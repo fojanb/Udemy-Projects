@@ -1,4 +1,4 @@
-# Udemy_Homeworks
+# Udemy_Projects
 **Become a Certified Web Developer**
 _______________________________________________________________________________________
 **Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications**
