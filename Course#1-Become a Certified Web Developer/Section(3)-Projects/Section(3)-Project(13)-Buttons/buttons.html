@@ -3,19 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <title>Buttons</title>
     <style>
         .shape{
-            background-color: rgb(250, 227, 19);
+            background-color: rgb(187, 238, 247);
             border-radius: 4px;
             font-weight: bold;
+            border: 0px;
+            padding: 2px;
+            font-family: 'Indie Flower', cursive;
         }
+        .gfont{
+            font-family: 'Indie Flower', cursive;
+        }
+        input{
+            border-radius: 4px;
+            
+        }
+        
 
     </style>
 </head>
 <body>
     <form action="#">
-        <label for="username">Name</label>
+        <label class="gfont" for="username">Name</label>
         <input type="text" id="username" name="Name">
 
         <!-- Two differents methods to make buttons -->
