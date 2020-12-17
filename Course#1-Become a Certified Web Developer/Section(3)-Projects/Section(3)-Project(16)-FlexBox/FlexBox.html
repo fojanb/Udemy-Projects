@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- What does next line mean? you must know that -->
+    <!-- For all screen sizes: -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        #one , #two, #three {
+            border: 1px solid black;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            border-radius: 10px;
+        }
+        #one{
+            background-color: rgb(8, 240, 248);
+            
+        }
+        #two{
+            background-color: rgb(255, 7, 57);
+        }
+        #three{
+            background-color: rgb(253, 237, 3);
+        }
+
+        #container{
+            margin-top: 50px;
+            display: flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+             
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="one">
+            <h2>One</h2>
+            <p>
+                Victoria is the capital city of the Canadian
+                province of British Columbia, on the southern 
+                tip of Vancouver Island off Canada's Pacific coast.<br>
+                The city has a population of 85,792, and the Greater 
+                Victoria Area has a population of 367,770. <br>Victoria is 
+                the 7th-most densely populated city in Canada with 4,405.8 
+                inhabitants per square kilometre (11,411/sq mi).
+            </p>
+        </div><!--One-->
+
+        <div id="two">
+            <h2>Two</h2>
+            <p>
+                Victoria is the capital city of the Canadian
+                province of British Columbia, on the southern 
+                tip of Vancouver Island off Canada's Pacific coast.<br>
+                The city has a population of 85,792, and the Greater 
+                Victoria Area has a population of 367,770. <br>Victoria is 
+                the 7th-most densely populated city in Canada with 4,405.8 
+                inhabitants per square kilometre (11,411/sq mi).
+            </p>
+        </div><!--Two-->
+
+        <div id="three">
+            <h2>Three</h2>
+            <p>
+                Victoria is the capital city of the Canadian
+                province of British Columbia, on the southern 
+                tip of Vancouver Island off Canada's Pacific coast.<br>
+                The city has a population of 85,792, and the Greater 
+                Victoria Area has a population of 367,770. <br>Victoria is 
+                the 7th-most densely populated city in Canada with 4,405.8 
+                inhabitants per square kilometre (11,411/sq mi).
+            </p>
+        </div><!--Three-->
+    </div><!--container-->
+    
+</body>
+</html>
