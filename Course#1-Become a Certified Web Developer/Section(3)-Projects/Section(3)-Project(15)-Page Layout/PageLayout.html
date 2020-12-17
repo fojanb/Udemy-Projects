@@ -3,58 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital@1&display=swap" rel="stylesheet">
     <title>PageLayout</title>
     <style>
-        #format{
+        #container{
             background-color:#eee;
             width: 60%;
             padding:50px;
             margin: 0 auto;/*<div> will be set on the centre of the web page*/
+            font-family: 'Vollkorn', serif;
+        }
+        header{
+            text-align: center;
+            background-color: #121212;
+            color: white;
+            padding:1px;
+            font-family: 'Vollkorn', serif;
+           
+        }
+        footer{
+            border-top: 1px solid black; /* Horizontal line */
+            font-size: small;
+            padding-top: 10px;
+            font-family: 'Vollkorn', serif;
+            clear: both;
+        }
+        #colA{
+            width: 50%;
+            float: left;
+    
+        }
+        #colB{
+            width:50%;
+            float: left;
         }
     </style>
 </head>
 <body>
-    <div id="format">
-    <h2>Victoria,BC</h2>
-    <p> Victoria is the capital city of the Canadian
-        province of British Columbia, on the southern 
-        tip of Vancouver Island off Canada's Pacific coast.
-        The city has a population of 85,792, and the Greater 
-        Victoria Area has a population of 367,770. Victoria is 
-        the 7th-most densely populated city in Canada with 4,405.8 
-        inhabitants per square kilometre (11,411/sq mi).
-        Victoria is the southern most major city in Western Canada
-        and is about 100 km (60 mi) from British Columbia's largest
-        city of Vancouver on the mainland. The city is about 100 km
-        (60 mi) from Seattle by airplane, ferry, or the Victoria Clipper
-        passenger-only ferry, and 40 km (25 mi) from Port Angeles, Washington, 
-        by ferry Coho across the Strait of Juan de Fuca.
-    </p>
-    <h2>Vancouver</h2>
-        <p> Vancouver (/vænˈkuːvər/ (About this soundlisten) van-KOO-vər)
-            is a major city in western Canada, located in the Lower Mainland
-            region of British Columbia. As the most populous city in the province,
-            the 2016 census recorded 631,486 people in the city, up from 603,502 
-            in 2011. The Greater Vancouver area had a population of 2,463,431 in 2016,
-            making it the third-largest metropolitan area in Canada. Vancouver has the
-            highest population density in Canada, with over 5,400 people per square
-            kilometre,[5][6] which makes it the fifth-most densely populated city with
-            over 250,000 residents in North America, behind New York City, Guadalajara,
-            San Francisco,[7] and Mexico City. Vancouver is one of the most ethnically
-            and linguistically diverse cities in Canada: 52% of its residents are not
-            native English speakers,[8][9] 48.9% are native speakers of neither English
-            nor French, and 50.6% of residents belong to visible minority groups.[10]
+    <div id="container">
+        <header>
+            <h1>Canada,BC</h1>
+        </header>
 
-            Vancouver is consistently named as one of the top five worldwide 
-            cities for livability and quality of life,[11][12][13] and the Economist
-            Intelligence Unit acknowledged it as the first city ranked among the top 
-            ten of the world's most well-living cities[14] for ten consecutive years.[13]
-            However, Vancouver also ranks as the most expensive city to live in Canada[15]
-            and as the fourth-most expensive housing market globally.[16] In 2011, the city
-            planned to become the greenest city in the world by 2020. Vancouverism is
-            the city's urban planning design philosophy.
+        <div id="colA">
+            <h3>Victoria,BC</h3>
+            <p> Victoria is the capital city of the Canadian
+                province of British Columbia, on the southern 
+                tip of Vancouver Island off Canada's Pacific coast.<br>
+                The city has a population of 85,792, and the Greater 
+                Victoria Area has a population of 367,770. <br>Victoria is 
+                the 7th-most densely populated city in Canada with 4,405.8 
+                inhabitants per square kilometre (11,411/sq mi).
+                Victoria is the southern most major city in Western Canada
+                and is about 100 km (60 mi) from British Columbia's largest
+                city of Vancouver on the mainland. The city is about 100 km
+                (60 mi) from Seattle by airplane, ferry, or the Victoria Clipper
+                passenger-only ferry, and 40 km (25 mi) from Port Angeles, Washington, 
+                by ferry Coho across the Strait of Juan de Fuca.
             </p>
-        </div>
+        </div><!--colA-->
+        
+        <div id="colB">
+        <h2>Vancouver</h2>
+            <p> Vancouver (/vænˈkuːvər/ (About this soundlisten) van-KOO-vər)
+                is a major city in western Canada, located in the Lower Mainland
+                region of British Columbia. As the most populous city in the province,
+                the 2016 census recorded 631,486 people in the city, up from 603,502 
+                in 2011. The Greater Vancouver area had a population of 2,463,431 in 2016,
+                making it the third-largest metropolitan area in Canada.<br> Vancouver has the
+                highest population density in Canada, with over 5,400 people per square
+                kilometre,[5][6] which makes it the fifth-most densely populated city with
+                over 250,000 residents in North America, behind New York City, Guadalajara,
+                San Francisco,[7] and Mexico City. Vancouver is one of the most ethnically
+                and linguistically diverse cities in Canada: 52% of its residents are not
+                native English speakers,[8][9] 48.9% are native speakers of neither English
+                nor French, and 50.6% of residents belong to visible minority groups.[10]
+    
+                Vancouver is consistently named as one of the top five worldwide 
+                cities for livability and quality of life,[11][12][13] and the Economist
+                Intelligence Unit acknowledged it as the first city ranked among the top 
+                ten of the world's most well-living cities[14] for ten consecutive years.<br>[13]
+                However, Vancouver also ranks as the most expensive city to live in Canada[15]
+                and as the fourth-most expensive housing market globally.[16] In 2011, the city
+                planned to become the greenest city in the world by 2020.<br> Vancouverism is
+                the city's urban planning design philosophy.
+            </p>
+        </div><!--colB-->
+        
+        <footer>Copyright &copy 2020</footer>
+    </div> <!--container-->
     
 </body>
 </html>
