@@ -1,54 +1,44 @@
+<!-- Submit This -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media</title>
+    <title>Movies and Casts</title>
     <style>
-        #container{
-           border: 2px solid black;
-           padding-right: 50px;
-           padding-left: 50px;
-           width: 50%;
-           margin-left: 300px;
-           margin-top:100px;
-           border-radius: 10px;
-           background-color: rgb(173, 224, 255);
-           font-family: Verdana, Geneva, Tahoma, sans-serif;
-           font-size: 20px;
-            
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-        ol{
-           border: 0px solid black;
-           padding-right: 100px;
-           width: 20%;
-           margin-left: -10px;
+        a{
+            font-style: italic;
         }
-       
-        a:link{
-            color: red;
-            
-        }
-        a:visited{
-            color: Green;
+        a:link,a:visited{
+            color:brown;
         }
         a:hover{
-            font-weight: bold; 
-            color:brown;
-        }  
+            color:green;
+        }
+        #MainContainer{
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
    
+        }
     </style>
 </head>
 <body>
-    <div id="container">
-        <h2>My favorite social media's platforms are linked down below</h2>
-        <ol>
-            <li><a href="https://www.youtube.com/">YouTube</a></li>
-            <li><a href="https://www.facebook.com/">Facebook</a></li>
-            <li><a href="https://www.instagram.com/">Instagram</a></li>
-            <li><a href="https://www.snapchat.com/">SnapChat</a></li>
-        </ol>
-    </div><!--continer-->
+    <div id="MainContainer">
+       <h1><a href="https://www.imdb.com/title/tt0068646/?ref_=nv_sr_srsg_2">The Godfather</a></h1>
+       <div>
+           <ul>
+               <li><a href="https://en.wikipedia.org/wiki/Al_Pacino">Al Pacino</a></li>
+               <li><a href="https://en.wikipedia.org/wiki/Andy_Garc%C3%ADa">Andy Garcia</a></li>
+               <li><a href="https://en.wikipedia.org/wiki/Marlon_Brando">Marlon Brando</a></li>
+           </ul>
+       </div>
+      <p>A link to <a href="Taxi Driver.html">Taxi Driver</a></p>
+
+    </div><!--MainContainer-->
     
 </body>
 </html>
