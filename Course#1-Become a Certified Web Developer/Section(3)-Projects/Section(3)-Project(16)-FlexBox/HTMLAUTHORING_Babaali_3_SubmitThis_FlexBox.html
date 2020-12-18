@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foods Photo Galary</title>
+    <style>
+        body{
+            background-color: cornsilk;
+
+        }
+        h1{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-family: cursive;
+            margin-left: 600px;
+            
+
+        }
+        #parent{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+        }
+        .child{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+        }
+        .grandchild{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 0px solid black;
+            margin: 50px;
+            font-family:cursive;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Food Photo Galary</h1>
+    <div id="parent">
+        <div class="child">
+            <div class="grandchild">
+                <img src="img1.jpg" width="250px" height="250px">
+                <h3>Persian Kebab</h3>
+
+            </div>
+
+            <div class="grandchild">
+                <img src="img2.jpg" width="250px" height="250px">
+                <h3>Italian Pizza</h3>
+            </div>
+
+            <div class="grandchild">
+                <img src="img3.jpg" width="250px" height="250px">
+                <h3>Persian Soup</h3>
+            </div>
+        </div><!--child-->
+
+        <div class="child">
+            <div class="grandchild">
+                <img src="img4.jpg" width="250px" height="250px">
+                <h3>Greek Salad</h3>
+            </div>
+
+            <div class="grandchild">
+                <img src="img5.jpg" width="250px" height="250px">
+                <h3>Afghan Food</h3>
+            </div>
+
+            <div class="grandchild">
+                <img src="img6.jpg" width="250px" height="250px">
+                <h3>Canadian Food</h3>
+            </div>
+        </div><!--child-->
+
+        <div class="child">
+            <div class="grandchild">
+                <img src="img7.jpg" width="250px" height="250px">
+                <h3>American Food</h3>
+            </div>
+
+            <div class="grandchild">
+                <img src="img8.jpg" width="250px" height="250px">
+                <h3>Thai Food</h3>
+            </div>
+
+            <div class="grandchild">
+                <img src="img9.jpg" width="250px" height="250px">
+                <h3>British Food</h3>
+            </div>
+        </div><!--child-->
+    </div><!--parent-->
+
+</body>
+</html>
