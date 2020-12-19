@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html>
- <head>
- <title>Forms</title>
- </head>
- <body>
- <form action=”#” method=”post”>
- <input type=”text” id=”name” name=”name” />
- <label>Email</label>
- <input type=”email” />
- <br/>
- <p>What is your age group?</p>
- <option value=”2”>18-24</option>
- <option value=”3”>24-40</option>
- <option value=”4”>40+</option>
- <br>
- <p>Gender</p>
- <input type=”checkbox” name=”city” value=”M”>Male
- <input type=”checkbox” name=”city” value=”F”>Female
- <input type=”checkbox” name=”city” value=”O”>Other
- <label for=”oNum”>Order Number</label>
- <input type=”number”/><br/>
- <label>Order Date</label>
- <input type=”text” id=”oDate” name=”oDate” value=”mm/dd/
-yyyy”/>
- </form>
- </body>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        <form action="#" method="post">
+            <label id="name">Name</label>
+            <input type="text" id="name" name="name"/> 
+            <br>
+            <label id="email">Email</label>
+            <input type="email" id="email" name="email"/>         
+            
+        
+        <p>What is your age group?</p>
+        <select>
+            <option value="1">18-24</option>
+            <option value="2">24-40</option>
+            <option value="3">40+</option>
+        </select>
+        <br>
+        <p>Gender</p>
+        <input type="radio" name="city" value="M">Male
+        <br>
+        <input type="radio" name="city" value="F">Female
+        <br>
+        <input type="radio" name="city" value="0">Other
+        <br><br>
+
+        <label for="num">Order Number</label>
+        <input type="number" id="num" min="0" max="1000">
+        <br>
+        <label for="date">Order Date</label>
+        <input type="date" id="date" name=”date” value="mm/dd/yyyy"/>
+        </form>
+    </body>
 </html>
