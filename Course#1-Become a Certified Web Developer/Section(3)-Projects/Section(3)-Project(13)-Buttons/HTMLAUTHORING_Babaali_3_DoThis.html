@@ -5,45 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>infos</title>
     <style>
-        #adjust{
-            display: flex;
-            flex-direction: row;
-            width: 350px;
-            align-items: flex-start;
-            justify-content: space-between;
-            padding: 8.5pt;
-            padding-top: 1px;
+        body{
+            background-color: blanchedalmond;  
+            font-family: monospace;
+            font-size: large;    
+            margin: 50px;
         }
+        #move1{
+            margin-left: 28px;;
+        }
+        #move2{
+            margin-left: 10px;;
+        }
+        button{
+            background-color: rgb(161, 241, 247);
+            border-radius: 10px;
+            border:0px solid black;
+            font-family: monospace;
 
-       
+        }
     </style>
 </head>
 <body>
-    <div>
         <form action="#" method="post">
             <label for="name">First Name</label>
             <input type="text" id="name" name="name">
-            <button type="submit">submit</button>          
-            <button type="resest">reset</button>
+            <button type="submit">Submit</button>          
+            <button type="resest">Reset</button>
             <br><br>
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname">
-            <button type="submit">submit</button>          
-            <button type="resest">reset</button>
-            <br><br>
+            <div id="move2">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname">
+                <button type="submit">Submit</button>          
+                <button type="resest">Reset</button>
+            </div><!--move2-->
 
-            <div id="adjust">
-                <label for="add">Address</label>
-                <input type="text" id="add" name="add">    
-                <button type="submit">submit</button>          
-                <button type="resest">reset</button>
-                <br><br><br><br>
-                
-            </div>
-
+            <br>
+            <div id="move1">
+                <label for="lname">Address </label>
+                <input type="text" id="lname" name="lname">
+                <button type="submit">Submit</button>          
+                <button type="resest">Reset</button>
+            </div><!--move1-->
         </form>
 
-    </div>
-    
 </body>
 </html>
