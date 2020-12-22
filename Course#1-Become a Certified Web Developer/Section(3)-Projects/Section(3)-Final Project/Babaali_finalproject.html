@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS Library - Milligram : -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"> -->
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <title>Tighty Whities</title>
     <style>
+
         .footer {
           position: fixed;
           left: 0;
@@ -17,19 +21,16 @@
           width: 100%;
           color:lightgray;
           text-align: center;
+          
         }
-        h1{
-        right: 0;
-        top: 0;
-        width: 100%;
+        header{
         text-align: center;
         margin-top: 50px;
-        margin-left: 600px;
-        position:fixed;
-        /* border-bottom:1px solid lightgray;
-        border-top:1px solid lightgray; */
+        margin-left: 5px;
+        font-family: 'Special Elite', cursive;
+        font-size: 50px;
+        border-bottom:1px solid lightgray;
         
-
         }
         .ImgContainer{
             display: flex;
@@ -44,13 +45,48 @@
             flex-direction: row;
             justify-content: space-between;
         }
+        /* Navigation Bar Style-->Start */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            font-family: 'Special Elite', cursive;
+            }
+
+        li {
+        float: left;
+        }
+
+        li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+        li a:hover {
+        background-color: #111;
+        }
+       /* Navigation Bar Style-->Finish */
+    
+      
     </style>
 </head>
 <body>
-    <hr>
     <header>
-        <h1>Tighty Whities</h1>
+        <p>Tighty Whities</p>
     </header> 
+    <nav>
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+    </nav>
 
     <article class="ImgContainer">
         <div class="ImgPosition">
