@@ -1,0 +1,227 @@
+<div class="stackedit__html">
+	<h1 id="mastering-css-with-mark-lassoff">Mastering CSS with Mark Lassoff</h1>
+	<h1 id="section-3--selectors">Section 3:  Selectors</h1>
+	<p>After completing this section you will:
+	</p>
+	<ul>
+		<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Know How to Use Tag Selectors</li>
+		<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Use ID Selectors for Elements that Appear Once on a Page</li>
+		<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Use Classes for Elements That Appear More than Once on a Page</li>
+		<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Use Selectors that Access Multiple Elements</li>
+		<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Use Decendent Selectors</li>
+		<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Understand Attribute Based Selectors</li>
+		<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Apply a Pseudo-Selector</li>
+	</ul>
+	<h2 id="html-content">HTML Content</h2>
+	<p>We’ll be using the following HTML document in this section
+	</p>
+	<pre>&lt;code&gt;&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Complex Selectors&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header align="center"&gt;
+            &lt;h2&gt;Living in Southwestern Connecticut&lt;/h2&gt;
+            &lt;p class="fancy"&gt;Along the Connecticut Coast&lt;/p&gt;
+        &lt;/header&gt;
+        &lt;div id="main"&gt;
+            &lt;h2&gt;Summary&lt;/h2&gt;
+            &lt;p&gt;Norwalk is a U.S. city located in southwestern Connecticut, in southern &lt;span class="fancy"&gt;Fairfield County&lt;/span&gt;, on the northern shore of Long Island Sound. Norwalk is included statistically within both the New York metropolitan area as well as the Bridgeport metropolitan area.&lt;/p&gt;
+            &lt;p&gt;Norwalk was settled in 1649, and is now the sixth most populous city in Connecticut. According to the 2010 United States Census the city had a population of 85,603; with an estimated population of 88,438 in 2016.&lt;/p&gt;
+            &lt;h2&gt;History&lt;/h2&gt;
+            &lt;p&gt;Norwalk was settled in 1649, incorporated September 1651, and named after the Algonquin word noyank, meaning "point of land", or more probably from the native American name "Naramauke."&lt;/p&gt;
+            &lt;p&gt;The Battle of Norwalk took place during the Revolutionary War. This battle resulted in the burning of most of the town. In 1836, the borough of Norwalk was created, covering the central area of the town. In 1853, the first ever train disaster in the United States happened over the Norwalk River. During the 19th and early 20th century, Norwalk was a major railroad stop for the New York, New Haven, and Hartford Railroad. The city of South Norwalk and the remaining parts of the town of Norwalk were both combined in 1910 to form the current city.&lt;/p&gt;
+            &lt;h2&gt;Demographics&lt;/h2&gt;
+            &lt;p&gt;As of the census of 2010, there were 85,603 people, 35,415 households, and 21,630 families residing in the city. The population density was 2,358.2 inhabitants per square mile (910.7/km²). There were 35,415 housing units at an average density of 975.6 per square mile (376.6/km²). The racial makeup of the city was 68.7% White, 14.2% African American, 0.4% Native American, 4.8% Asian, 0.1% Pacific Islander, 9.0% from other races, and 2.8% from two or more races. Hispanic or Latino of any race were 24.3% of the population.&lt;/p&gt;
+            &lt;p&gt;There were 35,415 households out of which 27.9% had children under the age of 18 living with them, 47.1% were married couples living together, 11.0% had a female householder with no husband present, and 38.4% were non-families. 33.0% of all households were made up of individuals, and 8.5% had someone living alone who was 65 years of age or older. The average household size in the city was 2.55, and the average family size was 3.16.&lt;/p&gt;
+            &lt;p&gt;In the city, the population was spread out with 22% under the age of 18, 7.3% from 18 to 24, 31.7% from 25 to 44, 31.2% from 45 to 64, and 12.8% who were 65 years of age or older. The median age was 40 years. For every 100 females, there were 96.2 males.&lt;/p&gt;
+            &lt;p&gt;The median income for a household in the city was $76,161, and the median income for a family was $103,032. The per capita income for the city was $43,303. About 5.7% of families and 8.4% of the population were below the poverty line, including 10.2% of those under age 18 and 8.2% of those age 65 or over.&lt;/p&gt;
+        &lt;/div&gt; &lt;!-- main --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+&lt;/code&gt;
+	</pre>
+	<blockquote>
+		For your convenience this content is available online at <a href="https://gist.github.com/mlassoff/c6c9ce7a9c94653bdc4e4a8d86c00b5b">https://gist.github.com/mlassoff/c6c9ce7a9c94653bdc4e4a8d86c00b5b</a><br>
+	</blockquote>
+	<p>In the head section of the document, let’s add the opening an closing style tags that will enclose our stylesheet.
+	</p>
+	<pre>&lt;code&gt;  &lt;head&gt;
+        &lt;title&gt;Complex Selectors&lt;/title&gt;
+        &lt;style&gt;
+        &lt;/style&gt;
+&lt;/head&gt;
+&lt;/code&gt;
+	</pre>
+	<h2 id="tag-selectors">Tag Selectors</h2>
+	<p>Tag selectors allow you to select element for styling by the tag name.  For example, if we were to use <code>h1</code> as a selector all of the <code>&lt;h1&gt;</code> elements in the HTML document would be selected for styling.
+	</p>
+	<p>Consider the following code.
+	</p>
+	<pre>&lt;code&gt;&lt;style&gt;
+    h1 {
+        color: blue;
+        font-family: arial;
+    }
+    h2 {
+        font-family: Arial;
+    }
+&lt;/style&gt;
+&lt;/code&gt;
+	</pre>
+	<p>The result, of course, is that the single <code>&lt;h1&gt;</code> element is both blue and rendered in the Arial font while the multiple <code>&lt;h2&gt;</code> elements are rendered in the Arial font but remain the default black color.
+	</p>
+	<h2 id="id-selectors">ID Selectors</h2>
+	<p>ID’s are intended to be used once and only once on a page. Traditionally ID’s have been used to provide unique identifiers for content blocks within a web page.
+	</p>
+	<p>In our HTML example below the <code>&lt;header&gt;</code> element is a <code>&lt;div&gt;</code> tag modified by an <code>id</code> attribute with the value <code>main</code>.  We user the value of the attribute to select the element in CSS.  See the following example:
+	</p>
+	<pre>&lt;code&gt;&lt;style&gt;
+    #main {
+        font-size: 1.5em;
+        color: #121212;
+    }
+&lt;/style&gt;
+&lt;/code&gt;
+	</pre>
+	<p>The <code>font-size</code> rule and the <code>color</code> CSS rule here will apply to the entire <code>&lt;div&gt;</code>.  Note the use of the hash sign preceding the attribute value
+	</p>
+	<h2 id="class-selectors">Class Selectors</h2>
+	<p>Classes are intended to be deployed multiple times on a page. Classes are a flexible way to select multiple content elements for formatting. Here you can see that there are multiple class attributes inserted into the content:
+	</p>
+	<pre>&lt;code&gt;  &lt;p class="fancy"&gt;Along the Connecticut Coast&lt;/p&gt;
+        &lt;/header&gt;
+        &lt;div id="main"&gt;
+            &lt;h2&gt;Summary&lt;/h2&gt;
+            &lt;p&gt;Norwalk is a U.S. city located in southwestern Connecticut, in southern &lt;span class="fancy"&gt;Fairfield County&lt;/span&gt;, on the northern shore of Long Island Sound. Norwalk is included statistically within both the New York metropolitan area as well as the Bridgeport metropolitan area.&lt;/p&gt;
+&lt;/code&gt;
+	</pre>
+	<p>Both class attributes contain the value <code>fancy</code>.  We can use this value in our selector to format both elements.
+	</p>
+	<pre>&lt;code&gt;.fancy    {
+    text-decoration: underline;
+}
+&lt;/code&gt;
+	</pre>
+	<p>Both of the elements with the class attribute with the value <code>fancy</code> would now be underlined.
+	</p>
+	<p>Note the use of the period to indicate a class in the selector in the style sheet.
+	</p>
+	<blockquote>
+		Generally underlines should be avoided as users confuse them with hyperlinks.<br>
+	</blockquote>
+	<h2 id="multiple-selectors">Multiple Selectors</h2>
+	<p>There are times when it’s strategic to select more than a single element at a single time.  We can merely separate the individual selectors with a comma and all selectors listed will be styled.
+	</p>
+	<pre>&lt;code&gt;h1, h2 {
+    color: green;
+}
+&lt;/code&gt;
+	</pre>
+	<p>In this code above, all of the <code>&lt;h1&gt;</code> elements and all of the <code>&lt;h2&gt;</code> elements in the document will be selected, and the text colored green.
+	</p>
+	<h2 id="descendant-selectors">Descendant Selectors</h2>
+	<p>As you’ve likely realized, HTML5 provides a hierarchical document skeleton. Elements that are inside other elements are said to be descendants.
+	</p>
+	<blockquote>
+		All HTML5 tags are decendants of the <code>&lt;html&gt;</code> tag. <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> elements are direct decendents because there are no tags between the parents <code>&lt;html&gt;</code> tag and children.<br>
+	</blockquote>
+	<p>To demonstrate a descendent selector, let’s examine part of the original HTML code.
+	</p>
+	<pre>&lt;code&gt;&lt;script&gt;
+ &lt;header align="center"&gt;
+            &lt;h2&gt;Living in Southwestern Connecticut&lt;/h2&gt;
+            &lt;p class="fancy"&gt;Along the Connecticut Coast&lt;/p&gt;
+ &lt;/header&gt;
+ &lt;div id="main"&gt;
+            &lt;h2&gt;Summary&lt;/h2&gt;
+&lt;/code&gt;
+	</pre>
+	<p>In this code two <code>&lt;h2&gt;</code> tags are displayed. The first is a decedent of the <code>&lt;header&gt;</code> tag.  The second is a direct descendant of the <code>&lt;div&gt;</code> tag.
+	</p>
+	<p>Let’s add some CSS:
+	</p>
+	<pre>&lt;code&gt;&lt;style&gt;
+    header h2   {
+        font-family: arial;
+        font-size: 3em;
+    }
+&lt;/style&gt;
+&lt;/code&gt;
+	</pre>
+	<p>Since we used a decedent selector, the only <code>&lt;h2&gt;</code> effected is the one inside the <code>&lt;header&gt;</code> element.  Descendent selectors are one strategy for isolating a specific tag that may be used elsewhere in the document.
+	</p>
+	<p>Let’s take a look at another variant of the descendant selector.
+	</p>
+	<pre>&lt;code&gt;#main &gt; h2
+{
+    color: brown;
+}
+&lt;/code&gt;
+	</pre>
+	<p>In this case any <code>&lt;h2&gt;</code> who has the id <code>#main</code> for a parent.  In our document structure, that’s all the <code>&lt;h2&gt;</code> elements inside the logical division.
+	</p>
+	<h2 id="attribute-selectors">Attribute Selectors</h2>
+	<p>Attribute selectors, as you might imagine, allow you to select an element based on the attribute that it contains.  You’ll notice that the <code>&lt;header&gt;</code> element has an <code>align</code> attribute with a value of <code>center</code>.
+	</p>
+	<blockquote>
+		Typically we’d use CSS to align content.  However, this makes a convenient example for us here.<br>
+	</blockquote>
+	<p>Let’s add some CSS that selects that <code>align</code> attribute.
+	</p>
+	<pre>&lt;code&gt;[align]
+{
+    display: none;
+}
+&lt;/code&gt;
+	</pre>
+	<p>Because this selector matches any element with an <code>align</code> attribute, the entire <code>&lt;header&gt;</code> element disappears from the display.
+	</p>
+	<p>In addition to specifying a specific attribute, you can specify an attribute-value combination for selection.  If we were to select element that had an <code>align</code> attribute and a <code>center</code> value the selectors would look like this:
+	</p>
+	<pre>&lt;code&gt;[align=center]
+{
+    display: none;
+}
+&lt;/code&gt;
+	</pre>
+	<h2 id="pseudo-selectors">Pseudo-Selectors</h2>
+	<p>Pseudo-Selectors are designed to modify selectors.  Many pseudo-selectors are used in CSS.  Let’s take a look at the <code>first-line</code> pseudo-selector.
+	</p>
+	<pre>&lt;code&gt;p::first-line {
+    font-size: 1.25em;
+}
+&lt;/code&gt;
+	</pre>
+	<p>In this case, the <code>first-line</code> pseudo-selector is selecting the first line of every <code>p</code> element and altering the font size.  There’s also a first letter pseudo-selector.
+	</p>
+	<pre>&lt;code&gt;p::first-letter    {
+    font-size: 2em;
+}
+&lt;/code&gt;
+	</pre>
+	<blockquote>
+		Note the use of the double colon between the selector and pseudo-selector.<br>
+	</blockquote>
+	<h2 id="submit-this-departures-board">Submit This: Departures Board</h2>
+	<p>Westchester County Airport needs to make its departure board more attractive and readable.  Using the image below, prepare HTML5 and CSS to display a beautiful, useful Departures Board.
+	</p>
+	<p>Keep in mind this will be displayed full-screen on a large monitor and should be viewable from several feet away.  Please use the following selectors in your document:
+	</p>
+	<ul>
+		<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> A Tag Selector</li>
+		<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> An ID Selector</li>
+		<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> A Class Selector</li>
+		<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> A Selector that Selects Multiple Elements</li>
+		<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> A Descendant Selector</li>
+	</ul>
+	<p>Use the data below to make your departure board which must list 12 flights.
+	</p>
+	<p><img src="https://s3.amazonaws.com/coursewareframework/masteringcss/Departures.png" alt="enter image description here">
+	</p>
+	<p>Remember, when submitting the work, please use the following naming convention for your file:   <code>MASTERINGCSS_LastName_SectionNumber.html</code>.  So if your last name is Smith and your submitting section 1, your file name should be <code>MASTERINGCSS_Smith_3.html</code>.
+	</p>
+	<p>For this course go to <a href="https://www.dropbox.com/request/I5ZuBmkJjf0keEqRQHwK">https://www.dropbox.com/request/I5ZuBmkJjf0keEqRQHwK</a>  to submit your assignments.
+	</p>
+</div>
