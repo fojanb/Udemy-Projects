@@ -1,0 +1,337 @@
+<div class="stackedit__html">
+	<h1 id="mastering-css-with-mark-lassoff">Mastering CSS with Mark Lassoff</h1>
+	<h1 id="section-2--styling-text">Section 2:  Styling Text</h1>
+	<p>After completing this section you will:
+	</p>
+	<ul>
+		<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Understand HTML color and apply to text</li>
+		<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Apply alignment using CSS</li>
+		<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Use CSS text transformations and decorations</li>
+		<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="">  Adjust spacing within an HTML document</li>
+		<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Select Fonts and Adjust Font Size</li>
+	</ul>
+	<h2 id="html-document-example">HTML Document Example</h2>
+	<p>To demonstrate text styling, we obviously need a document to apply styles too.  Let’s start with the following simple HTML document.
+	</p>
+	<pre>&lt;code&gt;&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;A Little CSS&lt;/title&gt;
+        &lt;link rel="stylesheet" href="styles.css" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Norwalk, CT&lt;/h1&gt;
+        &lt;p&gt;&lt;img src="norwalk.jpg"&gt;Norwalk is a U.S. city located in southwestern Connecticut, in southern Fairfield County, on the northern shore of Long Island Sound. Norwalk is included statistically within both the New York metropolitan area as well as the Bridgeport metropolitan area.&lt;p&gt;
+        &lt;p&gt;Norwalk was settled in 1649, and is now the sixth most populous city in Connecticut. According to the 2010 United States Census the city had a population of 85,603; with an estimated population of 88,438 in 2016.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+&lt;/code&gt;
+	</pre>
+	<p>You’ll note that the document refers to another document titled <code>styles.css</code> in the <code>link</code> tag.  You should also create a blank document called <code>styles.css</code> and save it in the same folder as your HTML.
+	</p>
+	<p>Let’s go into the stylesheet document and add some initial styles.
+	</p>
+	<pre>&lt;code&gt;img {
+    float: right;
+    margin-left: 10px;
+    visibility: visible;
+    border: 1px black solid;
+}
+&lt;/code&gt;
+	</pre>
+	<blockquote>
+		Remember that you shouldn’t include the <code>style</code> tags when attaching an external style sheet.<br>
+	</blockquote>
+	<p><img src="https://coursewareframework.s3.amazonaws.com/masteringcss/CSS%20Screenshot%202.1.png" alt="enter image description here"><br>
+		After creating the initial document and CSS, your document should appear similar to screenshot above.
+	</p>
+	<h2 id="styling-text-with-color">Styling Text with Color</h2>
+	<p>Color can be applied to any text element in an HTML document. This can be done with the color rule.  Let’s add the following to our <code>styles.css</code> stylesheet.
+	</p>
+	<pre>&lt;code&gt;h1 {
+    color: green;
+    }
+&lt;/code&gt;
+	</pre>
+	<p>Since we’re using the <code>h1</code> selector, the green color will be applied to the text inside the heading tag that says “Norwalk, CT”.
+	</p>
+	<h3 id="understanding-color-in-html-and-css">Understanding color in HTML and CSS</h3>
+	<p>In the example above we just named our color “green”. Named colors are one of three distinct ways to work with color in HTML and CSS.
+	</p>
+	<h4 id="named-colors">Named Colors</h4>
+	<p>Named colors are colors that have a name.  We’ve used <code>green</code> but there are 139 additional options.  These colors are named for a specific color formulation, similar to crayons.
+	</p>
+	<blockquote>
+		You can see a complete chart of named colors at <a href="https://www.w3schools.com/colors/colors_names.asp">https://www.w3schools.com/colors/colors_names.asp</a>.<br>
+	</blockquote>
+	<p>Named colors actually have its drawbacks.  For example, can you visualize the difference between <code>Gold</code> and <code>GoldenRod</code>?  Me either.
+	</p>
+	<p><img src="https://coursewareframework.s3.amazonaws.com/masteringcss/CSS%20Screenshot%202.2.png" alt="enter image description here">
+	</p>
+	<p>Most developers forgo named colors in favor of one of the other color formulation methods that we’ll discuss next.
+	</p>
+	<h4 id="rgb-colors">RGB Colors</h4>
+	<p>RGB (Red-Blue-Green) are colors produced by mixing various intensities of the colors of red, blue and green.  This is similar to how many monitors work by mixing red, blue and green light in various intensities at each pixel.
+	</p>
+	<p>In CSS we’ll express an RGB color like this:
+	</p>
+	<pre>&lt;code&gt;rgb(45,0,10);
+&lt;/code&gt;
+	</pre>
+	<p>Each of the three values represent red, green and blue respectively and has an intensity from 0 (all the way off) to 255 (all the way on).  The example above has a bit of red, no green, and very little blue.  The result is a brick red color.
+	</p>
+	<p>You can experiment with mixing red, green, and blue to make many different colors-- in fact, there are 16.7 million colors available to you in the RGB color system.  Keep in mind that a value of <code>rgb(0,0,0)</code> is black.  The value <code>rgb(255,255,255)</code> is white.
+	</p>
+	<blockquote>
+		Visit <a href="https://www.colortools.net/color_mixer.html">https://www.colortools.net/color_mixer.html</a> to experiment with different RGB color combinations. This site has many handy color tools.<br>
+		<img src="https://coursewareframework.s3.amazonaws.com/masteringcss/CSS%20Screenshot%202.3.png" alt="enter image description here"><br>
+	</blockquote>
+	<h4 id="hexadecimal-colors">Hexadecimal Colors</h4>
+	<p>Perhaps the most common color formulation system in CSS is the Hexadecimal (often shortened to “Hex”) color system.  This system is also based on 256 distinct shades of red, green and blue. Instead of representing these values with the numbers 0-255, the hexadecimal number system is used with a range from 0-FF.
+	</p>
+	<p>In CSS we’ll represent a hexadecimal color like this:
+	</p>
+	<pre>&lt;code&gt;color: #73001A;
+&lt;/code&gt;
+	</pre>
+	<p>This is actually the same brick red color we created above.  In the hex system red, green and blue are represented as 00 (off) to FF (full intensity).
+	</p>
+	<blockquote>
+		The hexadecimal numbering system is based on 16, unlike the standard decimal system which is based on 10.  If we were to count to 20 in hex, the numbers would be: 0 1 2 3 4 5 6 7 8 9 a b c d e f 10 11 12 13.  We’re using a - f to represent real numbers.  13 depicts the decimal value 20.<br>
+	</blockquote>
+	<h2 id="text-alignment">Text Alignment</h2>
+	<p>Text alignment is achieved with the <code>text-align</code> rule.  The <code>text-align</code> rule has four possible values:  left, center, right and justify.  Let’s go ahead, and center align our <code>h1</code> tag in the document.
+	</p>
+	<pre>&lt;code&gt;h1 {
+    color: #000099;
+    text-align: center;
+}
+&lt;/code&gt;
+	</pre>
+	<p>You can confirm the text is center aligned by loading your document into your web browser.
+	</p>
+	<blockquote>
+		The justify setting creates lines of text that are all the same width. While this text may look neat and uniform, it makes content hard to read.  The justify setting adjusts the width of the spacebands between words, which makes it more difficult for the eye to track from one line of text to another.<br>
+	</blockquote>
+	<h2 id="text-transform">Text Transform</h2>
+	<p>Text-transform rules can transform the appearance of text that the rule is applied to.  The <code>capitalize</code> setting will capitalize the first letter of every word where the rule is applied.  The <code>uppercase</code> rule will render the text entirely in uppercase.  The <code>lowercase</code> setting will (surprise!) render the text entirely in lowercase letters.
+	</p>
+	<p>Let’s apply the <code>text-transform</code> rule to our <code>h1</code> selector in the CSS:
+	</p>
+	<pre>&lt;code&gt;color: #000099;
+text-align: center;
+text-transform: uppercase;
+&lt;/code&gt;
+	</pre>
+	<p>The result looks like this in our browser window:<br>
+		<img src="https://coursewareframework.s3.amazonaws.com/masteringcss/CSS%20Screenshot%202.4.png" alt="enter image description here">
+	</p>
+	<h2 id="text-decoration">Text-Decoration</h2>
+	<p>The <code>text-decoration</code> rule allows you to add an underline, overline or strikethrough to the text.  Let’s place the <code>text-decoration</code> rule in our <code>h1</code> selector:
+	</p>
+	<pre>&lt;code&gt;h1 {
+    color: #000099;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: line-through;
+}
+&lt;/code&gt;
+	</pre>
+	<p>Other options for the <code>text-decoration</code> rule include <code>underline</code> and <code>overline</code>.  ( I don’t think I have overlined text even once.)
+	</p>
+	<blockquote>
+		Caution should be used when using an underline with digital text. Many users will confuse underlined text with a hyperlink and click the text expecting to be linked to another document.<br>
+	</blockquote>
+	<h2 id="spacing-text">Spacing Text</h2>
+	<p>There are many ways to adjust the spacing within your text:
+	</p>
+	<h3 id="text-indent">text-indent</h3>
+	<p>The <code>text-indent</code> rule indents the first line of text. You need to provide a value for the width of the ident with your text-indent rule.  The following code indents the first line of text inside the <code>p</code> tag 40 pixels:
+	</p>
+	<pre>&lt;code&gt;p{
+     text-indent: 40px;
+}
+&lt;/code&gt;
+	</pre>
+	<h3 id="letter-spacing">letter-spacing</h3>
+	<p>In traditional typography, <code>letter-spacing</code> is known as tracking and describes how loose or how tight text is overall. We can use the following code to place 10 pixels of space between each letter:
+	</p>
+	<pre>&lt;code&gt;letter-spacing: 10px;
+&lt;/code&gt;
+	</pre>
+	<p>If applied to our heading tag in the document the result looks like this:<br>
+		<img src="https://coursewareframework.s3.amazonaws.com/masteringcss/CSS%20Screenshot%202.5.png" alt="enter image description here">
+	</p>
+	<h3 id="line-height">line-height</h3>
+	<p>In traditional typography, <code>line-height</code> is known as leading and is defined as the space between baselines on which the text rests. In middle school, you might have referred to <code>line-height</code> as single-spacing or double-spacing your text.
+	</p>
+	<p>In CSS the <code>line-height</code> rule takes a numerical value to indicate the space between lines.  In our document, let’s give the <code>p</code> tag a <code>line-height</code> value of 1.8.
+	</p>
+	<pre>&lt;code&gt;p{
+     text-indent: 40px;
+     line-height: 1.8;
+}
+&lt;/code&gt;
+	</pre>
+	<p>The result is, of course, much more space between lines.<br>
+		<img src="https://coursewareframework.s3.amazonaws.com/masteringcss/CSS%20Screenshot%202.6.png" alt="enter image description here">
+	</p>
+	<h3 id="word-spacing">Word Spacing</h3>
+	<p><code>word-spacing</code> is the width of the space bands between words in CSS.  The value of a <code>word-spacing</code> rule is the desired width of space bands for the affected elements.
+	</p>
+	<p>A typical CSS <code>word-spacing</code> rule might look like this:
+	</p>
+	<pre>&lt;code&gt;p    {
+    word-spacing: 10px;
+}
+&lt;/code&gt;
+	</pre>
+	<p>Most of the time the default <code>word-spacing</code> value is the correct one.  This is not something you’d typically want to adjust unless you have a distinct reason to do so.
+	</p>
+	<h2 id="text-shadow">Text Shadow</h2>
+	<p>The <code>text-shadow</code> rule allows you to place a drop shadow effect behind the text. Keep in mind that, as with all newer CSS rules, it’s possible that older browsers may not fully support the feature.
+	</p>
+	<p>The <code>text-shadow</code> rule has three components.  The first is the horizontal offset of the shadow.  The second component is the vertical offset of the shadow, and the third is the color of the shadow expressed as a named, RGB or hex color.  A typical <code>text-shadow</code> rule might be expressed like this:
+	</p>
+	<pre>&lt;code&gt;text-shadow:  2px 2px #cccccc;
+&lt;/code&gt;
+	</pre>
+	<p>This would give you a grey text shadow offset from the text by about two pixels.  Let’s try applying this to the heading in our document:
+	</p>
+	<pre>&lt;code&gt;h1 {
+    color: #000099;
+    text-align: center;
+    letter-spacing: 10px;
+    text-shadow:  2px 2px #cccccc;
+}
+&lt;/code&gt;
+	</pre>
+	<p>You might have to squint to see it, but, here is the result:<br>
+		<img src="https://coursewareframework.s3.amazonaws.com/masteringcss/CSS%20Screenshot%202.7.png" alt="enter image description here">
+	</p>
+	<h2 id="working-with-fonts">Working with Fonts</h2>
+	<p>Many people enjoy working with different fonts.  There have been many advances in online fonts that have allowed designers to go beyond the very standard, boring font options that included <em>Times New Roman</em>, <em>Arial</em>, and <em>Georgia</em>.
+	</p>
+	<p>The critical thing to understand is that unless you are using a font library like Google Fonts, the user must have the font choice you make in your CSS available on their machine. If not, the default font will display.
+	</p>
+	<h3 id="font-family">Font Family</h3>
+	<p>The <code>font-family</code> CSS rule allows you to choose a category of font or specific font to use for affected elements.  The font rule typically looks like this:
+	</p>
+	<pre>&lt;code&gt;font-family: Arial;
+&lt;/code&gt;
+	</pre>
+	<p>The rule above would, of course, render text in the standard Arial font.  If, for some reason, the Arial font was not available the default font would be used.
+	</p>
+	<p>CSS also allows choosing back-ups in case the first font choice is not available.  If we use a backup font choice the rule would be expressed as:
+	</p>
+	<pre>&lt;code&gt;font-family: Arial, sans-serif;
+&lt;/code&gt;
+	</pre>
+	<p>In this case, if Arial is not available, another available sans-serif option would be selected.
+	</p>
+	<p>We can apply a <code>font-family</code> CSS rule to the header in our document.
+	</p>
+	<pre>&lt;code&gt;h1 {
+    color: #000099;
+    text-align: center;
+    letter-spacing: 10px;
+    text-shadow:  2px 2px #cccccc;
+    font-family:  Verdana;
+}
+&lt;/code&gt;
+	</pre>
+	<h3 id="font-style-italics">Font Style (Italics)</h3>
+	<p>The <code>font-style</code> rule is used to <em>italisize</em> text in CSS. The possible values are either <code>italic</code> or <code>normal</code>.
+	</p>
+	<p>To italicize text use the following CSS rule:
+	</p>
+	<pre>&lt;code&gt;font-style: italics;
+&lt;/code&gt;
+	</pre>
+	<blockquote>
+		By default, the <code>&lt;em&gt;</code> tag in HTML will render text in italics as well.<br>
+	</blockquote>
+	<h3 id="font-weight-bold">Font-Weight (Bold)</h3>
+	<p>The <code>font-weight</code> rule allows you to make text <strong>bold</strong>.  The value for the font-weight rule can be a value like 100 or 200 to an upper limit of 1,000. This is supposed to represent the relative boldness desired.  This is supported by very few fonts so, generally <code>bold</code> and <code>normal</code> are used as values.  To make text bold, you would use the following CSS rule:
+	</p>
+	<pre>&lt;code&gt;font-weight: bold;
+&lt;/code&gt;
+	</pre>
+	<blockquote>
+		In HTML5 you can use the <code>&lt;strong&gt;</code> tag to make elements bold.  Keep in mind the appearance of <code>&lt;strong&gt;</code> elements can be adjusted through CSS (as can any HTML) tag.<br>
+	</blockquote>
+	<h3 id="font-size">Font Size</h3>
+	<p>The <code>font-size</code> rule is used to adjust the size of any type in CSS.  <code>font-size</code> can be measured using a number of different scales.
+	</p>
+	<p>In CSS, a <code>font-size</code> rule is used like this:
+	</p>
+	<pre>&lt;code&gt;font-size: 1.25em;
+&lt;/code&gt;
+	</pre>
+	<p>Here are a few of the most common ways to measure <code>font-size</code> in CSS:
+	</p>
+	<table>
+	<thead>
+	<tr>
+		<th>Abbreviation
+		</th>
+		<th>Scale
+		</th>
+		<th>Relative or Absolute
+		</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>px
+		</td>
+		<td>Pixels
+		</td>
+		<td>Absolute
+		</td>
+	</tr>
+	<tr>
+		<td>pt
+		</td>
+		<td>Points
+		</td>
+		<td>Absolute
+		</td>
+	</tr>
+	<tr>
+		<td>em
+		</td>
+		<td>Ems
+		</td>
+		<td>Relative
+		</td>
+	</tr>
+	<tr>
+		<td>%
+		</td>
+		<td>Percentage
+		</td>
+		<td>Relative
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	<p>Using pixels (px) or points (pt) will render the font in the pixel size or point size specified.  Using a relative measurement will render the typeface as a percentage of the baseline font size.
+	</p>
+	<p>When using <code>em</code> measurements, <code>1</code> is the baseline size.  Any value less than <code>1</code> will reduce the size of the font.  A value greater than <code>1</code> such as <code>1.4</code> will increase the font size.  A value of <code>1.4</code> translates to 140% of the baseline font size.
+	</p>
+	<blockquote>
+		Often it is advisable to use relative font sizes to respect the users’ choices better.  Using relative font sizes also allows visually impaired users to retain both the larger font sizes they need and the hierarchy of sizes within the document.<br>
+	</blockquote>
+	<h2 id="submit-this-i-have-a-dream-speech">Submit This: I Have a Dream Speech</h2>
+	<p>Martin Luther King’s famous “I  Have a Dream” Speech marked both a milestone in the Civil Rights Movement and in American History.
+	</p>
+	<p>The full text of the speech is available here:  <a href="https://gist.github.com/mlassoff/2f66db2c5e61ceaac0ce4c37d41daeba">https://gist.github.com/mlassoff/2f66db2c5e61ceaac0ce4c37d41daeba</a>
+	</p>
+	<p>Using correct HTML and CSS layout the speech as a digital document.  You should style the text using CSS typographic techniques outlined above. Using the CSS techniques you have learned make sure the display of the speech has the elegance deserved without sacrificing readability for the user.
+	</p>
+	<p>Remember, when submitting the work, please use the following naming convention for your file:   <code>MASTERINGCSS_LastName_SectionNumber.html</code>.  So if your last name is Smith and your submitting section 1, your file name should be <code>MASTERINGCSS_Smith_1.html</code>.
+	</p>
+	<p>For this course go to <a href="https://www.dropbox.com/request/I5ZuBmkJjf0keEqRQHwK">https://www.dropbox.com/request/I5ZuBmkJjf0keEqRQHwK</a>  to submit your assignments.
+	</p>
+</div>
