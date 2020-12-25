@@ -1,3 +1,3 @@
 Title:
 
-Certifaied HTML5 Specialist 2019
+Certified HTML5 Specialist 2019
