@@ -1,0 +1,15 @@
+hl
+    {
+    font-family: Verdana;
+    font-size: 1.75em;
+    font-weight: bold;
+    text-decoration: none;
+    font-variant: small-caps;
+    color: rgb(75,0,100);
+    }
+
+p
+    {
+    line-height: 2em;
+    text-align: left;
+    }
