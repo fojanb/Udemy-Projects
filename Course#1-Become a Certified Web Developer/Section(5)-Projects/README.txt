@@ -1,3 +1,3 @@
 Title:
 
-Certifaied JavaScript Specialist 2019
+Certified JavaScript Specialist 2019
