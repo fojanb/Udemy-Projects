@@ -1,3 +1,3 @@
 Title:
 
-Certifaied CSS Specialist 2019
+Certified CSS Specialist 2019
