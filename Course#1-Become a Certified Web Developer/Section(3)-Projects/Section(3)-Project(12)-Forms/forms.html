@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <style>
+        form input{
+            background-color: #b0ebf3;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <br>
+        <!-- Type = Text -->
+        <label for="username">First name</label>       
+        <input type="text" id="username" Name="username"/>
+        <br> <br>
+        <!-- Type = Text -->
+        <label for="lastname">Last name</label>
+        <input type="text" id="lastname" Name="lastname"/>
+        <br> <br>
+        <!-- Type = email -->
+        <label for="email">Email Address</label>
+        <input type="email" id="email" Name="emial"/>
+        <br> <br>
+        <!-- Type = tel -->
+        <label for="phone">Tellphone</label>
+        <input type="tel" id="phone" name="phone"/>
+        <br> <br>
+        <!-- Type = number -->
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="0" max="100"/>
+        <br> <br>
+        <!-- Type = date -->
+        <lable for="date">Date of birth</lable>
+        <input type="date" id="date" name="date"/>
+        <br> <br>
+        <!-- Type = password -->
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="pass"/>
+        <br> <br>
+        
+
+        <!-- type = checkboxes -->
+        <p>Check the bands that you like :</p>
+        <input type="checkbox" name="bands" value="Black Cats"> Black Cats<br>
+        <input type="checkbox" name="bands" value="Pink Floyd"> Pink Floyd<br>
+        <input type="checkbox" name="bands" value="Rolling Stones"> Rolling Stones<br>
+        <input type="checkbox" name="bands" value="The Boys"> The Boys<br>
+        <input type="checkbox" name="bands" value="Good Vibes"> Good Vibes<br>
+
+        <!-- type = radio -->
+        <p>Please select your favorite city :</p>
+        <input type="radio" name="city" value="LA"> Los Angeles<br>
+        <input type="radio" name="city" value="NY"> New York City<br>
+        <input type="radio" name="city" value="Londen"> London<br>
+        <input type="radio" name="city" value="Vic"> Victoria<br>
+        <input type="radio" name="city" value="Teh"> Tehran<br>
+
+        <!-- select-option_Menue Drop Down -->
+        <p>Please select your salary range :</p>
+        <select>
+            <option value="1">Under 30,000</option>
+            <option value="1">30,000-50,000</option>
+            <option value="1">50,000-80,000</option>
+            <option value="1">80,000-100,000</option>
+            <option value="1">100,000</option>
+        </select>
+    </form>
+    
+</body>
+</html>
