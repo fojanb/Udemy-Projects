@@ -1,0 +1,3 @@
+
+Store name : mybitzone
+theme configure --password=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 --store=mybitzone.myshopify.com --themeid=117044216000
