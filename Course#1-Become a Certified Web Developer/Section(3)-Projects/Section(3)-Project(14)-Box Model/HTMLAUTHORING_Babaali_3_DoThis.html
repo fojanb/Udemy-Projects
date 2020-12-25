@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boxes</title>
+    <style>
+        body{
+            font-family:serif;
+            font-size: 1.1em;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+            width:800px;
+            float: left;
+            justify-content: space-evenly;
+            background-color: cornsilk;
+            padding-top:20px; 
+            padding-bottom:10px;   
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        #col1{
+            width: 500px;
+            padding-right: 25px;
+        }
+        #col2{
+            width: 500px;
+            padding-left: 25px;  
+        }
+        img{
+            border: 20px solid rgb(103, 247, 168);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="col1">
+            <img src="img1.jpg" width="200px" height="100px" alt="Lion"/>
+            <h3>Lion</h3>
+            <p> 
+                The lion (Panthera leo) is a species in the family Felidae 
+                and a member of the genus Panthera. It has a muscular,
+                deep-chested body, short, rounded head, round ears, and 
+                a hairy tuft at the end of its tail. It is sexually dimorphic;
+                adult male lions have a prominent mane. With a typical head-to-body
+                length of 184–208 cm (72–82 in) they are larger than females at 160–184
+                cm (63–72 in). It is a social species, forming groups called prides.
+                A lion pride consists of a few adult males, related females and cubs.
+                Groups of female lions usually hunt together, preying mostly on large ungulates.
+                The lion is an apex and keystone predator; although some lions scavenge when
+                opportunities occur and have been known to hunt humans, the species typically 
+                does not.
+            </p>
+        </div><!--col1-->
+        <div id="col2">
+            <img src="img2.jpg" width="200px" height="100px" alt="Lion"/>
+            <h3>Giraffe</h3>
+            <p> 
+                The giraffe (Giraffa) is an African artiodactyl mammal, the tallest living
+                terrestrial animal and the largest ruminant. It is traditionally considered
+                to be one species, Giraffa camelopardalis, with nine subspecies. However,
+                the existence of up to eight extant giraffe species has been described, 
+                based upon research into the mitochondrial and nuclear DNA, as well as 
+                morphological measurements of Giraffa. Seven other species are extinct,
+                prehistoric species known from fossils.
+
+                 The giraffe's chief distinguishing characteristics are its extremely long neck
+                and legs, its horn-like ossicones, and its distinctive coat patterns. 
+                It is classified under the family Giraffidae, along with its closest
+                extant relative, the okapi. Its scattered range extends from Chad in
+                the north to South Africa in the south, and from Niger in the west
+                to Somalia in the east. Giraffes usually inhabit savannahs and woodlands.
+                Their food source is leaves, fruits and flowers of woody plants, 
+                primarily acacia species, which they browse at heights most other
+                herbivores cannot reach.
+            </p>
+        </div><!--col2-->
+    </div><!--container-->
+</body>
+</html>
