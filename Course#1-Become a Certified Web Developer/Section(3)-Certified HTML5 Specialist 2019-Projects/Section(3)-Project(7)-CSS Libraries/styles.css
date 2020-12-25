@@ -1,0 +1,16 @@
+.DivStyle{
+    border: 20mm;
+    border-radius: 10pt;
+    background-color: rgb(212, 231, 248);
+    margin: 50px;
+    padding: 20px;
+    
+}
+.SpanStyle{
+    border: 20mm;
+    border-radius: 10pt;
+    background-color: rgb(255, 255, 255);
+    margin: 50px;
+    padding: 20px;
+    text-align: center;
+}
