@@ -1,0 +1,3 @@
+
+Assets, Configs and Locales Cheatsheet's Link: https://shopify.dev/tutorials/develop-theme-files#assets
+
