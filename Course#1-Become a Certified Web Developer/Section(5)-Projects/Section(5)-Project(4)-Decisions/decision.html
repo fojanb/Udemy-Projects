@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var grade=prompt('Type your grade :');
+        switch (grade) {
+                case"A" :
+                case"a" :
+                document.getElementById('output').innerHTML="<h2>Great job!</h2>";
+                break;
+                case"B" :
+                case"b" :
+                document.getElementById('output').innerHTML="<h2>Good job! Almost there</h2>";
+                break;
+                case"C" :
+                case"c" :
+                document.getElementById('output').innerHTML="<h2>You are passed</h2>";
+                break;
+                case"D" :
+                case"d" :
+                document.getElementById('output').innerHTML="<h2>not good</h2>";
+                break;
+                case"F" :
+                case"f" :
+                document.getElementById('output').innerHTML="<h2>Failed</h2>";
+        }
+
+
+    </script>
+    
+</body>
+</html>
