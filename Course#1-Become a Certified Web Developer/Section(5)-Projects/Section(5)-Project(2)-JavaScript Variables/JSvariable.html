@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS-Variables</title>
 </head>
 <body>
+    <div id="out"></div>
     <script>
-        var age = 40; //Integer,Positive
+        var age = 29; //Integer,Positive
         var status = -10; //Integer,Negative
         var gpa = 3.45; //Floating point
 
-        alert("Mark is "+ age + " years old"); 
+        var output ="";
+        output += "Age:"+ age;
+        output += "<br/>";
+        output += "Status:"+ status;
+        output += "<br/>";
+        output += "GPA:"+ gpa;
+        var fullname= "Fojan Babaali";
+
+        document.getElementById('out').innerHTML= fullname + <br/> + output;
+
+        // alert("Mark is "+ age + " years old"); 
     </script>
     
 </body>
