@@ -1,0 +1,44 @@
+body{
+font-family: "Jost", sans-serif;
+font-size: 1.6rem;
+color:#4c4f52;
+background-color:#f9fbfc;
+margin: 50px;
+padding:50px;}
+
+    body p{
+        color: black;
+    }
+
+#fontstyel h5{
+    font-style: italic;
+    font-weight: bolder;
+    color:#4c4f52;}
+
+.box-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width:50%;
+    background-color:#eeeeee;
+    padding: 40px;
+    margin-right: 20px;}
+
+.box-5{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    background-color: #eeeeee;
+    margin-left: 20px ;
+    padding:40px;
+   
+    width:50%;}
+
+#article_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}
+
