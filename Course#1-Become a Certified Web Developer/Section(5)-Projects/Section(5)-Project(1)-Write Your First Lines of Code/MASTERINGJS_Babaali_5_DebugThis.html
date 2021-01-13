@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Mad Lib</title>
+</head>
+<body>
+    <div id="out"></div>
+    <script>
+        var properName = prompt("Enter a proper name");
+        var verb = prompt("Enter a verb (past tense)");
+        var verb2 = prompt("Enter a second verb (past tense)");
+        var adj = prompt("Enter an adjective");
+        var adj2 = prompt("Enter another adjective");
+        var out = "Roses are Red. Violets are blue.<br>";
+
+        out += properName + " left town without wearing a shoe <br>";
+        out += properName + " " + verb + ".<br>";
+        out += "And " + properName + " " + verb2;
+        out += "<br> But I am "  + adj + " " + properName + " thought.<br>";
+        out += "And kind of " + adj2 + " too!";
+
+    document.getElementById('out').innerHTML = out;
+
+    </script>
+    
+</body>
+</html>
