@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+       
+        var location=prompt("In which city or town do you live?");
+        var age=prompt("How old are you?");
+        var pets=prompt("Do you have any pets?");
+        var food=prompt("What is your favorite food?");
+
+        var out = "This is my friend " + "name";
+        out+= "name" + " lives in " + location;
+        out+= "name" + " is " + age + " years old";
+        out+= "name" + " likes to eat "+ food;
+
+        document.getElementById('output').innerHTML= out;
+    </script>
+</body>
+</html>
