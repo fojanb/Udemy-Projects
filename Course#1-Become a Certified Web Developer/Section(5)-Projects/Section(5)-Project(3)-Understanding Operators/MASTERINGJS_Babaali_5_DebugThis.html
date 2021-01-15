@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Debug Me</title>
+ </head>
+ <body>
+    <p>Click the button to display the results.</p>
+    <button onclick="myFunction()">Try it</button>
+    
+    <div id='output'></div>
+    <script>
+        function myFunction(){
+            var x = 25.55;
+            var y = 19.232;
+
+            var add = (x + y);
+            var mod = (x % y);
+
+            var out ="";//out is a string(null for now)
+            out += x + "+" + y + "=" + add;
+            out += "<br/>";
+            out += x + "%" + y + "="+ mod;
+
+            document.getElementById('output').innerHTML = out;
+        }
+    </script>
+
+ </body>
+</html>
