@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Lab #2</title>
+</head>
+<body>
+    <div id="out"></div>
+    <script>
+        var name1 = "Tom";
+        var name2 = "Bob";
+        var name3 = "Mary";
+        var name4 = "Caitlyn";
+        var name5 = "Red";
+        var name6 = "Douglas";
+        var name7 = "Judy";
+        var name8 = "Susan";
+        // -----------
+        var result="";
+        // -----------
+        var separator="";
+       
+        while (separator!="-"){
+            var separator =prompt('Enter dash:');
+            if(separator!= "-"){
+                alert('not accepted separator.Please try again');}
+            else{
+                result=name1+separator+name2+separator+name3+separator+
+                name4+separator+name5+separator+name6+separator+name7+separator+name8;
+                }
+        } //end of while
+        
+        var num=parseInt(prompt('Enter a number :'));
+        var add=0;
+        var add=add+num;
+        var add1=add+10;
+        var add2=add+20;
+        var add3=add+50;
+        var add4=add+1568;
+        
+        document.getElementById('out').innerHTML=result+"<br>"+
+        "Your number is: "+add+"<br>"+
+        "Your number added by 10: "+add1+"<br>"+
+        "Your number added by 20: "+add2+"<br>"+
+        "Your number added by 50: "+add3+"<br>"+
+        "Your number added by 1568: "+add4+"<br>";
+        
+        
+        
+
+    </script>
+</body>
+</html>
