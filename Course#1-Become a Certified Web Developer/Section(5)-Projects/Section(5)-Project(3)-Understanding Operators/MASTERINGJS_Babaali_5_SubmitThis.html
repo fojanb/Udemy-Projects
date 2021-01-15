@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Operators</title>
+</head>
+<body>
+    <div id="res"></div><!--result-->
+    <div id="com"></div><!--compare if x=y-->
+    <div id="division"></div><!--division-->
+    <div id="sml"></div><!--compare if x<y-->
+    <script>
+        var oprand1=parseInt(prompt('Enter first number:'));
+        var oprand2=parseInt(prompt('Enter second number:'));
+
+        var sum=oprand1+oprand2;
+        var sub=oprand2-oprand1;
+        var mul=oprand1*oprand2;
+        //-------------------------------------*
+        if(oprand2==0){
+            document.getElementById('division').innerHTML="Devision is not applicable";
+        }
+        else{
+            var div=oprand1/oprand2;//Must oprand2 !=0
+        }
+        //-------------------------------------*
+        if(oprand2==oprand1){
+            document.getElementById('com').innerHTML="Oprnad1 is equal to oprand2";
+        }
+        else{
+            document.getElementById('com').innerHTML="Oprnad1 is not equal to oprand2";
+        }
+        //-------------------------------------*
+        if(oprand1<oprand2){
+            document.getElementById('sml').innerHTML="Oprand1 is smaller than oprand2";
+        }
+        else{
+            document.getElementById('sml').innerHTML="Oprand1 is not smaller than oprand2";
+
+        }
+        //-------------------------------------*
+        document.getElementById('res').innerHTML= "Sum is : "+sum+"<br>"+
+                                                  "Sub is: "+sub+"<br>"+
+                                                  "Mul is: "+mul+"<br>"+
+                                                  "Div is: "+div+"<br>";  
+
+    </script>
+    
+</body>
+</html>
