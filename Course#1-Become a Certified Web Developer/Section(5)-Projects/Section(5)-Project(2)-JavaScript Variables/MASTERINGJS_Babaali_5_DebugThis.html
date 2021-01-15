@@ -9,18 +9,19 @@
     <div id="output"></div>
     <script>
         
-        const name="Mark";
-        var location=prompt("In which city or town do you live?");
+        var nam="Mark";
+        var loc=prompt("In which city or town do you live?");
         var age=prompt("How old are you?");
         var pets=prompt("Do you have any pets?");
         var food=prompt("What is your favorite food?");
 
-        var out = "This is my friend " + name;
-        out+= name + " lives in " + location;
-        out+= name + " is " + age + " years old";
-        out+= name + " likes to eat "+ food;
 
-        document.getElementById('output').innerHTML= out;
+        var out = "This is my friend " +nam+"<br>";
+        out+= nam + " lives in " + loc +"<br>";
+        out+= nam + " is " + age + " years old"+"<br>";
+        out+= nam + " likes to eat "+ food;
+
+        document.getElementById('output').innerHTML="output is :" + out;
     </script>
 </body>
 </html>
