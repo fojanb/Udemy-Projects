@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>postfix and prefix decrements</title>
+</head>
+<body>
+    <div id="dec"></div>
+    <script>
+        var z=15;
+        z--;//z=14
+
+        document.getElementById('dec').innerHTML=z+"<br>";//output=14
+        document.getElementById('dec').innerHTML+= --z +"<br>";//output=13
+        document.getElementById('dec').innerHTML+= z-- +"<br>";//output=13
+        document.getElementById('dec').innerHTML+= z-- +"<br>";//output=12
+    </script>
+    
+</body>
+</html>
