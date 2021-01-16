@@ -1,24 +1,21 @@
 body{
     margin: 50px;
     padding: 25px;
-   
+    background-image: url(puppy.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
     font-family: "Jost", sans-serif;
     font-weight: 500;
     font-size: 20px;
+    color: whitesmoke;
 }
-/* #form-box{
-    display: flex;
-    flex-direction: column;
-    
-    
-} */
 .space{
     height: 20px;
 }
 form input{
     border-radius: 5px;
     padding: 10px;
-    background-color:rgb(187, 255, 255) 
+    background-color:rgb(187, 255, 215); 
 }
 select{
     padding: 10px;
@@ -27,21 +24,32 @@ button{
     padding: 10px;
     font-weight: 500;
     border-radius: 5px;
-    background-color: aquamarine;
+    background-color: rgb(187, 255, 215);
     cursor: pointer;
 }
 form button:hover{
     color: rgb(158, 146, 78);
 }
+#set{
+    display: flex;
+    flex-direction: row;
+    
+}
 
 #lable_box{
     display:flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 150px;
     height: 350px;
+    margin-right: 10px;
 }
 #input_box{
     display:flex;
     flex-direction: column;
     width: 200px;
+    height: 350px;
     justify-content: space-between;
+    margin-left: 10px;
 }
+
