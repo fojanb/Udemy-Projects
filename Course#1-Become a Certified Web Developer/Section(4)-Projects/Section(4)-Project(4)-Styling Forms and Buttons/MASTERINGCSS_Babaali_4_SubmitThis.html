@@ -13,37 +13,29 @@
 <body>
     
         <form action="#" method="post">
-            <div id="lable_box">
-                <div>
+            <div id="set">
+                <div id="lable_box">
                     <lable for="name">Owener's Name</lable>
-                    <input type="text" id="name" name="name">
-                </div>
-
-                <div>
                     <lable for="PhoneNumber">Cell</lable>
-                    <input type="tel" id="PhoneNumber" name="PhoneNumber">
-                </div>
-
-                <lable for="email">E-mail</lable>
-                <lable for="name">Puppy's Name</lable>
-                <lable for="bd">Birthdate</lable>
-                <lable for="breed">Breed</lable>
-            </div>
-          
-            <div class="space"></div>
-            <!-- ------------------------------------- -->
-            <div id="input_box">
-                
-                <input type="tel" id="PhoneNumber" name="PhoneNumber">
-                <input type="email" id="email" name="email">
-                <input type="text" id="name" name="name">
-                <input type="date" id="bd" name="bd">
-                <input type="text" id="breed" name="breed">
-            </div>
+                    <lable for="email">E-mail</lable>
+                    <lable for="name">Puppy's Name</lable>
+                    <lable for="bd">Birth of Date</lable>
+                    <lable for="breed">Breed</lable>
+                </div><!--lable_box-->
+                <!-- ------------------------------------- -->
+                <div id="input_box">
+                    <input type="text" id="name" name="name" placeholder="Name">
+                    <input type="tel" id="PhoneNumber" name="PhoneNumber" placeholder="Cell Number">
+                    <input type="email" id="email" name="email" placeholder="E-mail Address">
+                    <input type="text" id="name" name="name" placeholder="Puppy's Name">
+                    <input type="date" id="bd" name="bd" placeholder="Date of Birth">
+                    <input type="text" id="breed" name="breed" placeholder="Puppy's Breed">
+                </div><!--input_box-->
+            </div><!--set-->
             <!-- ------------------------------------- -->
             
             <div>
-                <p>Please select the vaccinations that your puppy got so far:</p>
+                <p>*Please select the vaccinations that your puppy got so far.</p>
                 <input type="checkbox">Parvo
                 <input type="checkbox">Distemper
                 <input type="checkbox">Rabies
@@ -51,7 +43,7 @@
             <div class="space"></div>
             <!-- ------------------------------------- -->
             <div>
-                <p>How did you hear about us? :</p>
+                <p>*How did you hear about us?</p>
                 <select>
                     <option value="1">Radio</option>
                     <option value="1">Driving by</option>
