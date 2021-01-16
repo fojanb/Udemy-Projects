@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Numbers</title>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        var number=parseInt(prompt('Please enter an integer number:'));
+
+        var mod=(number%2);
+
+        if(mod==0){
+            document.getElementById('output').innerHTML=number+" is an even number.";
+        }
+
+        else{
+           
+            document.getElementById('output').innerHTML=number+" isn't an even number.";
+        }
+    </script>
+    
+</body>
+</html>
