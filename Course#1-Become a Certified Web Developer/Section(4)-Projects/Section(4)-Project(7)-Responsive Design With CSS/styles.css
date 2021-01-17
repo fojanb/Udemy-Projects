@@ -2,13 +2,15 @@ body{
     background-color: #eee;
     font-size: 1.1rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
+  
 }
 .main{
     display: flex;
     flex-direction: column;
-    padding:20px;
-    margin: 100px;
+    padding:10px;
     margin-top: 50px;
+    margin-left:70px;
+    margin-right:70px;
 }
 article p{
     line-height: 1.6; /*recommended*/
@@ -16,4 +18,58 @@ article p{
 article img{
     border-radius: 10px;
 }
+ol{
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    padding: 50px;
+    margin-right:200px;
+    justify-content: space-between;
+    align-items: left;
+    font-weight: bold;
+}
+
+    ol a{text-decoration: none;}
+    ol a:hover{color: orange;}
+    
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-top:60px;
+    background-color: rgb(255, 255, 255);
+   
+}
+.art_div{
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    margin-bottom: 35px;
+    justify-content: space-between;
+    align-items: left;
+    width: 90%;
+}
+    .art_div h2,img,p{
+        padding:15px;
+    }
+    .art_div h2{
+        font-weight: bold;
+    }
+
+header{
+    display: flex;
+    flex-direction: row;
+    padding-left: 25px;
+    align-items: center;
+
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+    
+    
+}
+
  
