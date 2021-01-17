@@ -1,0 +1,19 @@
+body{
+    background-color: #eee;
+    font-size: 1.1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    margin: 100px;
+    margin-top: 50px;
+}
+article p{
+    line-height: 1.6; /*recommended*/
+}
+article img{
+    border-radius: 10px;
+}
+ 
