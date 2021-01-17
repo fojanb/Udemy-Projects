@@ -1,0 +1,104 @@
+body{
+    background-color: rgb(171, 92, 245);
+}
+#face{
+    display: flex;
+    flex-direction: column;
+    background-color: wheat;
+    border:50px solid wheat;
+    border-radius: 800px;
+    width:500px;
+    height: 500px;
+    position: absolute;
+    bottom: 50px;
+    right:500px;}
+        
+#rightEye{
+    display:flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border:50px solid whitesmoke;
+    border-radius: 50px;
+    width:1px;
+    position: absolute;
+    bottom:400px;
+    right:650px;
+    z-index: 1;}
+
+#leftEye{
+    display:flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border:50px solid whitesmoke;
+    border-radius: 50px;
+    width:1px;
+    position: absolute;
+    bottom:400px;
+    right:850px;
+    z-index: 1;}
+
+#nose{
+    display:flex;
+    flex-direction: column;
+    background-color:yellow;
+    border:20px solid yellow;
+    border-radius: 30px;
+    height: 150px;
+    width: 0px;
+    position: absolute;
+    bottom: 250px;
+    right: 778px;
+    z-index: 1;}
+
+#mouth{
+    display:flex;
+    flex-direction: row;
+    background-color: red;
+    border:20px solid red;
+    border-radius: 500px;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    bottom: 100px;
+    right: 685px;}
+
+#circle{
+    display:flex;
+    flex-direction: row;
+    background-color: wheat;
+    border:20px solid wheat;
+    border-radius: 500px;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    bottom: 200px;
+    right: 685px;
+    z-index: 0;}
+
+#rightEyeCore{
+    display:flex;
+    flex-direction: column;
+    background-color: black;
+    border:20px solid black;
+    border-radius: 20px;
+    width:1px;
+    position: absolute;
+    bottom:450px;
+    right:700px;
+    z-index:1;}
+
+#leftEyeCore{
+    display:flex;
+    flex-direction: column;
+    background-color:black;
+    border:20px solid black;
+    border-radius: 20px;
+    width:1px;
+    position: absolute;
+    bottom:450px;
+    right:900px;
+    z-index: 1;}
+
+
+
+
