@@ -1,24 +1,17 @@
 body{
     background-color: #eee;
     font-size: 1.1rem;
-    font-family: 'PT Sans', sans-serif;
-
-}
+    font-family: 'PT Sans', sans-serif;}
+/* ------------------------------- */
 .main{
     display: flex;
-    flex-direction: column;
-    padding:10px;
-    margin-top: 50px;
-    margin-left:70px;
-    margin-right:70px;
-}
-  
+    flex-direction: column;}
+/* ------------------------------- */
 article p{
-    line-height: 1.6; /*recommended*/
-}
+    line-height: 1.6; /*recommended*/}
 article img{
-    border-radius: 10px;
-}
+    border-radius: 10px;}
+/* ------------------------------- */
 ol{
     display: flex;
     flex-direction: row;
@@ -27,12 +20,11 @@ ol{
     margin-right:200px;
     justify-content: space-between;
     align-items: left;
-    font-weight: bold;
-}
+    font-weight: bold;}
 
     ol a{text-decoration: none;}
     ol a:hover{color: orange;}
-    
+/* ------------------------------- */
 footer{
     display: flex;
     flex-direction: row;
@@ -45,7 +37,7 @@ footer{
     @media only screen and (max-width: 768px) {
         footer{
             
-           
+  
             margin-bottom: 0px;
           
           
@@ -57,9 +49,7 @@ footer{
             
         }
     }
-    
-    
-
+/* ------------------------------- */
 .art_div{
     display: flex;
     flex-direction: column;
@@ -67,22 +57,24 @@ footer{
     margin-bottom: 35px;
     justify-content: space-between;
     align-items: left;
-    width: 90%;
-}
-    .art_div h2,img,p{
-        padding:15px;
-    }
-    .art_div h2{
-        font-weight: bold;
-    }
+    width: 90%;}
 
+    .art_div h2,img,p{
+        padding:15px;}
+    .art_div h2{
+        font-weight: bold;}
+/* ------------------------------- */
 header{
     display: flex;
     flex-direction: row;
-    padding-left: 25px;
-    align-items: center;
+    justify-content: center;
+    align-items: center;}
 
-}
+    @media only screen and (max-width:768px){
+        header img{
+            width:661px;
+            height: 200px;}}
+            
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 768px) {
     section{
