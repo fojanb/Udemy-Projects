@@ -1,16 +1,37 @@
 body{
     background-color: #eee;
     font-size: 1.1rem;
-    font-family: 'PT Sans', sans-serif;}    
+    font-family: 'PT Sans', sans-serif;
+    }  
+    
+    @media only screen and (max-width:425px){
+        body{
+            
+            margin-right: 100px;
+        }}
+
 /* ------------------------------- */
 .main{
     display: flex;
     flex-direction: row;
-    padding-left: 25px;}
+    padding-left: 25px;
+}
 
     @media only screen and (max-width: 768px){
         .main{
             flex-wrap: wrap;}}
+
+    @media only screen and (max-width:425px){
+        .main{
+            margin: 0px;
+            justify-content: center;
+          
+           
+           
+        }
+    }
+
+
 /* ------------------------------- */
 article p{
     line-height: 1.6; /*recommended*/}
@@ -20,10 +41,6 @@ article img{
 ol{
     display: flex;
     flex-direction: row;
-    width: 250px;
-    padding: 50px;
-    padding-left: 150px;
-    margin-right:200px;
     justify-content: space-between;
     align-items: left;
     font-weight: bold;}
@@ -41,17 +58,26 @@ footer{
     /* margin-top:60px; */
     background-color: #eee;}
 
+    @media only screen and (max-width: 1024px) {
+        footer hr{
+         display: none;}}
+
     @media only screen and (max-width: 768px) {
         footer{
             margin-bottom: 0px;
             width:661px;
             height: 200px; 
             background-color:#eee;
-            margin-left: 100px;}}
+            /* margin-left: 100px;*/}} 
 
-    @media only screen and (max-width: 1024px) {
-        footer hr{
-         display: none;}}
+    @media only screen and (max-width:425px){
+        footer{
+            margin-bottom: 0px;
+            width:400px;
+            height: 200px; 
+            background-color:#eee;
+            margin-left: 0px;
+            font-size: 0.7rem;}}
 /* ------------------------------- */
 .art_div{
     display: flex;
@@ -67,9 +93,12 @@ footer{
     .art_div h2{
         font-weight: bold;}
 
-    @media only screen and (max-width:1024px){
-        .art_div{
-           font-size: 0.9rem;}}
+@media only screen and (max-width:425px){
+    .art_div{
+        /* float: left; */
+        font-size: 0.7rem;
+    }
+}
 /* ------------------------------- */
 header{
     display: flex;
@@ -81,6 +110,13 @@ header{
         header img{
             width:661px;
             height: 200px;}}
+
+    @media only screen and (min-width:425px){
+        header img{
+            width:1200px;
+            height: 220px;
+            margin-right: 0px;
+        }}
 
 
 
