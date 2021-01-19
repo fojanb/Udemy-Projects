@@ -1,0 +1,23 @@
+body{
+    background-color: #eee;
+    font-size: 1.1rem;
+    font-family: 'PT Sans', sans-serif;
+}
+/* ------------------------------------------- */
+#main{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 50px;}
+
+    #main img{
+        margin-top: 50px;
+        width: 200px;
+        height: 100px;
+    }
+    #main img:hover{
+        transform: rotate(90deg);
+    }
+    #main p{
+        font-weight: bold;
+    }
+/* ------------------------------------------- */
