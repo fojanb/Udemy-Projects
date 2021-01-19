@@ -1,0 +1,167 @@
+#sky{
+    background-color: rgb(174, 240, 245);
+    width: 500px;
+    height: 300px;
+    animation: sky 5s infinite;
+}
+@keyframes sky {
+    0% {
+    background:rgb(80, 1, 1);
+    width: 500px;
+    height: 300px;
+    
+    }
+    33% {
+    background: rgb(80, 5, 5); /*Night sky*/
+    width: 500px;
+    height: 300px;
+    }
+    40%{
+    background: rgb(65, 16, 1); /*Night sky*/
+    width: 500px;
+    height: 300px;
+    }
+
+    45%{
+    background: rgb(39, 10, 1); /*Night sky*/
+    width: 500px;
+    height: 300px;
+    }
+
+    50%{
+    background: rgb(1, 1, 39); /*Night sky*/
+    width: 500px;
+    height: 300px;
+    }
+
+    66% {
+    background: pink;
+    width: 500px;
+    height: 300px;
+    }
+
+    100%{
+    background-color: rgb(174, 240, 245);
+    width: 500px;
+    height: 300px;
+    }
+}
+/* ---------------------------------------------- */
+#sun{
+    background-color: yellow;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    animation: sun 5s infinite;
+}
+@keyframes sun {
+    0% {
+    background:rgb(255, 102, 0);
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    }
+    33% {
+    background: rgb(245, 212, 66); 
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: relative;
+    bottom:-170px; /*Sun is close to ground*/
+    }
+
+    35%{
+    background: rgb(245, 212, 66); 
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: relative;
+    bottom:-145px;
+    }
+    40%{
+    background: rgb(245, 212, 66); 
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: relative;
+    bottom:-140px;
+    }
+    45%{
+    background: rgb(245, 212, 66); 
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: relative;
+    bottom:-135px;
+    }
+    50%{
+    background: rgb(245, 212, 66); 
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: relative;
+    bottom:-130px;
+    }
+    52%{
+    background: rgb(245, 212, 66); 
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: relative;
+    bottom:-125px;
+    }
+    55%{
+    background: rgb(245, 212, 66); 
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: relative;
+    bottom:-120px;
+    }   
+    60%{
+    background: rgb(245, 212, 66); 
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: relative;
+    bottom:-100px;
+    }  
+    62%{
+    background: rgb(245, 212, 66); 
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: relative;
+    bottom:-80px;
+    } 
+    64%{
+    background: rgb(245, 212, 66); 
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: relative;
+    bottom:0px;
+    }         
+    66% {
+    background: rgb(248, 246, 110);
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    }
+    100% {
+    background:yellow;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    }
+}
+
+/* ---------------------------------------------- */
+#ground{
+    background-color: rgb(31, 146, 40);
+    width:500px;
+    height: 100px;
+    position: relative;
+    bottom: -120px;
+
+}
