@@ -7,27 +7,14 @@
 </head>
 <body>
     <div id="output"></div>
-
     <script>
-        var index=100;
-        
-    //     for (let index = 100; index <= 0; index--) {
-    //        out+=index;
-    //        out+="<br>";
-           
-          
-    //   }
-      
-      
-        while (index>=0) {
-           
-           
-           document.getElementById('output')=index;
-           index--;
-            
+        var x = 100;
+        while(x >= 0)
+        {
+        document.getElementById("output").innerHTML += x+"<br>";
+        x--;
         }
         
-    </script>
-    
+    </script>      
 </body>
 </html>
