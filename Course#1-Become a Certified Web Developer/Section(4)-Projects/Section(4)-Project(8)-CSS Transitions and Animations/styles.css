@@ -9,6 +9,7 @@ body{
     flex-direction: column;
     padding: 50px 50px;}
 /* ------------------------------------------- */
+/* <!-- Rotate: --> */
 #division_1 img{
     margin-top: 50px;
     width: 200px;
@@ -21,6 +22,7 @@ body{
     font-weight: bold;
 }
 /* ------------------------------------------- */
+/* <!-- Skew: --> */
 #division_2 img{
     margin-top: 50px;
     width: 200px;
@@ -45,6 +47,7 @@ body{
     font-weight: bold;
 }
 /* ------------------------------------------- */
+/* <!-- Scale: --> */
 #division_4 img{
     margin-top: 50px;
     width: 200px;
@@ -54,6 +57,19 @@ body{
     transform: scale(2,3);
 }
 #division_4 p{
+    font-weight: bold;
+}
+/* ------------------------------------------- */
+/* <!-- Translate --> */
+#division_5 img{
+    margin-top: 50px;
+    width: 200px;
+    height: 100px;
+}
+#division_5 img:hover{
+    transform: translate(20px,10px);
+}
+#division_5 p{
     font-weight: bold;
 }
 
