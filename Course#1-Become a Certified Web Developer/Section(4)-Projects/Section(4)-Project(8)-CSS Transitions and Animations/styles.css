@@ -8,16 +8,52 @@ body{
     display: flex;
     flex-direction: column;
     padding: 50px 50px;}
-
-    #main img{
-        margin-top: 50px;
-        width: 200px;
-        height: 100px;
-    }
-    #main img:hover{
-        transform: rotate(90deg);
-    }
-    #main p{
-        font-weight: bold;
-    }
 /* ------------------------------------------- */
+#division_1 img{
+    margin-top: 50px;
+    width: 200px;
+    height: 100px;
+}
+#division_1 img:hover{
+    transform: rotate(90deg);
+}
+#division_1 p{
+    font-weight: bold;
+}
+/* ------------------------------------------- */
+#division_2 img{
+    margin-top: 50px;
+    width: 200px;
+    height: 100px;
+}
+#division_2 img:hover{
+    transform: skew(15deg,15deg);
+}
+#division_2 p{
+    font-weight: bold;
+}
+/* ------------------------------------------- */
+#division_3 img{
+    margin-top: 50px;
+    width: 200px;
+    height: 100px;
+}
+#division_3 h1:hover{
+    transform: skew(15deg,15deg);
+}
+#division_3 p{
+    font-weight: bold;
+}
+/* ------------------------------------------- */
+#division_4 img{
+    margin-top: 50px;
+    width: 200px;
+    height: 100px;
+}
+#division_4 img:hover{
+    transform: scale(2,3);
+}
+#division_4 p{
+    font-weight: bold;
+}
+
