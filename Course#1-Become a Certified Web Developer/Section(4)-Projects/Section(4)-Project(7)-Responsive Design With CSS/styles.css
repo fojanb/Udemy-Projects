@@ -2,13 +2,14 @@ body{
     background-color: #eee;
     font-size: 1.1rem;
     font-family: 'PT Sans', sans-serif;
+    margin-bottom: 100px;
     }  
     
-    @media only screen and (max-width:425px){
+    /* @media only screen and (max-width:425px){
         body{
             
             margin-right: 100px;
-        }}
+        }} */
 
 /* ------------------------------- */
 .main{
@@ -117,6 +118,10 @@ header{
             height: 220px;
             margin-right: 0px;
         }}
+
+#space{
+    height: 200px;
+}
 
 
 
