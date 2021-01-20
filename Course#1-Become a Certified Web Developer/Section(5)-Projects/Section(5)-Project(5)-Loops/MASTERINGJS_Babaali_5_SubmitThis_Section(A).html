@@ -4,33 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patterns</title>
+    <style>
+        body{
+            background-color: #eeeeee;
+        }
+        #pattern-1{
+            margin: 20px 30px;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: blue;
+        }
+        #pattern-2{
+            margin: 20px 30px;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(202, 19, 34);
+        }
+
+    </style>
 </head>
 <body>
-    <div id="output"></div>
+    <div id="pattern-1"><p>Pattern Number 1 :</p></div>
+    <div id="pattern-2"><p>Pattern Number 2 :</p></div>
+    <br>
     <script>
-        var i;//Row index
-        var j;//Column index
+        // ------------------Pattern #1-----------------------
+        var i;//Row index//Also t
+        var j;//Column index//Also k
         var a = "";
+        var b = "";
       
         for (let j = 1; j <= 2; j++) {//10 Columns
             for (let i= 1; i <= 5; i++) {//20 Rows
                 a += "*";
-                document.getElementById('output').innerHTML += a +"<br>";
+                document.getElementById('pattern-1').innerHTML += a +"<br>";
                
             }  
         }
 
-        for (let j = 1; j <= 2; j++) {//10 Columns
-            for (let i= 1; i <= 5; i++) {//20 Rows
-                a << 5;
-                document.getElementById('output').innerHTML += a +"<br>";
+        b+="**********";
+        for (let k = 1; k <= 5; k++) {//10 Columns
+            for (let t= 1; t <= 2; t++) {//20 Rows
+                b = b.substring(0,b.length-1);
+                document.getElementById('pattern-1').innerHTML += b +"<br>";
                
             }  
         }
-
-        
-   
+        // ------------------Pattern #2-----------------------
+        var c = "";
+        for (let d = 1; d <= 4; d++) {
+                c +="*-*-*-*-*-*-";
+                document.getElementById('pattern-2').innerHTML += c +"<br>";
+                c=""; 
+            }
     </script>
-    
 </body>
 </html>
