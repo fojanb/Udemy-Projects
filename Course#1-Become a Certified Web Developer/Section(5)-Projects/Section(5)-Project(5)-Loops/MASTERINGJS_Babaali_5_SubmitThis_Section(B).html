@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Maker</title>
+    <style>
+        body{
+            background-color: #eeeeee;
+        }
+        #output{
+            margin: 30px 50px;
+            font-size: large;
+            font-weight: bold;
+            color: red;
+        }
+            #output p{
+                color: black;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+    </style>
+</head>
+<body>
+    <div id="output"><p>Your matrix is ready !</p></div>
+    <script>
+        var row=parseInt(prompt('Enter the number of row:'));
+        var col=parseInt(prompt('Enter the number of column:'));
+        var mat = "";
+    
+        for (let i = 1; i <= row; i++) {
+            for (let j = 1; j <= col; j++) {
+               document.getElementById('output').innerHTML += mat + "*";
+            }
+            document.getElementById('output').innerHTML += "<br>";    
+        }
+    </script>
+</body>
+</html>
