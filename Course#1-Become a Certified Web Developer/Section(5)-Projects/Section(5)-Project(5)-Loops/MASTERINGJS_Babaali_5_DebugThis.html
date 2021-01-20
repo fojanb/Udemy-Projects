@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var from = parseInt(prompt('Where do you want to start counting?'));
+        var stopp = parseInt(prompt('Where do you want to stop counting?'));
+        //Forward Counting:
+        if (from<stopp) {
+            for(let i = from; i < stopp + 1; i++)
+            {
+            document.getElementById('output').innerHTML += i +
+            "<br/>";
+            }   
+        }
+        //No counting will happen: 
+        if (from==stopp) {
+            document.getElementById('output').innerHTML="no counting";
+   
+        }
+        //Backward Counting:
+        if (from>stopp) {
+            for(let i = from; i > stopp - 1; i--)
+            {
+            document.getElementById('output').innerHTML += i +
+            "<br/>";
+            }  
+        }
+    </script>
+</body>
+</html>
