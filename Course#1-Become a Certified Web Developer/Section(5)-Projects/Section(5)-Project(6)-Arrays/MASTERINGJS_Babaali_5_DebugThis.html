@@ -8,26 +8,24 @@
 <body>
     <div id='output'></div>
     <script>
+        var gpas = [3.4, 3.12, 3.333, 2.5, 1.9, 3.94, 2.1, 4, 3.11];
 
-    var gpas = [3.4, 3.12, 3.333, 2.5, 1.9, 3.94, 2.1, 4, 3.11];
+        var out = "<h2>Class GPAs</h2>";
+        var total = 0;
+        var average=0;
+        var length = gpas.length;
+        //---------------------------------
+        for(let i=0; i < gpas.length; i++)
+        {
+            out += gpas[i];
+            document.getElementById('output').innerHTML=out;
+            out += "<br/>";
+            total += gpas[i];
+        }
 
-    var out = "<h2>Class GPAs</h2>";
-    var total = 0;
-    var average=0;
-    var length = gpas.length;
-    //---------------------------------
-    for(let i=0; i < gpas.length; i++)
-    {
-        out += gpas[i];
-        document.getElementById('output').innerHTML=out;
-        out += "<br/>";
-        total += gpas[i];
-    }
-
-    average += (total/(gpas.length));
-    out += "Class Average GPA:" + average;
-    document.getElementById('output').innerHTML = out;
-
+        average += (total/(gpas.length));
+        out += "Class Average GPA:" + average;
+        document.getElementById('output').innerHTML = out;
     </script>
 </body>
 </html>
