@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <div id="array"></div>
+    <script>
+        var a =["Fojan","Mani","Nima","Paul"];
+        var i = 0;//index
+        //Output each member of the array:
+        while (i<a.length) {
+            document.getElementById('array').innerHTML += a[i] +"<br>";
+            i++;
+        }
+        //Access an index-value that doesn’t exist in array.
+        //The result would be "Undefined" :
+        document.getElementById('array').innerHTML=a[7];
+        
+        //Access the array by name without an index.
+        //The result would be the whole array's elements :
+        document.getElementById('array').innerHTML=a;
+
+        
+    </script>
+    
+</body>
+</html>
