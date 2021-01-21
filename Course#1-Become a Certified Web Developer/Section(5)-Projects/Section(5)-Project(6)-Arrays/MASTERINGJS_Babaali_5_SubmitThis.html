@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit GPA</title>
+    <style>
+        body{
+            margin: 50px 50px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div id="gpa"></div>
+    <div id="sort"></div>
+    <div id="average"></div>
+    <div id="Max_GPA"></div>
+    <div id="Min_GPA"></div>
+    <div id="out"></div>
+    <script>
+        var gpas = [];
+        var theGpa = "";
+        var out="";
+        var total=0;
+        var average=0;
+        var outs="";
+
+        while (theGpa != "XXX")
+        {
+            theGpa = prompt('Enter GPA or XXX to Stop');
+        
+            if(theGpa != "XXX"){
+            gpas.push(theGpa);//Building the gpas array
+            }//If Statement
+        }//While Loop
+
+        for(let x = 0; x < gpas.length; x++)
+        {
+            out+=gpas[x];
+            if (x!= (gpas.length-1)) {
+                out+="<br>";
+            }//If Statement
+        }//For Loop-All of the "gpas" array's elements went to "out".
+
+        document.getElementById('gpa').innerHTML+="<h3>Class GPAs :</h3>"+out;
+        document.getElementById('sort').innerHTML="<h3>Sort GPAs in descending order :</h3>"+gpas.sort(function(a, b){return b-a});
+
+        for (let x = 0; x < gpas.length; x++) {
+                total+=parseInt(gpas[x]);
+            
+        }//For Loop
+        average += (total/(gpas.length));
+        document.getElementById('average').innerHTML+="<h3>The average of GPAs :</h3>"+average;
+
+        gpas.sort(function(a, b){return b-a});
+        document.getElementById('Max_GPA').innerHTML="<h3>Highest GPA in Class:</h3>"+gpas[0];
+        document.getElementById('Min_GPA').innerHTML="<h3>Lowest GPA in Class:</h3>"+gpas[gpas.length-1];
+
+        //Finding outstanding GPAs:
+        var i=0;
+        while (i<gpas.length) {
+            if (gpas[i]>=3.4) {
+                outs+=gpas[i];
+                outs+="<br>";  
+            }//If
+            i++; 
+        }//While
+        document.getElementById('out').innerHTML+="<h3>Outstanding GPAs in Class:</h3>"+ outs;
+    </script>
+</body>
+</html>
