@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal</title>
+</head>
+<body>
+    <div id="bird-div"></div>
+    <script src="animal.js"></script>
+
+    <script>
+        var bird = new Animal('mammel', '200', 'red', 'true', '12', 'Jik Jik');
+        document.getElementById('bird-div').innerHTML = bird.breathe();
+    </script>
+    
+</body>
+</html>
