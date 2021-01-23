@@ -6,16 +6,15 @@
     <title>Bank Model-Class</title>
 </head>
 <body>
-    <div id="bank"></div>
+    <div id="client-1"></div><!--A logical devision for JavaScript outputs.-->
+    <script src="main.js"></script><!--Importing external JavaScript file-->
+
     <script>
-       
-        var bank1 = new Bank("02150","$20,000","25/2/2020","Active");
-        bank1.OpenAccount();
+        var client1 = new Bank('12345','$200','Student Account','20.3.2020','Active');
+        document.getElementById('client-1').innerHTML = client1.CloseAccount();
       
-
-
     </script>
-    <script src="main.js"></script>
+    
     
 </body>
 </html>
