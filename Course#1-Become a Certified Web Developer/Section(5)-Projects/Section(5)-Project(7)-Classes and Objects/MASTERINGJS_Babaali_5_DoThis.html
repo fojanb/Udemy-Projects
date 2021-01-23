@@ -7,11 +7,11 @@
 </head>
 <body>
     <div id="client-1"></div><!--A logical devision for JavaScript outputs.-->
-    <script src="main.js"></script><!--Importing external JavaScript file-->
+    <script src="main.js"></script><!--Importing external JavaScript file_Should come first-->
 
     <script>
-        var client1 = new Bank('12345','$200','Student Account','20.3.2020','Active');
-        document.getElementById('client-1').innerHTML = client1.CloseAccount();
+        var client1 = new Bank('12345','200000','Student Account','20.3.2020','Active');
+        document.getElementById('client-1').innerHTML = client1.Debit();
       
     </script>
     
