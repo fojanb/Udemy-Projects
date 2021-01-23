@@ -14,7 +14,7 @@ class Bank {
         this.Debit();//Method#4     
     };//End of the constructor
 
-        // --------------------Methods Definition-------------
+    // --------------------Methods Definition-------------
     OpeningAccount(){
             return this.OpeningDate;
         };//End of Method#1
