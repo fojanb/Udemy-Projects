@@ -18,7 +18,6 @@ class Animal {
     };//End of method#1
    
     breathe(){
-   
         return `${this.type} is breathing`;
     }//End of method#2
    
