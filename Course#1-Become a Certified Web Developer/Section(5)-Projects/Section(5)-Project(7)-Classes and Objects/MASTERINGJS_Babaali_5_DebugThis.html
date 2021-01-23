@@ -10,8 +10,9 @@
     <script src="animal.js"></script>
 
     <script>
-        var bird = new Animal('mammel', '200', 'red', 'true', '12', 'Jik Jik');
-        document.getElementById('bird-div').innerHTML = bird.breathe();
+        var bird = new Animal('Mammel', '200', 'red', 'true', '12', 'koo Koo');
+        document.getElementById('bird-div').innerHTML = bird.makeSound()+"<br>"+
+                                                        bird.breathe();
     </script>
     
 </body>
