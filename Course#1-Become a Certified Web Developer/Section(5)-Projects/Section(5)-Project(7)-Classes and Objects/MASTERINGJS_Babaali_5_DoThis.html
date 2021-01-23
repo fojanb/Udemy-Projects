@@ -9,16 +9,18 @@
     <div id="client-1-properties"></div><!--A logical devision for JavaScript outputs.-->
     <div id="client-1-methods"></div><!--A logical devision for JavaScript outputs.-->
 
-    <script src="main.js"></script><!--Importing external JavaScript file_Should come first-->
+    <script src="bank.js"></script><!--Importing external JavaScript file_Should come first-->
 
     <script>
         var client1 = new Bank('12345','200000','Student Account','20.3.2020','Active');
+        //Let's print out properties:
         document.getElementById('client-1-properties').innerHTML = "<h3>Object's Properties (client-1)</h3>"+
                                                         "Account Number: "+client1.AccountNumber+"<br>"+
                                                         "Blanace: "+client1.Balance+"<br>"+
                                                         "Account Type: "+client1.AccountType+"<br>"+
                                                         "Opening Date: "+client1.OpeningDate+"<br>"+
                                                         "Account Status: "+client1.AccountStatus;
+        //Let's print out methods:
         document.getElementById('client-1-methods').innerHTML = "<hr><h3>Object's Methods(client-1)</h3>"+
                                                         "Date of Opening: "+client1.OpeningAccount()+"<br>"+
                                                         "Account Status: "+client1.CloseAccount()+"<br>"+
