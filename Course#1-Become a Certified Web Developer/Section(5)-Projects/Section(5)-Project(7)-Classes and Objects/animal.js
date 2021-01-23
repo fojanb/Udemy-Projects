@@ -8,17 +8,18 @@ class Animal {
         this.length = length;
         this.soundItMakes = soundItMakes;
         //------------------Methods-----------------
-        this.makeSound();
-        this.breathe();
+        this.makeSound();//Method#1
+        this.breathe();//Method#2
     };//End of the constructor
+
     //---------------------Methods Definition-----------------
     makeSound(){
-    return this.soundItMakes;
-    };
+        return `${this.soundItMakes}`;
+    };//End of method#1
    
     breathe(){
    
-    return `${this.type} is breathing`;
-    }
+        return `${this.type} is breathing`;
+    }//End of method#2
    
 }
