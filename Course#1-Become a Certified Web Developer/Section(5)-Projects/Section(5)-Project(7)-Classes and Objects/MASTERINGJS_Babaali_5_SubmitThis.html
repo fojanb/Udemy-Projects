@@ -4,14 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: center;      
+        }
+    </style>
 </head>
 <body>
     <div id="player-1"></div>
-    <script src="player.js"></script>
+    <div id="player-1-failed"></div>
+    <div id="moveToLeft"></div>
+    <div id="moveToRight"></div>
+    <div id="moveToUp"></div>
+    <div id="moveToDown"></div>
+    <div id="player-1-gameOver"></div>
 
+    <!-- ----------------------------- -->
+    <table>
+        <tr>
+            <th>(1,1)</th>
+            <th>(1,2)</th>
+            <th>(1,3)</th>
+            <th>(1,4)</th>
+            <th>(1,5)</th>
+            <th>(1,6)</th>
+            <th>(1,7)</th>
+            <th>(1,8)</th>
+            <th>(1,9)</th>
+        </tr>
+        <tr>
+            <th>(2,1)</th>
+            <th>(2,2)</th>
+            <th>(2,3)</th>
+            <th>(2,4)</th>
+            <th>(2,5)</th>
+            <th>(2,6)</th>
+            <th>(2,7)</th>
+            <th>(2,8)</th>
+            <th>(2,9)</th>
+        </tr>
+        <tr>
+            <th>(3,1)</th>
+            <th>(3,2)</th>
+            <th>(3,3)</th>
+            <th>(3,4)</th>
+            <th>(3,5)</th>
+            <th>(3,6)</th>
+            <th>(3,7)</th>
+            <th>(3,8)</th>
+            <th>(3,9)</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+      </table>
+
+
+
+
+
+    
+    <script src="player.js"></script>
     <script>
+ 
         var player1 = new Player('Foj','0','1','2',"3","3");
-        document.getElementById('player-1').innerHTML= "HI"+ player1.score;
+        document.getElementById('player-1').innerHTML= player1.get();
+
     </script>
 </body>
 </html>
