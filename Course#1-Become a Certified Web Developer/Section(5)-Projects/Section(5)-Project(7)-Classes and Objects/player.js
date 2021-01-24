@@ -41,7 +41,7 @@ class Player{
                     if(this.gridLocationX<0){
                         document.getElementById('moveToLeft').innerHTML= 'You are out of game board.';
                     }
-                    else{document.getElementById('moveToLeft').innerHTML= 'You moved to the left. Your new location is: '+'<br>'+'X= '+this.gridLocationX+"<br>"+'Y= '+this.gridLocationY;}
+                        else{document.getElementById('moveToLeft').innerHTML= 'You moved to the left. Your new location is: '+'<br>'+'X= '+this.gridLocationX+"<br>"+'Y= '+this.gridLocationY;}
                     break;
                 case "R":
                 case "r":   
@@ -58,7 +58,6 @@ class Player{
                         document.getElementById('moveToUp').innerHTML= 'You are out of game board.';
                     }
                         else{document.getElementById('moveToUp').innerHTML= 'You moved to the up. Your new location is: '+'<br>'+'X= '+this.gridLocationX+"<br>"+'Y= '+this.gridLocationY;}
-                   
                     break;
                 case "D":
                 case "d":
@@ -75,42 +74,5 @@ class Player{
             
           
     };//End of method
-
-    // moveLeft()
-    //         {
-    //             this.gridLocationX=this.gridLocationX-1;
-    //             document.getElementById('moveToLeft').innerHTML= this.gridLocationX;
-    //         }
-            
-
-    // moveRight(_gridLocationX,_gridLocationY)
-    //         {
-    //             this.gridLocationY+=1;
-    //             document.getElementById('moveToRight').innerHTML= this.gridLocationY;
-    //         }
-    
-
-
-    // die(_gridLocationX,_gridLocationY){
-       
-                    
-                
-    //     }
-        
-       
-
-    //     moveRight(){
-    //         this.gridLocationX+=1;
-    //         return this.gridLocationX;   
-    //     };
-
-    //     moveUp(){
-    //         this.gridLocationY+=1;
-    //         return this.gridLocationY;
-    //     };
-    //     moveDown(){
-    //         this.gridLocationY-=1;
-    //         return this.gridLocationY;
-    //     }
 
 }//End of class
