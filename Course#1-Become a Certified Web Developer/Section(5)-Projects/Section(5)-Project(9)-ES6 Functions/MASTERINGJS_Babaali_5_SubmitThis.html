@@ -6,8 +6,8 @@
     <title>My To-Dos</title>
 </head>
 <body>
-    <div id="output"></div>
     <div id="title"></div>
+    <div id="output"></div>
 
     <script>
         // Global vars
@@ -16,34 +16,28 @@
         var toDoList=[];
         const ITEMS = 10;
         
+        // ------------------------------------
+        function todo(){
+            document.getElementById('title').innerHTML="<h1>TO-DO :</h1>";
+        };//End of Function
         
-        // function todo(...params){
-        //     for (let index = 0; index < params.length; index++) {
-        //         list[index] = params;
-        //         document.getElementById('output').innerHTML=list[index] + "<br>";
-                
-        //     }
-            
-        // };
         // ------------------------------------
         function addTodos(...params){
-            document.getElementById('title').innerHTML="<h1>TO-DO :</h1>";
-
             for (let j = 0; j < params.length; j++) {
                 document.getElementById('output').innerHTML=params[j];
-                
-            }
-        }//End of Function
+            }//end of for loop
+        };//End of Function
 
+        // ------------------------------------
         while (x < ITEMS){
             var item = prompt('Enter items:');
             toDoList.push(item);//Building the toDoList array
             x++;
-        }//While Loop
+        };//While Loop
 
+        // -----------Call Functions-------------------------
+        todo();
         addTodos(toDoList);
-        
     </script>
-    
 </body>
 </html>
