@@ -3,38 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Function Notation in JavaScript</title>
+    <title>Function Notations in JavaScript</title>
 </head>
 <body>
     <div id="output1"></div>
     <div id="output2"></div>
+    <div id="output3"></div>
+    <div id="output4"></div>
 
     <script>
         //Function Notation no.1 :
         function greeting1(name){
             document.getElementById('output1').innerHTML="Function Notattion No.1 Output :Hello "+ name;
-
         }
-        let name1 = prompt('Please Enter Your Name :');
+        let name1 = prompt('Please First Name :');
         greeting1(name1);
-        // -------------------------------
+
+        // ---------------Anonymous Functions-------------
         //Function Notation no.2 => Anonymous Functions :
         let name2 = function(name2){
-            var name2 = prompt('Enter a Name :')
-
-            document.getElementById('output2').innerHTML="Function Notattion No.2 Output :Hello "+ name2;
-
-
+            var name2 = prompt('Enter Second Name :');
+            document.getElementById('output2').innerHTML="Anonymous Function Notattion No.2 Output :Hello "+ name2;
         }
         name2(name2);
 
+        // ---------------Lambda Functions----------------
+        //Function Notation no.3 => Lambda Functions :
+        let greetings = (Name) => ('Hello, ' + Name);
+
+        var name3 = prompt('Enter Third Name :');
+        document.getElementById('output3').innerHTML="Lambda Function Notattion No.3 Output :"+ greetings(name3);
         
-
-        
-
-
-
-    </script>
+        // ----------Functions Constructor----------------
+        //Function Notation no.4 => Functions Constructor :
+        let hi = new Function("Name4", "return ('Greetings to '+ Name4)");
+        var name4 = prompt('Enter Forth Name :');
+        document.getElementById('output4').innerHTML="Function Constructor Notattion No.4 Output :"+ hi(name4);
     
+    </script>
 </body>
 </html>
