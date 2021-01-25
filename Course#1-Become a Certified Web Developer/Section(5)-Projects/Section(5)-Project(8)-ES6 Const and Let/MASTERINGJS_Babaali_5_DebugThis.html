@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug This</title>
+</head>
+<body>
+    <div id="out"></div>
+
+    <script>
+    let output = "";//Global Variable
+
+    function init(){
+        let factor = 3;//Local Variable-for loop scope
+        const maxValue = 100;//Local Variable-for loop scope
+        const minValue = 0;//Local Variable-for loop scope
+        for(let x = maxValue; x > minValue; x--){
+            if(x % factor == 0){
+                output += x;
+                output += "<br/>";
+                }//End of if 
+            }//End of for loop
+
+        document.getElementById("out").innerHTML = "Factors of " + factor + ':<br/>';
+        document.getElementById("out").innerHTML += output;
+
+    }//End of init
+    init();
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
