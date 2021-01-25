@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator-Using Let and Const</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        //Global Variables:
+        let num1=parseInt(prompt('Enter the first number:'));
+        let num2=parseInt(prompt('Enter the second number:'));
+        const op=prompt('Enter operation (+,*,-,/) :');
+        let res=0;
+        function showResult(){
+        switch(op){
+            case "+":res=num1+num2;
+            break;
+
+            case"*":res=num2*num1;
+            break;
+
+            case"-":res=num1-num2;
+            break;
+
+            case"/":res=num1/num2;
+                
+            }//End of switch
+            document.getElementById('result').innerHTML=num1+" "+op+" "+num2+" "+"= "+res;
+        }//End of function
+        showResult();
+
+
+    </script>
+</body>
+</html>
