@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Dos</title>
+</head>
+<body>
+    <div id="output"></div>
+    <div id="title"></div>
+
+    <script>
+        // Global vars
+        var list = [];
+        var x = 0;
+        var toDoList=[];
+        const ITEMS = 10;
+        
+        
+        // function todo(...params){
+        //     for (let index = 0; index < params.length; index++) {
+        //         list[index] = params;
+        //         document.getElementById('output').innerHTML=list[index] + "<br>";
+                
+        //     }
+            
+        // };
+        // ------------------------------------
+        function addTodos(...params){
+            document.getElementById('title').innerHTML="<h1>TO-DO :</h1>";
+
+            for (let j = 0; j < params.length; j++) {
+                document.getElementById('output').innerHTML=params[j];
+                
+            }
+        }//End of Function
+
+        while (x < ITEMS){
+            var item = prompt('Enter items:');
+            toDoList.push(item);//Building the toDoList array
+            x++;
+        }//While Loop
+
+        addTodos(toDoList);
+        
+    </script>
+    
+</body>
+</html>
