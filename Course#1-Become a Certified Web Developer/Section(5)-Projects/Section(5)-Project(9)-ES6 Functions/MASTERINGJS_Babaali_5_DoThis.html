@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Notation in JavaScript</title>
+</head>
+<body>
+    <div id="output1"></div>
+    <div id="output2"></div>
+
+    <script>
+        //Function Notation no.1 :
+        function greeting1(name){
+            document.getElementById('output1').innerHTML="Function Notattion No.1 Output :Hello "+ name;
+
+        }
+        let name1 = prompt('Please Enter Your Name :');
+        greeting1(name1);
+        // -------------------------------
+        //Function Notation no.2 => Anonymous Functions :
+        let name2 = function(name2){
+            var name2 = prompt('Enter a Name :')
+
+            document.getElementById('output2').innerHTML="Function Notattion No.2 Output :Hello "+ name2;
+
+
+        }
+        name2(name2);
+
+        
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>
