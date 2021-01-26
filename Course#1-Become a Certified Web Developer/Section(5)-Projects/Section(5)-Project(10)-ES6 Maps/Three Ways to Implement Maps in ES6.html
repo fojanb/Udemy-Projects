@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps in ES6_Three Different Ways Implementation </title>
+</head>
+<body>
+    <script>
+        // #1
+        let team = new Map();
+        team.set("Player_1","Mike");
+        team.set("Player_2","Milo");
+        team.set("Player_3","Joan");
+        team.set("Player_4","Mark");
+        team.set("Player_5","Carol");
+        // alert(team.get("Player_1"));
+
+        // #2
+        let music = new Map();
+        music.set('Blues','Mike').set('Jazz','Milo').set('Classic','Joan')
+             .set('Pop','Mark');
+        // alert(music.get('Jazz'));
+
+        // #3
+        let family = new Map([['mother','Jessy'],
+                              ['father','Jack'],
+                              ['brother','Nikk'],
+                              ['sister','Nicole'],
+                              ['grandpa','Peter']]);
+        alert(family.get('mother'));
+    </script>
+</body>
+</html>
