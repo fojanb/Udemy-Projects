@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets in ES6_Three Different Ways Implementation</title>
+</head>
+<body>
+    <script>
+        // #1
+        let songs = new Set();
+        songs.add("Hello Girl");
+        songs.add("Sunshine");
+        songs.add("the Love");
+        songs.add("Some one like you");
+
+        // #2 - Chaining
+        let colors = new Set();
+        colors.add('blue').add('red').add('green').add('yellow');
+
+        // #3
+        let words = new Set(['hi','one','no']);
+// ---------------------------------------------------------------------------
+        if (songs.has('the Love')) {
+            alert('the Love is present');  
+        }
+        if (colors.has('red')) {
+            alert('red is present');  
+        }
+        if (words.has('hi')) {
+            alert('hi is present');  
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
