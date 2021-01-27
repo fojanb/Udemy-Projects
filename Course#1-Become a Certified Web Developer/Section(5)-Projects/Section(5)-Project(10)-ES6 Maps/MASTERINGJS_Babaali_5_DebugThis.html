@@ -22,18 +22,18 @@
     <div id="result"></div><!--This logical devision is reserved for JS outputs-->
 
     <script>
-        const ADDBUTTON = document.getElementById('btnToAddToMap').innerHTML;
-        const DISPLAYBUTTON = document.getElementById('btnDisplayMap').innerHTML;
+        const ADDBUTTON = document.getElementById('btnToAddToMap');
+        const DISPLAYBUTTON = document.getElementById('btnDisplayMap');
 
         let grades = new Map(); //grades is an object from Map class.
 
         ADDBUTTON.onclick = function(){//onclick is a DOM Events.ADDBUTTON function
             // won't be render before onclick happened.
-            var name = document.getElementById('name').innerHTML;
-            var grade = document.getElementById('numericalGrade').innerHTML;
-            grades.set(name.key, grade.value);
-            // name.value = '';
-            // grade.value = '';
+            const name = document.getElementById('name');
+            const grade = document.getElementById('numericalGrade');
+            grades.set(name.value, grade.value);
+            name.value = '';
+            grade.value = '';
 
         };
 
