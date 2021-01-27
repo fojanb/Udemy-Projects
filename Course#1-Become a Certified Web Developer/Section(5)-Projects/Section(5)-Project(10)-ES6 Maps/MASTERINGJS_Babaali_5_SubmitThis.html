@@ -45,12 +45,20 @@
         <input type="text" id="name" /><br/>
         <!-- ----------- -->
         <label for="task">Task</label>
-        <input type="text" id="task"/><br/>
+        
+        <select id="task">
+            <option value="Front Room Sweep">Front Room Sweep</option>
+            <option value="Back Room Sweep">Back Room Sweep</option>
+            <option value="Outside Grounds">Outside Grounds</option>
+            <option value="Clean Toilet">Clean Toilet</option>
+            <option value="Clean Sink">Clean Sink</option>
+            <option value="Trash Patrol and Supplies">Trash Patrol and Supplies</option>
+        </select>
     </div><!--container-->
 
     <div id="btn-style">
         <button id="btnToAddToMap">Add</button>
-        <button id="btnDisplayMap">Display Database</button>
+        <button id="btnDisplayMap">Display</button>
     </div><!--btn-style-->
 
     <div id="result"></div><!--This logical devision is reserved for JS's outputs-->
@@ -59,21 +67,20 @@
         const ADDBUTTON = document.getElementById('btnToAddToMap');
         const DISPLAYBUTTON = document.getElementById('btnDisplayMap');
 
-        let grades = new Map(); //grades is an object from Map class.
+        let tasks = new Map(); //grades is an object from Map class.
 
         ADDBUTTON.onclick = function(){//onclick is a DOM Events.ADDBUTTON function
             // won't be render before onclick happened.
+            const task = document.getElementById('task');
             const name = document.getElementById('name');
-            const grade = document.getElementById('numericalGrade');
-            grades.set(name.value, grade.value);
+            tasks.set(task.value,name.value);
+            task.value = '';
             name.value = '';
-            grade.value = '';
-
         };
 
         DISPLAYBUTTON.onclick = function(){//onclick is a DOM Events.
             let out= '';
-            for(let x of grades.entries())
+            for(let x of tasks.entries())
             {
                 out += x[0] + ': '+ x[1];
                 out += '<br/>';
