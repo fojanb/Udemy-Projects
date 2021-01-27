@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campers-Chores</title>
+    <style>
+        body{
+            background-color:#eee;
+            margin: 50px 50px;
+            padding: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif\;
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            width:200px;
+        }
+        button{
+            margin: 10px;
+            padding: 5px;
+            border-radius: 10px;
+            background-color: rgb(190, 230, 248);
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+            button:hover{
+                color:coral;
+            }
+        h1{
+            padding-left: 30px;
+        }
+        #btn-style{
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Please enter the camper's name and his task :</h1>
+
+    <div id="container">
+        <label for="name">Name</label>
+        <input type="text" id="name" /><br/>
+        <!-- ----------- -->
+        <label for="task">Task</label>
+        <input type="text" id="task"/><br/>
+    </div><!--container-->
+
+    <div id="btn-style">
+        <button id="btnToAddToMap">Add</button>
+        <button id="btnDisplayMap">Display Database</button>
+    </div><!--btn-style-->
+
+    <div id="result"></div><!--This logical devision is reserved for JS's outputs-->
+
+    <script>
+        const ADDBUTTON = document.getElementById('btnToAddToMap');
+        const DISPLAYBUTTON = document.getElementById('btnDisplayMap');
+
+        let grades = new Map(); //grades is an object from Map class.
+
+        ADDBUTTON.onclick = function(){//onclick is a DOM Events.ADDBUTTON function
+            // won't be render before onclick happened.
+            const name = document.getElementById('name');
+            const grade = document.getElementById('numericalGrade');
+            grades.set(name.value, grade.value);
+            name.value = '';
+            grade.value = '';
+
+        };
+
+        DISPLAYBUTTON.onclick = function(){//onclick is a DOM Events.
+            let out= '';
+            for(let x of grades.entries())
+            {
+                out += x[0] + ': '+ x[1];
+                out += '<br/>';
+            }
+            document.getElementById('result').innerHTML += out;
+        }
+    </script>
+</body>
+</html>
+
+<!-- HTML DOM in this code :
+onclick()
+document.getElementById()
+-->
+
+
+
