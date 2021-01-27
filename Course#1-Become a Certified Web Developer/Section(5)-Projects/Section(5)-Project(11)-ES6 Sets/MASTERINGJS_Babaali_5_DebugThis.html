@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average</title>
+</head>
+<body>
+    <div id="scores"></div>
+    <div id="average"></div>
+    <script>
+        let sum = 0;
+        let grades = new Set([85,67,23,91,63,88,78,71,75,82,92,80]);
+
+        for (let grade of grades.entries())
+        {
+            sum += grade[0];
+            document.getElementById('scores').innerHTML += grade[0] + ' ';
+        }
+
+        let average = sum/grades.size;
+        document.getElementById('average').innerHTML = 'Average:'+ average;
+    </script>
+</body>
+</html>
