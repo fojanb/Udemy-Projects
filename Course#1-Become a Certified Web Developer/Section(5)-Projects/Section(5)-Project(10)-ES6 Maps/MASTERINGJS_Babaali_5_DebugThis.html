@@ -4,20 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Map Exercise</title>
-</head>
+    <style>
+        body{
+            background-color:#eee;
+            margin: 50px 50px;
+            padding: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif\;
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            width:200px;
+        }
+        button{
+            margin: 10px;
+            padding: 5px;
+            border-radius: 10px;
+            background-color: rgb(190, 230, 248);
+            font-weight: bold;
 
+        }
+        h1{
+            padding-left: 30px;
+        }
+        #btn-style{
+            padding-left: 20px;
+        }
+    </style>
+</head>
 <body>
     <h1>Add to the Map</h1>
 
-    <label for="name">Name</label>
-    <input type="text" id="name" /><br/>
+    <div id="container">
+        <label for="name">Name</label>
+        <input type="text" id="name" /><br/>
+        <!-- ----------- -->
+        <label for="numericalGrade">Grade</label>
+        <input type="number" min="0" max="100"
+        id="numericalGrade"/><br/>
+    </div><!--container-->
 
-    <label for="numericalGrade">Grade</label>
-    <input type="number" min="0" max="100"
-    id="numericalGrade"/><br/>
-
-    <button id="btnToAddToMap">Add to Map Object</button>
-    <button id="btnDisplayMap">Display Map</button>
+    <div id="btn-style">
+        <button id="btnToAddToMap">Add to Map Object</button>
+        <button id="btnDisplayMap">Display Map</button>
+    </div><!--btn-style-->
 
     <div id="result"></div><!--This logical devision is reserved for JS outputs-->
 
@@ -49,6 +80,11 @@
     </script>
 </body>
 </html>
+
+<!-- HTML DOM in this code :
+onclick()
+document.getElementById()
+-->
 
 
 
