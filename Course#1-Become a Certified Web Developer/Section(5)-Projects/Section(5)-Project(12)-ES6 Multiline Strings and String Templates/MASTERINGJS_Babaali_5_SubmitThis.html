@@ -4,40 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madd Libs Game</title>
+    <style>
+        body{
+            background-color: #eee;
+            margin: 50px 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .btn{
+            background-color: rgb(145, 217, 245);
+            border-radius: 10px;
+            font-weight: bold;  
+        }
+        button:hover{
+            color: rgb(233, 218, 177);
+            cursor: pointer;
+        }
+
+
+    </style>
 </head>
 <body>
-    <label for="A">A piece of Clothing</label>
-    <input type="text" id="A" name="A">
+    <h1>Please start Mad Libs :</h1>
     <br><br>
-    <label for="B">Part of Body</label>
-    <input type="text" id="B" name="B">
+    <label for="a">A piece of Clothing</label>
+    <input type="text" id="a" name="a">
     <br><br>
-    <label for="C">Part of Body</label>
-    <input type="text" id="C" name="C">
+    <label for="b">Part of Body</label>
+    <input type="text" id="b" name="b">
     <br><br>
-    <label for="D">Verb Base Form</label>
-    <input type="text" id="D" name="D">
+    <label for="c">Part of Body</label>
+    <input type="text" id="c" name="c">
     <br><br>
-    <label for="E">Part of Body</label>
-    <input type="text" id="E" name="E">
+    <label for="d">Verb Base Form</label>
+    <input type="text" id="d" name="d">
     <br><br>
-    <label for="F">Verb Base Form</label>
-    <input type="text" id="F" name="F">
+    <label for="e">Part of Body</label>
+    <input type="text" id="e" name="e">
     <br><br>
-    <label for="G">Noun Plural</label>
-    <input type="text" id="G" name="G">
+    <label for="f">Verb Base Form</label>
+    <input type="text" id="f" name="f">
     <br><br>
-    <label for="H">Noun Plural</label>
-    <input type="text" id="H" name="H">
+    <label for="g">Noun Plural</label>
+    <input type="text" id="g" name="g">
     <br><br>
-    <label for="I">Verb Base Form</label>
-    <input type="text" id="I" name="I">
+    <label for="h">Noun Plural</label>
+    <input type="text" id="h" name="h">
     <br><br>
-    <button id="addbtn">Submit</button>
-    <button id="showbtn">Lib it</button>
+    <label for="i">Verb Base Form</label>
+    <input type="text" id="i" name="i">
+    <br><br>
+    <button id="addbtn" class="btn">Submit</button>
+    <button id="showbtn"class="btn">Lib it</button>
+    <br><br>
+   
+    <div id="out"></div>
 
     <script>
+        const ADDBUTTON = document.getElementById('addbtn');
+        const SHOWBUTTON = document.getElementById('showbtn');
+
+        let libs = new Array(); //lib is an object from Array class.
         
+        ADDBUTTON.onclick = function(){//onclick is a DOM Events.ADDBUTTON function
+            // won't be render before onclick happened.
+            var A = document.getElementById('a');//will be placed index 0 of libs array
+            var B = document.getElementById('b');//will be placed index 1 of libs array
+            var C = document.getElementById('c');//will be placed index 2 of libs array
+            var D = document.getElementById('d');//will be placed index 3 of libs array
+            var E = document.getElementById('e');//will be placed index 4 of libs array
+            var F = document.getElementById('f');//will be placed index 5 of libs array
+            var G = document.getElementById('g');//will be placed index 6 of libs array
+            var H = document.getElementById('h');//will be placed index 7 of libs array
+            var I = document.getElementById('i');//will be placed index 8 of libs array
+
+            libs.push(A.value,B.value,C.value,D.value,E.value,F.value,G.value,H.value,I.value);
+      
+        };//function
+
+        SHOWBUTTON.onclick = function(){//onclick is a DOM Events.
+            let out= '';
+            let x = 0;
+                out += `How to do The Floss Dance<br>
+                        1 ) Put on some music<br>
+                        2 ) Put on a ,<strong>${libs[x]}</strong><br>
+                        3 ) Stand with your <strong>${libs[x+1]}</strong> ever so slightly bent<br>
+                        4 ) Put your hands in fists<br>
+                        5 ) Place your <strong>${libs[x+2]}</strong>, relaxed, at the side of your body<br>
+                        6 ) Begin to <strong>${libs[x+3]}</strong> your <strong>${libs[x+4]}</strong> left and right around your torso in the<br>
+                            opposite direction to your hips<br>
+                        7 ) Keep doing it and increase speed and <strong>${libs[x+5]}</strong> <strong>${libs[x+6]}</strong> occasionally for<br>
+                            effect After building confidence, you can also <strong>${libs[x+7]}</strong> <strong>${libs[x+8]}</strong> with your arms if desired,<br>
+                            but this is not mandatory.`;
+                out += '<br/>';
+            
+            document.getElementById('out').innerHTML +=`<h3>The Mad Libs you created:</h3> <br> ${out}`;
+        }//function
 
 
     </script>
