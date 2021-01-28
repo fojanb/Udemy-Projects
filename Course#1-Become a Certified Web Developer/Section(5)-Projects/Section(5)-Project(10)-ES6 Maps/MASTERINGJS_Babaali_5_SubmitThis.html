@@ -71,8 +71,8 @@
 
         ADDBUTTON.onclick = function(){//onclick is a DOM Events.ADDBUTTON function
             // won't be render before onclick happened.
-            const task = document.getElementById('task');
-            const name = document.getElementById('name');
+            const task = document.getElementById('task');//Key
+            const name = document.getElementById('name');//Value
             tasks.set(task.value,name.value);
             task.value = '';
             name.value = '';
