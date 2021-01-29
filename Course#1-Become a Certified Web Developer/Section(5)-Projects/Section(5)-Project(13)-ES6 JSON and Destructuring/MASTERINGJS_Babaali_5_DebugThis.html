@@ -7,33 +7,38 @@
 </head>
 <body>
     <script>
+        //Complex object(catalog)
         let catalog = {
-                "artists": [
-                    { "name":"Journey",
-                    "hits":[ "Faithfully",
-                    "Only the Young",
-                    "Dont Stop Believing" ] 
+                artists: [
+                    { name:"Journey",
+                      hits:["Faithfully",
+                            "Only the Young",
+                            "Dont Stop Believing" ] 
                     },//Child object#1
 
-                    { "name":"REO Speedwagon",
-                    "hits":[ "Keep On Loving You",
-                    "Time for Me to Fly",
-                    "Cant Fight This Feeling" ] 
+                    { name:"REO Speedwagon",
+                      hits:[ "Keep On Loving You",
+                             "Time for Me to Fly",
+                             "Cant Fight This Feeling" ] 
                     },//Child object#2
 
-                    { "name":"Styx",
-                    "hits":[ "Come Sail Away",
-                    "Mr. Roboto",
-                    "Blue Collar Man"] 
+                    { name:"Styx",
+                      hits:[ "Come Sail Away",
+                             "Mr. Roboto",
+                             "Blue Collar Man"] 
                     }//Child object#3
 
                 ]//End of artists(artists is an array of objects:[{},{},{}])
         };//End of parent object
+       
+        // let { hits } = catalog.artists[i];
+        for (let i = 0; i < 4; i++){
+            for(let j = 0 ; j < 4; j++){
+                console.log(catalog.artists[i].hits[j]);
         
-        let { hits } = catalog.artists[x];
-        for(let x=0 ; x<hits.length; x++){
-         console.log(catalog.artists[x].hits[x]);
+            }
         }
+        
         </script>
 </body>
 </html>
