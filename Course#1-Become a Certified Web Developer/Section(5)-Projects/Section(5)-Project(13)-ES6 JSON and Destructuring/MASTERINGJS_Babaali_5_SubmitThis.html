@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit This</title>
-
     <style>
+        body{
+            background-color: #eee;
+        }
         table{
             border:1px solid black;
             border-collapse: collapse;
             font-family:monospace;
             font-size:large;
             background-color: rgb(202, 255, 228);
-           
-
+            margin: 60px 60px;
         }
         tr,th,td{
             border:5px solid rgb(116, 255, 169);
@@ -28,16 +29,30 @@
     <div>
         <table>
             <tr>
-                <th>first name</th><th>last name</th><th>date of birth</th><th>languages</th>
+            <th>first name</th><th>last name</th><th>date of birth</th><th>languages</th>
             </tr>
           
             <tr>
-                 <td id=fname></td><td id=lname></td><td id=dob></td> <td id=langs></td>
+            <td id=fname-0></td><td id=lname-0></td><td id=dob-0></td><td id=langs-0></td>
+            </tr>
+
+            <tr>
+            <td id=fname-1></td><td id=lname-1></td><td id=dob-1></td><td id=langs-1></td>
+            </tr>
+
+            <tr>
+            <td id=fname-2></td><td id=lname-2></td><td id=dob-2></td><td id=langs-2></td>
+            </tr>
+
+            <tr>
+            <td id=fname-3></td><td id=lname-3></td><td id=dob-3></td><td id=langs-3></td>
             </tr>
 
         </table>
 
     </div>
+
+    <div id="m"></div>
     <script>
         //object:
         var userList = {
@@ -81,11 +96,33 @@
         };//End of object
 
        //console.log(userList.people[3].spokenLanguages.native);
-    for (let i = 0; i < userList.people.length; i++) {
+       
+            document.getElementById('fname-0').innerHTML=userList.people[0].firstName;
+            document.getElementById('lname-0').innerHTML=userList.people[0].lastName;
+            document.getElementById('dob-0').innerHTML=userList.people[0].dateOfBirth;
+            document.getElementById('langs-0').innerHTML=`${userList.people[0].spokenLanguages.native},
+                                                          ${userList.people[0].spokenLanguages.fluent},
+                                                          ${userList.people[0].spokenLanguages.intermediate}`;
+           
+            document.getElementById('fname-1').innerHTML=userList.people[1].firstName;
+            document.getElementById('lname-1').innerHTML=userList.people[1].lastName;
+            document.getElementById('dob-1').innerHTML=userList.people[1].dateOfBirth;
+            document.getElementById('langs-1').innerHTML=`${userList.people[1].spokenLanguages.native},
+                                                          ${userList.people[1].spokenLanguages.fluent},
+                                                          ${userList.people[1].spokenLanguages.intermediate}`;
+       
+            document.getElementById('fname-2').innerHTML=userList.people[2].firstName;
+            document.getElementById('lname-2').innerHTML=userList.people[2].lastName;
+            document.getElementById('dob-2').innerHTML=userList.people[2].dateOfBirth;
+            document.getElementById('langs-2').innerHTML=`${userList.people[2].spokenLanguages.native},
+                                                          ${userList.people[2].spokenLanguages.fluent}`;
 
-       document.getElementById('fname').innerHTML=userList.people[i].firstName;       
-       document.getElementById('lname').innerHTML=userList.people[i].lasttName;
-    }
+            document.getElementById('fname-3').innerHTML=userList.people[3].firstName;
+            document.getElementById('lname-3').innerHTML=userList.people[3].lastName;
+            document.getElementById('dob-3').innerHTML=userList.people[3].dateOfBirth;
+            document.getElementById('langs-3').innerHTML=`${userList.people[3].spokenLanguages.native},
+                                                          ${userList.people[3].spokenLanguages.fluent},
+                                                          ${userList.people[3].spokenLanguages.intermediate}`;
 
     </script>
 </body>
