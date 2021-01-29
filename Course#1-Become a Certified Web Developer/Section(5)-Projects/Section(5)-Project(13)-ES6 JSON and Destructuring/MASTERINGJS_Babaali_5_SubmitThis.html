@@ -4,15 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit This</title>
+
+    <style>
+        table{
+            border:1px solid black;
+            border-collapse: collapse;
+            font-family:monospace;
+            font-size:large;
+            background-color: rgb(202, 255, 228);
+           
+
+        }
+        tr,th,td{
+            border:5px solid rgb(116, 255, 169);
+            padding: 8px;
+        }
+        th{
+            font-weight: bolder;
+        }
+    </style>
 </head>
 <body>
     <div>
+        <table>
+            <tr>
+                <th>first name</th><th>last name</th><th>date of birth</th><th>languages</th>
+            </tr>
+          
+            <tr>
+                 <td id=fname></td><td id=lname></td><td id=dob></td> <td id=langs></td>
+            </tr>
 
-
-
-
-
-
+        </table>
 
     </div>
     <script>
@@ -57,14 +80,13 @@
             ]//End of people (JSON)
         };//End of object
 
-        console.log(userList.people[3].spokenLanguages.native);
-        
-        // for (let i = 0; i < 4; i++){
-        //     for(let j = 0 ; j < 4; j++){
-        //         console.log(catalog.artists[i].hits[j]);
-        
-        //     }
-        // }
+       //console.log(userList.people[3].spokenLanguages.native);
+    for (let i = 0; i < userList.people.length; i++) {
+
+       document.getElementById('fname').innerHTML=userList.people[i].firstName;       
+       document.getElementById('lname').innerHTML=userList.people[i].lasttName;
+    }
+
     </script>
 </body>
 </html>
