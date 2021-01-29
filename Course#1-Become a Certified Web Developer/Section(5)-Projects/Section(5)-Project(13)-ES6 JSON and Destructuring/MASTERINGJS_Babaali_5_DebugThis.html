@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let catalog = {
+                "artists": [
+                    { "name":"Journey",
+                    "hits":[ "Faithfully",
+                    "Only the Young",
+                    "Dont Stop Believing" ] 
+                    },//Child object#1
+
+                    { "name":"REO Speedwagon",
+                    "hits":[ "Keep On Loving You",
+                    "Time for Me to Fly",
+                    "Cant Fight This Feeling" ] 
+                    },//Child object#2
+
+                    { "name":"Styx",
+                    "hits":[ "Come Sail Away",
+                    "Mr. Roboto",
+                    "Blue Collar Man"] 
+                    }//Child object#3
+
+                ]//End of artists(artists is an array of objects:[{},{},{}])
+        };//End of parent object
+        
+        let { hits } = catalog.artists[x];
+        for(let x=0 ; x<hits.length; x++){
+         console.log(catalog.artists[x].hits[x]);
+        }
+        </script>
+</body>
+</html>
