@@ -1,13 +1,8 @@
-# Udemy_Projects
-**Course#2-Intro to Shopify Development and Customization with Liquid: 
-Learn How to Create Shopify Stores like the Professionals.
-**
+# Shopify
+
 _______________________________________________________________________________________
 
-Instructor : Working With Shopify 
-_______________________________________________________________________________________
-
-In this course you will learn:
+In this repository you will learn:
 
 	1. Why Shopify is so Popular?
 
