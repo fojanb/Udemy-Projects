@@ -1,24 +1,14 @@
-import logo from './logo.svg';
+//App.js is our react component (Function Component)
+
 import './App.css';
 
-function App() {
+function App(props) { //Function Component
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="person">
+      <h3>Name: {props.name}</h3>
+      <p>Age : {props.age}</p>
     </div>
+    
   );
 }
 
