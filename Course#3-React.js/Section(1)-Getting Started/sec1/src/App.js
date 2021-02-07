@@ -10,11 +10,10 @@ class App extends Component { //Class Component
     return (
       <div className="app">
         <h1>Hi, I am a react app</h1>
-        <Person/>
-        <Person/>
-        <Person/>
-        <Person/>
-        <Person/>
+        <Person name="Mike" age="40"/>
+        <Person name="Anna" age="51"/>
+        <Person name="Nikkie" age="28"/>
+       
 
       </div>
     );
