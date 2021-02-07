@@ -5,16 +5,25 @@ import Person from "./components/Person";
 
 //----------------------Class Component :---------------------------
 class App extends Component { //Class Component
+  state={ //State is an JS object
+    persons:[ //persons is array of objects (JSON format)
+      {name:'Mike' , age:20},
+      {name:'Jenny', age:32},
+      {name:'Niel' , age:40}
+    ]
+  };
+  eventHandler = () =>{
+    console.log('You clicked the button!');
+  }
   render() {
     //Method #1 :
     return (
       <div className="app">
+        <button onClick={()=>{this.eventHandler}}>Swith Name</button>
         <h1>Hi, I am a react app</h1>
-        <Person name="Mike" age="40"/>
-        <Person name="Anna" age="51"/>
-        <Person name="Nikkie" age="28"/>
-       
-
+        <Person name={this.state.persons[0].name} age={this.state.persons[0].age}>My hobby : Chess</Person>
+        <Person name={this.state.persons[1].name} age={this.state.persons[1].age}/>
+        <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
       </div>
     );
     //Method#2 :
