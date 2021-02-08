@@ -1,8 +1,8 @@
 //App.js is our react component (Function Component)
 // import React, { Component } from "react"; //React.createElement() is from here.also setState()
 import "./App.css";
-import React, { Component} from "react"; //We need this line for building a 'class compnonet'
-import Person from "./components/Person";//App.js is Person.js's parent.
+import React, { Component } from "react"; //We need this line for building a 'class compnonet'
+import Person from "./components/Person"; //App.js is Person.js's parent.
 //-------------------------Class Componenet------------------------------------
 class App extends Component {
   //Class Component
@@ -14,32 +14,40 @@ class App extends Component {
       { name: "Jenny", age: 32 },
       { name: "Niel", age: 40 },
     ],
-    otherState :'Other type of state'
-    
+    otherState: "Other type of state",
+  };
+  styles = {
+    fontFamily:'monospace',
+    backgroundColor: "lightblue",
+    borderRadius: "10px",
+    border: "none",
+    padding:'15px',
+    cursor:'pointer'
   };
   //-----------------Event Handlers <start>---------------------
   buttonHandler = (newName) => {
-    console.log('You clicked the button!');
+    console.log("You clicked the button!");
     //DO NOT DO THIS : this.state.persons[0].name="Fojan"
-    this.setState({ //setState() is a method in 'Component' class and App inheret it.
+    this.setState({
+      //setState() is a method in 'Component' class and App inheret it.
       persons: [
-        { name: newName, age: 20 },//Instead of hard-coding I passed a parameter to buttonHandler()
+        { name: newName, age: 20 }, //Instead of hard-coding I passed a parameter to buttonHandler()
         { name: "Jenny", age: 40 },
         { name: "Niel", age: 40 },
-      ]
+      ],
     });
   };
 
-  changeNameHandler = (event)=>{
-    this.setState({ //setState() is a method in 'Component' class and App inheret it.
+  changeNameHandler = (event) => {
+    this.setState({
+      //setState() is a method in 'Component' class and App inheret it.
       persons: [
-        { name: "Fojan", age: 20 },//Instead of hard-coding I passed a parameter to buttonHandler()
+        { name: "Fojan", age: 20 }, //Instead of hard-coding I passed a parameter to buttonHandler()
         { name: event.target.value, age: 40 },
         { name: "Niel", age: 40 },
-      ]
+      ],
     });
-
-  }
+  };
   //-----------------Event Handlers <finish>---------------------
 
   render() {
@@ -47,10 +55,12 @@ class App extends Component {
     return (
       <div className="app">
         {/* We used arrow function to pass parameter to our buttonHandler function */}
-        <button style={'background-color:blue'} onClick={()=>this.buttonHandler("Fojan")}>Swith Name</button> 
+        <button style={this.styles} onClick={() => this.buttonHandler("Fojan")}>
+          Swith Name
+        </button>
         <h1>Hi, I am a react app</h1>
         <Person
-          click={this.buttonHandler.bind(this,"Foji!")}//We used bind() for passing 
+          click={this.buttonHandler.bind(this, "Foji!")} //We used bind() for passing
           //parameter to a method
           name={this.state.persons[0].name}
           age={this.state.persons[0].age}
@@ -73,7 +83,6 @@ class App extends Component {
   }
 }
 export default App;
-
 
 //----------------------Function Component --------------------------------
 // import "./App.css";
@@ -103,7 +112,6 @@ export default App;
 //         { name: "Niel", age: 40 },
 //       ],
 //       otherState :'Other type of state' //or otherState :personState.otherState
-
 
 //     });
 //   };
