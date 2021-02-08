@@ -17,37 +17,40 @@ class App extends Component {
     otherState :'Other type of state'
     
   };
-  eventHandler = (newName) => {
+  //-----------------Event Handlers <start>---------------------
+  buttonHandler = (newName) => {
     console.log('You clicked the button!');
     //DO NOT DO THIS : this.state.persons[0].name="Fojan"
     this.setState({ //setState() is a method in 'Component' class and App inheret it.
       persons: [
-        { name: newName, age: 20 },//Instead of hard-coding I passed a parameter to eventHandler()
+        { name: newName, age: 20 },//Instead of hard-coding I passed a parameter to buttonHandler()
         { name: "Jenny", age: 40 },
         { name: "Niel", age: 40 },
       ]
     });
   };
 
-  changeName = (event)=>{
+  changeNameHandler = (event)=>{
     this.setState({ //setState() is a method in 'Component' class and App inheret it.
       persons: [
-        { name: "Fojan", age: 20 },//Instead of hard-coding I passed a parameter to eventHandler()
+        { name: "Fojan", age: 20 },//Instead of hard-coding I passed a parameter to buttonHandler()
         { name: event.target.value, age: 40 },
         { name: "Niel", age: 40 },
       ]
     });
 
   }
+  //-----------------Event Handlers <finish>---------------------
+
   render() {
     //Method #1 :
     return (
       <div className="app">
-        {/* We used arrow function to pass parameter to our eventHandler function */}
-        <button onClick={()=>this.eventHandler("Fojan")}>Swith Name</button> 
+        {/* We used arrow function to pass parameter to our buttonHandler function */}
+        <button onClick={()=>this.buttonHandler("Fojan")}>Swith Name</button> 
         <h1>Hi, I am a react app</h1>
         <Person
-          click={this.eventHandler.bind(this,"Foji!")}//We used bind() for passing 
+          click={this.buttonHandler.bind(this,"Foji!")}//We used bind() for passing 
           //parameter to a method
           name={this.state.persons[0].name}
           age={this.state.persons[0].age}
@@ -57,7 +60,7 @@ class App extends Component {
         <Person
           name={this.state.persons[1].name}
           age={this.state.persons[1].age}
-          change={this.changeName}
+          change={this.changeNameHandler}
         />
         <Person
           name={this.state.persons[2].name}
@@ -89,7 +92,7 @@ export default App;
 //   console.log(personState);
 //   // console.log(setPersonState);
 
-//   const eventHandler = () => {
+//   const buttonHandler = () => {
 //     console.log("You clicked the button!");
 //     //DO NOT DO THIS : this.state.persons[0].name="Fojan"
 //     setPersonState({
@@ -108,7 +111,7 @@ export default App;
 //   //Method #1 :
 //   return (
 //     <div className="app">
-//       <button onClick={eventHandler}>Swith Name</button>
+//       <button onClick={buttonHandler}>Swith Name</button>
 //       <h1>Hi, I am a react app</h1>
 //       <Person
 //         name={personState.persons[0].name}
