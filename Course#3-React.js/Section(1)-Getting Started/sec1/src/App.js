@@ -47,7 +47,7 @@ class App extends Component {
     return (
       <div className="app">
         {/* We used arrow function to pass parameter to our buttonHandler function */}
-        <button onClick={()=>this.buttonHandler("Fojan")}>Swith Name</button> 
+        <button style={'background-color:blue'} onClick={()=>this.buttonHandler("Fojan")}>Swith Name</button> 
         <h1>Hi, I am a react app</h1>
         <Person
           click={this.buttonHandler.bind(this,"Foji!")}//We used bind() for passing 
