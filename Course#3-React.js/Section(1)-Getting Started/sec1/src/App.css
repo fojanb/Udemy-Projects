@@ -1,5 +1,14 @@
 .app{
   text-align: center;
- 
+  font-family: monospace;
+}
+body{
+  background-color:cornsilk;
 
 }
+h1{
+  color:lightblue;
+}
+  h1:hover{
+    color:rgb(243, 144, 14);
+  }
