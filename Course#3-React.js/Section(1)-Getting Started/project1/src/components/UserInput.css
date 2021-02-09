@@ -1,0 +1,14 @@
+.format{
+   display: flex;
+   flex-direction: row;
+   height: 80px;  
+   margin-left:50px;
+   font-weight: bold;
+}
+input{
+   position: relative;
+   top:15px;
+   left:50px;
+   width: 200px;
+   height: 25px;
+}
