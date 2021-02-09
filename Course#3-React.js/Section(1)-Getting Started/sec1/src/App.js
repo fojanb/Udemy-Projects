@@ -70,7 +70,7 @@ class App extends Component {
         <Person
           name={this.state.persons[1].name}
           age={this.state.persons[1].age}
-          change={this.changeNameHandler}
+          change={this.changeNameHandler}//When working with <input/> tag
         />
         <Person
           name={this.state.persons[2].name}
