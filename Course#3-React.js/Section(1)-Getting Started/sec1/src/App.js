@@ -60,8 +60,8 @@ class App extends Component {
         </button>
         <h1>Hi, I am a react app</h1>
         <Person
-          click={this.buttonHandler.bind(this, "Foji!")} //We used bind() for passing
-          //parameter to a method
+        // We used bind() for passing parameter to a method
+          click={this.buttonHandler.bind(this, "Foji!")} 
           name={this.state.persons[0].name}
           age={this.state.persons[0].age}
         >
