@@ -15,8 +15,9 @@ class App extends Component {
       { name: "Niel", age: 40 },
     ],
     otherState: "Other type of state",
-    showPerson = flase
+    showPersons : false
   };
+  // ----------------------------------------------------------
   styles = {
     fontFamily: "monospace",
     backgroundColor: "lightblue",
@@ -49,38 +50,45 @@ class App extends Component {
       ],
     });
   };
+
+  togglePersonsHandler = () => {
+    const doesShow = this.state.showPersons;
+    this.setState({showPersons:!doesShow}) //showPersons has been updated with new boolean
+
+  }
   //-----------------Event Handlers <finish>---------------------
 
   render() {
     //Method #1 :
     return (
       <div className="app">
-        {/* We used arrow function to pass parameter to our buttonHandler function */}
         <button style={this.styles} onClick={this.togglePersonsHandler}>
-          {/* //or :onClick = {this.buttonHandler.bind(this, "Fojan")} */}
-          Swith Name
+          Toggle Persons
         </button>
         <h1>Hi, I am a react app</h1>
-        <div>
-          <Person
-            //We used bind() for passing parameter to our buttonHandler function
-            click={this.buttonHandler.bind(this, "Foji!")}
-            // or click = {() => this.buttonHandler("Foji!")}
-            name={this.state.persons[0].name}
-            age={this.state.persons[0].age}
-          >
-            My hobby : Chess
-          </Person>
-          <Person
-            name={this.state.persons[1].name}
-            age={this.state.persons[1].age}
-            change={this.changeNameHandler} //When working with <input/> tag
-          />
-          <Person
-            name={this.state.persons[2].name}
-            age={this.state.persons[2].age}
-          />
-        </div>
+        {
+          this.state.showPersons ?  //IF-ELSE Conditional statement in JSX
+            <div>
+            <Person
+              //We used bind() for passing parameter to our buttonHandler function:
+              click={this.buttonHandler.bind(this, "Foji!")}
+              // or click = {() => this.buttonHandler("Foji!")}
+              name={this.state.persons[0].name}
+              age={this.state.persons[0].age}
+            >
+              My hobby : Chess
+            </Person>
+            <Person
+              name={this.state.persons[1].name}
+              age={this.state.persons[1].age}
+              change={this.changeNameHandler} //When working with <input/> tag
+            />
+            <Person
+              name={this.state.persons[2].name}
+              age={this.state.persons[2].age}
+            />
+          </div> : null
+        }
       </div>
     );
     //Method#2 :
