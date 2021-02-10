@@ -15,7 +15,7 @@ class App extends Component {
       { name: "Niel", age: 40 },
     ],
     otherState: "Other type of state",
-    showPersons : false
+    showPersons: false,
   };
   // ----------------------------------------------------------
   styles = {
@@ -53,12 +53,45 @@ class App extends Component {
 
   togglePersonsHandler = () => {
     const doesShow = this.state.showPersons;
-    this.setState({showPersons:!doesShow}) //showPersons has been updated with new boolean
-
-  }
+    this.setState({ showPersons: !doesShow }); //showPersons has been updated with new boolean
+  };
   //-----------------Event Handlers <finish>---------------------
 
   render() {
+    let allpersons = null;
+    if (this.state.showPersons) {
+      allpersons = (
+        <div>
+          {this.state.persons.map((person) => {
+            return <Person name={person.name} age={person.age} />;
+          })}
+        </div>
+      );
+    }
+//if statement outside of return:
+    // if (this.state.showPersons) {
+    //   <div>
+    //     <Person
+    //       //We used bind() for passing parameter to our buttonHandler function:
+    //       click={this.buttonHandler.bind(this, "Foji!")}
+    //       // or click = {() => this.buttonHandler("Foji!")}
+    //       name={this.state.persons[0].name}
+    //       age={this.state.persons[0].age}
+    //     >
+    //       My hobby : Chess
+    //     </Person>
+    //     <Person
+    //       name={this.state.persons[1].name}
+    //       age={this.state.persons[1].age}
+    //       change={this.changeNameHandler} //When working with <input/> tag
+    //     />
+    //     <Person
+    //       name={this.state.persons[2].name}
+    //       age={this.state.persons[2].age}
+    //     />
+    //   </div>;
+    // }
+
     //Method #1 :
     return (
       <div className="app">
@@ -66,9 +99,8 @@ class App extends Component {
           Toggle Persons
         </button>
         <h1>Hi, I am a react app</h1>
-        {
-          this.state.showPersons ?  //IF-ELSE Conditional statement in JSX
-            <div>
+        {this.state.showPersons ? ( //IF-ELSE Conditional statement in JSX
+          <div>
             <Person
               //We used bind() for passing parameter to our buttonHandler function:
               click={this.buttonHandler.bind(this, "Foji!")}
@@ -87,8 +119,8 @@ class App extends Component {
               name={this.state.persons[2].name}
               age={this.state.persons[2].age}
             />
-          </div> : null
-        }
+          </div>
+        ) : null}
       </div>
     );
     //Method#2 :
