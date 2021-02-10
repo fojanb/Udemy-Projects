@@ -10,7 +10,7 @@ class UserOutput extends Component {
   };
   render() {
     return (
-      <div className='flexbox' onClick={this.props.click}>
+      <div className='flexbox'>
         <p><strong style={{color:"blue"}}>User Name : {this.props.user}</strong><br/>
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
