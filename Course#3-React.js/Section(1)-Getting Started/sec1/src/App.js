@@ -12,7 +12,7 @@ class App extends Component {
       //persons is array of objects (JSON format)
       { name: "Mike", age: 20 },
       { name: "Jenny", age: 32 },
-      { name: "Niel", age: 40 },
+      { name: "Niel", age: 40 }
     ],
     otherState: "Other type of state",
   };
@@ -55,13 +55,15 @@ class App extends Component {
     return (
       <div className="app">
         {/* We used arrow function to pass parameter to our buttonHandler function */}
-        <button style={this.styles} onClick={() => this.buttonHandler("Fojan")}>
+        <button style={this.styles} onClick={() => this.buttonHandler("Fojan")}> 
+        {/* //or :onClick = {this.buttonHandler.bind(this, "Fojan")} */}
           Swith Name
         </button>
         <h1>Hi, I am a react app</h1>
         <Person
-        // We used bind() for passing parameter to a method
+        //We used bind() for passing parameter to our buttonHandler function
           click={this.buttonHandler.bind(this, "Foji!")} 
+          // or click = {() => this.buttonHandler("Foji!")}
           name={this.state.persons[0].name}
           age={this.state.persons[0].age}
         >
