@@ -11,7 +11,7 @@ class UserInput extends Component {
       <div className="format">
         <p>Please insert your data</p>
         <br/>
-        <input type="text" />
+        <input type="text" onChange={this.props.change} />
       </div>
     );
   }
