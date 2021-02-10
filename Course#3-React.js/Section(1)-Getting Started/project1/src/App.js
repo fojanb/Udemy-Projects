@@ -12,16 +12,16 @@ class App extends Component {
       { name: "mike@gmail.com", id: 0 },
       { name: "jenny@shaw.ca", id: 1 },
       { name: "carol2020@hotmail.com", id: 2 },
-      { name: "arieljackson@gmail.com", id:3 },
+      { name: "arieljackson@gmail.com", id: 3 },
       { name: "nikkifox@yahoo.com", id: 4 },
     ],
   };
-  clickHandler = (newName) => {
+  changeHandler = (event) => {
     //State management(updating the state):
     this.setState({
       userNames: [
         //userNames is array of js objects (JSON format)
-        { name: newName + "@gmail.com", id: 0 },
+        { name: event.target.value + "@gmail.com", id: 0 },
         { name: "jenny@shaw.ca", id: 1 },
         { name: "carol2020@hotmail.com", id: 2 },
         { name: "arieljackson@gmail.com", id: 3 },
@@ -33,11 +33,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <UserInput />
-        <UserOutput
-          // click={this.clickHandler.bind(this, "Fojan")}
-          user={this.state.userNames[0].name}
-        />
+        <UserInput change={this.changeHandler} />
+        <UserOutput user={this.state.userNames[0].name} />
         <br />
         <UserOutput />
       </div>
