@@ -3,7 +3,7 @@
     border:0px solid black;
     border-radius: 10px;
     box-shadow:5px 5px lightslategray;
-    background-color:lightblue;
+    background-color:gold;
     width: 300px;
     height: 120px;
     margin-left:600px;
@@ -11,7 +11,7 @@
     padding: 20px;
 }
     .person:hover{
-        color: rgb(243, 144, 14);
+        color: rgb(156, 12, 212);
     }
 /* ---------------------------------------- */
 input{
