@@ -11,9 +11,10 @@ class App extends Component {
     //State is an JS object
     persons: [
       //persons is array of objects (JSON format)
-      { name: "Mike", age: 20 },
-      { name: "Jenny", age: 32 },
-      { name: "Niel", age: 40 }
+      //id must be UNIQUE
+      { id: '1' , name: "Mike", age: 20 },
+      { id: '2' , name: "Jenny", age: 32 },
+      { id: '3' , name: "Niel", age: 40 },
     ],
     otherState: "Other type of state",
     showPersons: false,
@@ -26,7 +27,7 @@ class App extends Component {
     border: "none",
     padding: "15px",
     cursor: "pointer",
-    margin: "10px"
+    margin: "10px",
   };
   //-----------------Event Handlers <start>---------------------
   buttonHandler = (newName) => {
@@ -35,22 +36,26 @@ class App extends Component {
     this.setState({
       //setState() is a method in 'Component' class and App inheret it.
       persons: [
-        { name: newName, age: 20 }, //Instead of hard-coding I passed a parameter to buttonHandler()
-        { name: "Jenny", age: 40 },
-        { name: "Niel", age: 40 },
+        {id:'1', name: newName, age: 20 }, //Instead of hard-coding I passed a parameter to buttonHandler()
+        { id:'2',name: "Jenny", age: 40 },
+        { id:'3',name: "Niel", age: 40 },
       ],
     });
   };
-  
-  changeNameHandler = (event) => {
-    this.setState({
-      //setState() is a method in 'Component' class and App inheret it.
-      persons: [
-        { name: "Fojan", age: 20 }, //Instead of hard-coding I passed a parameter to buttonHandler()
-        { name: event.target.value, age: 40 },
-        { name: "Niel", age: 40 },
-      ],
+
+  changeNameHandler = (event,id) => {
+    const personIndex = this.state.persons.findIndex(p=>{
+      return p.id===id; //Index has been found so far
     });
+
+    const person = {...this.state.persons[personIndex]}; //Each person in persons is an object{}
+    person.name=event.target.value;
+
+    const persons=[...this.state.persons]; //A copy of state.persons
+    persons[personIndex]=person;
+    this.setState({persons:persons});
+      //setState() is a method in 'Component' class and App inheret it.
+      
   };
 
   togglePersonsHandler = () => {
@@ -58,33 +63,41 @@ class App extends Component {
     this.setState({ showPersons: !doesShow }); //showPersons has been updated with new boolean
   };
 
-  personDeleteHandler = (personIndex) =>{
-    const persons= this.state.persons.slice();//Fetch persons(Array of Objects) in state
-    persons.splice(personIndex,1);//This line will remove item from arr
-    this.setState({persons:persons});
-
-  }
-
-  personAddHandler = () =>{
-    const persons= this.state.persons.slice();
-    persons.push({name:"Zwe",age:50});
-    this.setState({persons:persons});
-  }
+  personDeleteHandler = (personIndex) => {
+    //const persons = this.state.persons  //Fetch persons(Array of Objects) in state
+    // const persons = this.state.persons.slice(); //Fetch a copy of persons(Array of Objects) in state
+    const persons = [...this.state.persons]  //Fetch a copy of persons(Array of Objects) in state
+    persons.splice(personIndex, 1); //This line will remove item from arr
+    this.setState({ persons: persons });
+  };
+  
   //-----------------Event Handlers <finish>---------------------
 
   render() {
-    let persons = null;
-      {/* Conditional rendering_If statement using Lists : Way #4 ===> the best practice!!!*/}
-      if (this.state.showPersons) {
-        persons=(
-          <div>
-              {this.state.persons.map((person,index) => {
-                return <Person 
-                click={()=>this.personDeleteHandler(index)} name={person.name} age={person.age}></Person>;
-              })}
-            </div>
-        );
-      {/* Conditional rendering_If statement : Way #3 */}
+    let persons = null; //Default
+    {
+      /* Conditional rendering_If statement using Lists : Way #4 ===> the best practice!!!*/
+    }
+    if (this.state.showPersons) {
+      persons = (
+        <div>
+          {this.state.persons.map((person, index) => {
+            return (
+              <Person
+                click={() => this.personDeleteHandler(index)} //A list
+                change={(event)=>this.changeNameHandler(event,person.id)}
+                name={person.name}
+                age={person.age}
+                key={person.id} //Key is UNIQUE since id is unique
+              ></Person>
+            );
+          })}
+        </div>
+      );
+
+      {
+        /* Conditional rendering_If statement : Way #3 */
+      }
       // persons = (
       //   <div>
       //       <Person
@@ -114,9 +127,6 @@ class App extends Component {
       <div className="app">
         <button style={this.styles} onClick={this.togglePersonsHandler}>
           Toggle Persons
-        </button>
-        <button style={this.styles} onClick={this.personsAddHandler}>
-          Add Persons
         </button>
         <h1>Hi, I am a react app</h1>
         {persons}
