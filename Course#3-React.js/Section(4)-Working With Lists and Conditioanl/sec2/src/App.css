@@ -3,12 +3,12 @@
   font-family: monospace;
 }
 body{
-  background-color:cornsilk;
+  background-color:rgb(155, 154, 245);
 
 }
 h1{
-  color:lightblue;
+  color:rgb(107, 20, 148);
 }
   h1:hover{
-    color:rgb(243, 144, 14);
+    color:gold;
   }
