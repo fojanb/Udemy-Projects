@@ -131,7 +131,7 @@ class App extends Component {
         <button style={this.styles} onClick={this.togglePersonsHandler}>
           Toggle Persons
         </button>
-        <h1>Hi, I am a react app</h1>
+        <h1>-- Hi, I am a react app --</h1>
         {persons}
         {/* Conditional rendering_Ternary Expression : Way #2 */}
         {/* {this.state.showPersons ? (
