@@ -22,12 +22,15 @@ class App extends Component {
   // ----------------------------------------------------------
   styles = {
     fontFamily: "monospace",
-    backgroundColor: "lightblue",
+    backgroundColor: "gold",
     borderRadius: "10px",
     border: "none",
     padding: "15px",
     cursor: "pointer",
     margin: "10px",
+    boxShadow:'5px 5px lightslategray',
+    fontWeight:'bold'
+    
   };
   //-----------------Event Handlers <start>---------------------
   buttonHandler = (newName) => {
