@@ -1,4 +1,4 @@
-//index.js is respnsible for 'rendering' the App.js component
+//index.js is responsible for 'rendering' the App.js component (root component)
 //We could delete index.js from src folder and put render() method
 //in App.js instead.
 
