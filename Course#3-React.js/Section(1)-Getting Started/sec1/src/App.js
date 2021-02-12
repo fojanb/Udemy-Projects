@@ -9,7 +9,7 @@ class App extends Component {
   state = {
     //State is an JS object
     persons: [
-      //persons is array of objects (JSON format)
+      //persons is array of objects (JSON format: JSON is basically a data structure)
       { name: "Mike", age: 20 },
       { name: "Jenny", age: 32 },
       { name: "Niel", age: 40 }
