@@ -1,6 +1,7 @@
 .App{
+  text-align: center;
   font-family: monospace;
-  font-size: large;
+  font-size: 25px;
   margin: 50px;
 
 }
