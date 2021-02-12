@@ -4,7 +4,7 @@ class Validation extends Component {
   state = {
     lenghtInValidation: 0, //initial
   };
-
+//--------------------------functions--------------------------------
   stateUpdate = () => {
     this.state.lenghtInValidation = this.props.paragraphLength;
   };
@@ -14,10 +14,12 @@ class Validation extends Component {
     } else {
       if (this.state.lenghtInValidation >= 100) {
         return <h3>Too long</h3>;
+      } else {
+        return <h3>Perfect length ! keep typing.</h3>;
       }
     }
   };
-
+// ------------------------------------------------------------------
   render() {
     return (
       //All JSX are here
