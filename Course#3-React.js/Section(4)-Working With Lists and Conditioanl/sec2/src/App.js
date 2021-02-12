@@ -51,7 +51,7 @@ class App extends Component {
       return p.id===id; //Index has been found so far
     });
 
-    const person = {...this.state.persons[personIndex]}; //Each person in persons is an object{}
+    const person = {...this.state.persons[personIndex]}; //copy---Each person in persons is an object{}
     person.name=event.target.value;
 
     const persons=[...this.state.persons]; //A copy of state.persons
@@ -79,7 +79,7 @@ class App extends Component {
   render() {
     let persons = null; //Default
     {
-      /* Conditional rendering_If statement using Lists : Way #4 ===> the best practice!!!*/
+      /* Conditional rendering_If statement using Lists : Way #4 ===> Best practice!!!*/
     }
     if (this.state.showPersons) {
       persons = (
