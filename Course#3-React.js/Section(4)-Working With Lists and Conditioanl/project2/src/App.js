@@ -25,7 +25,7 @@ class App extends Component {
     return c;
   };
   showLetterinChar = (index) => {
-    return this.state.words.charAt(index);
+    return this.state.words.charAt(index);//words is string here
   };
 
   // -----------------------------------------------------
@@ -36,7 +36,7 @@ class App extends Component {
         <div>
           {/* change words ='abc' to words=['abc'] via split(''), then you can use map()*/}
           {/* Since map() only works for array not string */}
-          {this.state.words.split("").map((letter, index) => {
+          {this.state.words.split("").map((letter, index) => { //words turns to array here
             return (
               <Char
                 // click={() => this.letterDeleteHandler(index)} //A list
