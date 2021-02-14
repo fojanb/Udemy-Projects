@@ -13,7 +13,7 @@ class Validation extends Component {
       return <h3>Too short</h3>;
     } else {
       if (this.state.lenghtInValidation >= 100) {
-        return <h3>Too long</h3>;
+        return <h3>Too long, Stop!</h3>;
       } else {
         return <h3>Perfect length ! keep typing.</h3>;
       }
