@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-
+// import "./Char.css";
 
 class Char extends Component {
   state = {
@@ -15,8 +15,7 @@ class Char extends Component {
     margin: "16px",
     textAlign: "center",
     border: "5px solid #2d3047",
-    backgroundColor:"#FF9B71"
-   
+    backgroundColor: "#FF9B71",
   };
 
   render() {
