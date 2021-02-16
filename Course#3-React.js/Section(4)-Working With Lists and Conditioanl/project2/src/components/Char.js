@@ -19,7 +19,7 @@ class Char extends Component {
   };
 
   render() {
-    return <div style={this.styles}>{this.state.letter}</div>;
+    return <div style={this.styles} onClick={this.props.click} >{this.state.letter}</div>;
   }
 }
 
