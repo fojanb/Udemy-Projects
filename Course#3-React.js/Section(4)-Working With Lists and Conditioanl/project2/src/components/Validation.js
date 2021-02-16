@@ -4,7 +4,7 @@ class Validation extends Component {
   state = {
     lenghtInValidation: 0, //initial
   };
-//--------------------------functions and eventHandler--------------------------------
+//------------------functions and eventHandler---------------------
   stateUpdate = () => {
     this.state.lenghtInValidation = this.props.paragraphLength;
   };
