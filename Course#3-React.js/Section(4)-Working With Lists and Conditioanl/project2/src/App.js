@@ -5,7 +5,6 @@ import "./components/Char.css";
 import Validation from "./components/Validation";
 import Char from "./components/Char";
 
-
 class App extends Component {
   state = {
     words: "", //string ===> 'Paragraph' is stored here
@@ -44,7 +43,7 @@ class App extends Component {
     if (true) {
       letter = (
         <div className="wrapper">
-          {/* change words ='abc' to words=['abc'] via split(''), then you can use map()*/}
+          {/* change words ='abc' to words=['a','b','c'] via split(''), then you can use map()*/}
           {/* Since map() only works for array not string */}
           {/* Creating a list of Char component based on words ins state */}
           {this.state.words.split("").map((letter, index) => {
