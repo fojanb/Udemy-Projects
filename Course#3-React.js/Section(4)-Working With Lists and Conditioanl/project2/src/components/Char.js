@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 // import "./Char.css";
 
 class Char extends Component {
-  state = {
-    letter: this.props.getLetter,
-  };
+  // state = {
+  //   letter: this.props.getLetter,
+  // };
   styles = {
     display: "inlineBlock",
     width: "100px",
@@ -17,9 +17,10 @@ class Char extends Component {
     border: "5px solid #2d3047",
     backgroundColor: "#FF9B71",
   };
+  updateState
 
   render() {
-    return <div style={this.styles} onClick={this.props.click} >{this.state.letter}</div>;
+    return <div style={this.styles} onClick={this.props.click} >{this.props.getLetter}</div>;
   }
 }
 
