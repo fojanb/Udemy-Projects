@@ -1,5 +1,6 @@
 .wrapper{
     display: flex;
     flex-direction: row;
+    -ms-flex-direction: row;
     width: 100px;
 }
