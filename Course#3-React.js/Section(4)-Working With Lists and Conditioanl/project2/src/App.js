@@ -11,7 +11,7 @@ class App extends Component {
   };
 
   // -----------functions and eventHandler--------------
-  newWordHandler = (event) => {
+  newLetterHandler = (event) => {
     //This method are updating our state
     const str = event.target.value;
     this.setState({ words: str });
@@ -25,21 +25,31 @@ class App extends Component {
     return c;
   };
   showLetterinChar = (index) => {
-    return this.state.words.charAt(index);//words is string here
+    return this.state.words.charAt(index); //'words' is string here
+  };
+
+  letterDeleteHandler = (index) => {
+    let arrayOfWords = this.state.words.slice().split(""); //Fetch a ""copy"" of words(Array of Objects) in state via slice()
+    //and convert it to an array via split()
+    arrayOfWords.splice(index, 1);
+
+    this.setState({ words: arrayOfWords.join("") });
   };
 
   // -----------------------------------------------------
   render() {
-    let letters = null;
+    let letter = null;
     if (true) {
-      letters = (
+      letter = (
         <div>
           {/* change words ='abc' to words=['abc'] via split(''), then you can use map()*/}
           {/* Since map() only works for array not string */}
-          {this.state.words.split("").map((letter, index) => { //words turns to array here
+          {/* Creating a list of Char component based on words ins state */}
+          {this.state.words.split("").map((letter, index) => {
+            //words turns to array here
             return (
               <Char
-                // click={() => this.letterDeleteHandler(index)} //A list
+                click={() => this.letterDeleteHandler(index)}
                 getLetter={this.showLetterinChar(index)}
               ></Char>
             );
@@ -55,14 +65,14 @@ class App extends Component {
           type="text"
           rows="8"
           placeholder="Maximum character 100"
-          onChange={(event) => this.newWordHandler(event)}
+          onChange={(event) => this.newLetterHandler(event)}
         />
-        {/* or : <textarea type="text" rows= '8' onChange={this.newWordHandler}/> */}
+        {/* or : <textarea type="text" rows= '8' onChange={this.newLetterHandler}/> */}
 
         <p>Character count : {this.countLetter()} </p>
 
         <Validation paragraphLength={this.state.lengthInApp} />
-        {letters}
+        {letter}
       </div>
     );
   }
