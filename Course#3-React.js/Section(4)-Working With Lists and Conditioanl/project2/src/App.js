@@ -6,13 +6,13 @@ import Char from "./components/Char";
 
 class App extends Component {
   state = {
-    words: " ", //string ===> 'Paragraph' is stored here
+    words: "", //string ===> 'Paragraph' is stored here
     lengthInApp: 0, //initial
   };
 
   // -----------functions and eventHandler--------------
   newLetterHandler = (event) => {
-    //This method are updating our state
+    //This method are updating our 'words' in state
     const str = event.target.value;
     this.setState({ words: str });
   };
@@ -29,11 +29,11 @@ class App extends Component {
   };
 
   letterDeleteHandler = (index) => {
-    let arrayOfWords = this.state.words.slice().split(""); //Fetch a ""copy"" of words(Array of Objects) in state via slice()
+    let words = this.state.words.split(""); //Fetch a ""copy"" of words(Array of Objects) in state via slice()
     //and convert it to an array via split()
-    arrayOfWords.splice(index, 1);
+    words.splice(index, 1);
 
-    this.setState({ words: arrayOfWords.join("") });
+    this.setState({ words: words.join("") });
   };
 
   // -----------------------------------------------------
