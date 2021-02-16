@@ -24,7 +24,7 @@ class App extends Component {
     this.state.lengthInApp = c; // State update
     return c;
   };
-  showLetterinChar = (index) => {
+  showLetterInChar = (index) => {
     return this.state.words.charAt(index); //'words' is string here
   };
 
@@ -50,7 +50,7 @@ class App extends Component {
             return (
               <Char
                 click={() => this.letterDeleteHandler(index)}
-                getLetter={this.showLetterinChar(index)}
+                getLetter={this.showLetterInChar(index)}
               ></Char>
             );
           })}
