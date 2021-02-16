@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./App.css";
+import "./components/Char.css";
 import Validation from "./components/Validation";
 import Char from "./components/Char";
+
 
 class App extends Component {
   state = {
@@ -16,6 +18,7 @@ class App extends Component {
     const str = event.target.value;
     this.setState({ words: str });
   };
+
   countLetter = () => {
     let c = 0; //initial
     for (let index = 0; index < this.state.words.length; index++) {
@@ -24,6 +27,7 @@ class App extends Component {
     this.state.lengthInApp = c; // State update
     return c;
   };
+
   showLetterInChar = (index) => {
     return this.state.words.charAt(index); //'words' is string here
   };
@@ -32,16 +36,14 @@ class App extends Component {
     let words = this.state.words.split(""); //Fetch a ""copy"" of words(Array of Objects) in state via slice()
     //and convert it to an array via split()
     words.splice(index, 1);
-
     this.setState({ words: words.join("") });
   };
-
   // -----------------------------------------------------
   render() {
     let letter = null;
     if (true) {
       letter = (
-        <div>
+        <div className="wrapper">
           {/* change words ='abc' to words=['abc'] via split(''), then you can use map()*/}
           {/* Since map() only works for array not string */}
           {/* Creating a list of Char component based on words ins state */}
@@ -54,16 +56,16 @@ class App extends Component {
               ></Char>
             );
           })}
-        </div>
+        </div> //wrapper
       );
     }
-
     return (
       <div className="App">
         <h3>Please type your paragraph down below</h3>
         <textarea
           type="text"
           rows="8"
+          cols="40"
           placeholder="Maximum character 100"
           onChange={(event) => this.newLetterHandler(event)}
         />
