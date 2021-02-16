@@ -71,7 +71,7 @@ class App extends Component {
     // const persons = this.state.persons.slice(); //Fetch a copy of persons(Array of Objects) in state
     const persons = [...this.state.persons]  //Fetch a copy of persons(Array of Objects) in state
     persons.splice(personIndex, 1); //This line will remove item from arr
-    this.setState({ persons: persons });
+    this.setState({ persons: persons });//Now update the state
   };
   
   //-----------------Event Handlers <finish>---------------------
