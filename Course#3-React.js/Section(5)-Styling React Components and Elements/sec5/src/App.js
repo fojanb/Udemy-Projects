@@ -4,6 +4,7 @@ import "./App.css";
 import React, { Component } from "react"; //We need this line for building a 'class compnonet'
 import Person from "./components/Person"; //App.js is Person.js's parent.
 import person from "./components/Person";
+import Radium from "radium";
 //<------------------------Class Componenet--------------------->
 class App extends Component {
   //Class Component
@@ -66,20 +67,22 @@ class App extends Component {
     // <------Internal CSS------>
 
     // Dynamic CSS - Classes - array of classes
-    let twoClasses = ['red','bold'].join(' '); //Output wil be=>className='red bold' which is a list of classes in CSS
+    let twoClasses = ["green", "bold"].join(" "); //Output wil be=>className='green bold' which is a list of classes in CSS
     //Make sure to add one white space character between the qoute in join(' ').
+
     // Dynamic CSS - Classes - array of classes
     const oneClass = [];
-      if (this.state.persons.length <=2) {
-        oneClass.push('red'); //oneClasses=['red']
-      }
-      if (this.state.persons.length <=1) {
-      oneClass.push('bold'); //oneClasses=['red bold']
-      }
+    if (this.state.persons.length <= 2) {
+      oneClass.push("green"); //oneClasses=['green']
+    }
+    if (this.state.persons.length <= 1) {
+      oneClass.push("bold"); //oneClasses=['green bold']
+    }
+
     //non-dynamic CSS
     const styles = {
       fontFamily: "monospace",
-      backgroundColor: "lightGreen",
+      backgroundColor: "green",
       color: "rgb(107, 20, 148)",
       borderRadius: "10px",
       border: "none",
@@ -88,8 +91,11 @@ class App extends Component {
       margin: "10px",
       boxShadow: "5px 5px lightslategray",
       fontWeight: "bold",
+      ":hover": {
+        //pseudo css selector
+        backgroundColor: "lightGreen",
+      },
     };
-
 
     let persons = null; //Default
     {
@@ -111,9 +117,15 @@ class App extends Component {
           })}
         </div>
       );
-      styles.backgroundColor = "red"; //Here 'styles' does not need 'this'.cuase 
+      //Here we are over-writting our styles:
+      styles.backgroundColor = "red"; //Here 'styles' does not need 'this'.cuase
       // it is not a variable in class. it is a typical var in a function (aka render())
       styles.color = "#eee";
+      //Radium for pseudo css selector
+      styles[":hover"] = {
+        backgroundColor: "salmon",
+        color: "black",
+      };
 
       {
         /* Conditional rendering_If statement : Way #3 */
@@ -149,7 +161,7 @@ class App extends Component {
           Toggle Persons
         </button>
         <h1 className={twoClasses}>-- Hi, I am a react app --</h1>
-        <h2 className={oneClass.join(' ')}>-- Welcome here --</h2>
+        <h2 className={oneClass.join(" ")}>-- Welcome here --</h2>
         {persons}
         {/* Conditional rendering_Ternary Expression : Way #2 */}
         {/* {this.state.showPersons ? (
@@ -189,7 +201,7 @@ class App extends Component {
     // return React.createElement('div',{className:'app'},React.createElement('h1',null,'I am Fojan'))
   }
 }
-export default App;
+export default Radium(App);
 
 //<----------------------Function Component ------------------------>
 // import "./App.css";
