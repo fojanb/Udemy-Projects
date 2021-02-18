@@ -4,7 +4,7 @@ import "./App.css";
 import React, { Component } from "react"; //We need this line for building a 'class compnonet'
 import Person from "./components/Person"; //App.js is Person.js's parent.
 import person from "./components/Person";
-// import Radium from "radium"; //use for styling --> pseudo selectors and media queries
+import Radium from "radium"; //use for styling --> pseudo selectors and media queries
 //<------------------------Class Componenet--------------------->
 class App extends Component {
   //Class Component
@@ -91,7 +91,7 @@ class App extends Component {
       margin: "0 auto",
       boxShadow: "5px 5px lightslategray",
       fontWeight: "bold",
-      ":hover": {  /*pseudo selectors in 'Radium'*/
+      ":hover": {  /*how to manage pseudo selectors with 'Radium'*/
         //pseudo css selector - Using 'Radium'
         backgroundColor: "lightGreen",
       },
@@ -203,7 +203,7 @@ class App extends Component {
     // return React.createElement('div',{className:'app'},React.createElement('h1',null,'I am Fojan'))
   }
 }
-export default App;
+export default Radium(App);
 
 //<----------------------Function Component ------------------------>
 // import "./App.css";
