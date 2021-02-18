@@ -1,10 +1,9 @@
-.app{
+.app {
   text-align: center;
   font-family: monospace;
 }
-body{
-  background-color:rgb(190, 160, 238);
-
+body {
+  background-color: rgb(190, 160, 238);
 }
 /* h1{
   color:rgb(107, 20, 148);
@@ -13,9 +12,24 @@ body{
     color:gold;
   } */
 
-.green{
+.green {
   color: green;
-}  
-.bold{
+}
+.bold {
   font-weight: bold;
 }
+
+.smallScreen{
+  margin:0 auto;
+}
+  @media only screen and (max-width:500px){
+    .smallScreen{
+      font-size: 10px;
+    }
+  }
+
+  @media only screen and (max-width:300px){
+    .smallScreen{
+      font-size: 5px;
+    }
+  }
