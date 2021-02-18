@@ -4,7 +4,7 @@ import "./App.css";
 import React, { Component } from "react"; //We need this line for building a 'class compnonet'
 import Person from "./components/Person"; //App.js is Person.js's parent.
 import person from "./components/Person";
-import Radium from "radium"; //For styling --> pseudo selectors and media queries
+// import Radium from "radium"; //use for styling --> pseudo selectors and media queries
 //<------------------------Class Componenet--------------------->
 class App extends Component {
   //Class Component
@@ -88,11 +88,11 @@ class App extends Component {
       border: "none",
       padding: "15px",
       cursor: "pointer",
-      margin: "10px",
+      margin: "0 auto",
       boxShadow: "5px 5px lightslategray",
       fontWeight: "bold",
-      ":hover": {
-        //pseudo css selector - Using Radium
+      ":hover": {  /*pseudo selectors in 'Radium'*/
+        //pseudo css selector - Using 'Radium'
         backgroundColor: "lightGreen",
       },
     };
@@ -103,7 +103,7 @@ class App extends Component {
     }
     if (this.state.showPersons) {
       persons = (
-        <div>
+        <div> {/* This 'div' is very important !!! always wrap your lists with a div*/}
           {this.state.persons.map((person, index) => {
             return (
               <Person
@@ -203,7 +203,7 @@ class App extends Component {
     // return React.createElement('div',{className:'app'},React.createElement('h1',null,'I am Fojan'))
   }
 }
-export default Radium(App);
+export default App;
 
 //<----------------------Function Component ------------------------>
 // import "./App.css";
