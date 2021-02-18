@@ -4,7 +4,7 @@ import "./App.css";
 import React, { Component } from "react"; //We need this line for building a 'class compnonet'
 import Person from "./components/Person"; //App.js is Person.js's parent.
 import person from "./components/Person";
-import Radium from "radium";
+import Radium from "radium"; //For styling --> pseudo selectors and media queries
 //<------------------------Class Componenet--------------------->
 class App extends Component {
   //Class Component
@@ -71,7 +71,7 @@ class App extends Component {
     //Make sure to add one white space character between the qoute in join(' ').
 
     // Dynamic CSS - Classes - array of classes
-    const oneClass = [];
+    const oneClass = []; //Emptty array
     if (this.state.persons.length <= 2) {
       oneClass.push("green"); //oneClasses=['green']
     }
@@ -92,7 +92,7 @@ class App extends Component {
       boxShadow: "5px 5px lightslategray",
       fontWeight: "bold",
       ":hover": {
-        //pseudo css selector
+        //pseudo css selector - Using Radium
         backgroundColor: "lightGreen",
       },
     };
@@ -160,8 +160,10 @@ class App extends Component {
         <button style={styles} onClick={this.togglePersonsHandler}>
           Toggle Persons
         </button>
-        <h1 className={twoClasses}>-- Hi, I am a react app --</h1>
-        <h2 className={oneClass.join(" ")}>-- Welcome here --</h2>
+        <div className="smallScreen">
+          <h1 className={twoClasses}>-- Hi, I am a react app --</h1>
+          <h2 className={oneClass.join(" ")}>-- Welcome here --</h2>
+        </div>
         {persons}
         {/* Conditional rendering_Ternary Expression : Way #2 */}
         {/* {this.state.showPersons ? (
