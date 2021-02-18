@@ -6,9 +6,9 @@
     background-color:gold;
     width: 300px;
     height: 120px;
-    margin-left:600px;
-    margin-bottom: 20px;
-    padding: 20px;
+    /* for staying fixed in the center of the page in any screen width: */
+    text-align: center;
+    margin: 0 auto;
 }
     .person:hover{
         color: rgb(156, 12, 212);
@@ -17,4 +17,10 @@
 input{
     border-radius: 10px;
 }
+
+h3{
+    padding: 15px;
+    margin: 20px;
+}
+
     
