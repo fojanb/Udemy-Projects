@@ -2,9 +2,8 @@ import React from "react";
 // import "./Person.css";
 import styled from "styled-components";
 
-//Function Component:
+//Function Component: Arrow function
 const person = (props) => {
-  //Arrow function
   const StyledPerson = styled.div`
      {
       //  Regular CSS here :
@@ -17,9 +16,10 @@ const person = (props) => {
       height: 120px;
       text-align: center;
       margin: 0 auto;
-      &:hover { /*Pseudo selectors in 'styled-components'*/
+      &:hover {
+        /*Pseudo selectors in 'styled-components'*/
         color: rgb(156, 12, 212);
-    }
+      }
     }
   `;
   return (
