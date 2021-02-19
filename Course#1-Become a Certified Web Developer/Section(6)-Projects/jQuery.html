@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Added jQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Document</title>
-</head>
-<body>
-    <div>
-        <p>Hi this is a jQuery test</p>
+    <style>
+      #p1 {
+        width: 80px;
+        height: 80px;
+        display: none;
+        background-color: red;
+      }
+      #p2 {
+        width: 80px;
+        height: 80px;
+        display: none;
+        background-color: greenyellow;
+      }
+      #p3 {
+        width: 80px;
+        height: 80px;
+        display: none;
+        background-color: blue;
+      }
+      #square {
+        background: #98bf21;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div>
+      <button id="button1">show</button>
+      <p id="p1"></p>
+      <p id="p2"></p>
+      <p id="p3"></p>
     </div>
-    <script rel="JavaScript" src='main.js'></script>
-</body>
+
+    <button id="button2">aminate</button>
+    <br /><br />
+    <div id="square"></div> -->
+
+    <button id="button3">ajax</button>
+    <div id="ajaxHolder"></div>
+    <!-- Added jQuery custome file -->
+    <script rel="JavaScript" src="main.js"></script>
+  </body>
 </html>
