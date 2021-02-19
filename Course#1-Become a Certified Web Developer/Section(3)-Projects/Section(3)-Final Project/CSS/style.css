@@ -1,28 +1,46 @@
-body{
-    font-family:Montserrat, sans-serif;
-    line-height: 1.8;
-    color: black;
+body {
+  font-family: Montserrat, sans-serif;
+  line-height: 1.8;
+  color: black;
 }
 
-.page-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 40px;
-    letter-spacing: 10px;
-    align-items: center;}
+.page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 40px;
+  letter-spacing: 10px;
+  align-items: center;
+}
 
- 
-
-  /* --------------------- */ 
-#navbar-style{
+/* --------------------- */
+/* #navbar-style{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     
-}    
+}     */
 .textCenter {
-    text-align: center;
-}    
-
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  margin: 0 auto;
+}
+#subItem1 {
+  display: none;
+  color: whitesmoke;
+}
+#subItem2 {
+  display: none;
+  color: whitesmoke;
+}
+#subItem3 {
+  display: none;
+  color: whitesmoke;
+}
+#subItem4 {
+  display: none;
+  color: whitesmoke;
+}
