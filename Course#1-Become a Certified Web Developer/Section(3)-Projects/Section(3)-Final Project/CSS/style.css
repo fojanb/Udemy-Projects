@@ -56,3 +56,9 @@ h1 {
 .imagePlacedInCenter {
   margin: 0 auto;
 }
+#mySearchInput {
+  margin-left: 510px;
+}
+#mySearchButton {
+  background-color: #fae1dd;
+}
