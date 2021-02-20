@@ -58,7 +58,13 @@ h1 {
 }
 #mySearchInput {
   margin-left: 510px;
+  border-width: 0px;
+  border: none;
+  
 }
 #mySearchButton {
-  background-color: #fae1dd;
+  background-color: #f8edeb;
 }
+  #mySearchButton a{
+    text-decoration: none;
+  }
