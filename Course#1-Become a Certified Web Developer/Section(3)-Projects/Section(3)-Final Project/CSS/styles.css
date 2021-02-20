@@ -1,4 +1,4 @@
-
+/* 
   .bg-1{
   text-align: center;
   margin-top: 50px;
@@ -7,47 +7,22 @@
   font-size: 50px;
   border-bottom:1px solid lightgray;
   letter-spacing: 20px; 
-}
+} */
  
   .ImgContainer{
       display: flex;
       flex-direction: column;
-      margin-top: 500px;
-      margin-bottom: 500px;
-      margin-left: 200px;
-      margin-right: 200px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
   }
   .ImgPosition{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
   }
-  /* Navigation Bar Style-->Start */
-  ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-      font-family: 'Special Elite', cursive;
-  }
 
-  li {
-      float: left;
-  }
-
-  li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-  }
-
-  li a:hover {
-      background-color: #111;
-  }
- /* Navigation Bar Style-->Finish */
  .footer {
     width: 100%;
     color:lightgray;
