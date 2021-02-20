@@ -1,6 +1,7 @@
 body {
   font-family: Montserrat, sans-serif;
   line-height: 1.8;
+  background-color: #f8edeb;
   color: black;
 }
 
@@ -43,4 +44,15 @@ h1 {
 #subItem4 {
   display: none;
   color: whitesmoke;
+}
+
+#carousel-example-generic a.carousel-control {
+  height: 26%;
+  top: 33%;
+  width: 86px;
+  background: black;
+}
+
+.imagePlacedInCenter {
+  margin: 0 auto;
 }
