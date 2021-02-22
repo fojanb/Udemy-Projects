@@ -29,28 +29,50 @@ h1 {
   text-align: center;
   margin: 0 auto;
 }
+/* --------------------------- */
 #subItem1 {
   display: none;
-  color: whitesmoke;
+  color: #424b54;
 }
+#item1 a:hover {
+  color: #ddbea9;
+  cursor: pointer;
+}
+/* --------------------------- */
 #subItem2 {
   display: none;
-  color: whitesmoke;
+  color: #424b54;
 }
+#item2 a:hover {
+  color: #ddbea9;
+  cursor: pointer;
+}
+/* --------------------------- */
 #subItem3 {
   display: none;
-  color: whitesmoke;
+  color: #424b54;
 }
+#item3 a:hover {
+  color: #ddbea9;
+  cursor: pointer;
+}
+/* --------------------------- */
 #subItem4 {
   display: none;
-  color: whitesmoke;
+  color: #424b54;
 }
+#item4 a:hover {
+  color: #ddbea9;
+  cursor: pointer;
+}
+/* --------------------------- */
 
 #carousel-example-generic a.carousel-control {
   height: 26%;
   top: 33%;
   width: 86px;
-  background: black;
+  color: #ddbea9;
+  background: transparent;
 }
 
 .imagePlacedInCenter {
@@ -60,13 +82,20 @@ h1 {
   margin-left: 510px;
   border-width: 0px;
   border: none;
-  
 }
 #mySearchButton {
   background-color: #f8edeb;
 }
-  #mySearchButton a{
-    text-decoration: none;
-  }
+#mySearchButton a {
+  text-decoration: none;
+}
+.imgInCarousel {
+  display: flex;
+  flex-direction: row;
+}
 
- 
+#headerLink a{
+  text-decoration: none;
+  /* color: #424b54; */
+  color: inherit;
+}
