@@ -1,0 +1,223 @@
+<!-- Final Project_Certified HTML5 Specialist -->
+<!--Author: Fojan Babaali-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tighty Wighty</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--------------------------------------->
+    <!--Bootstrap-->
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <!--------------------------------------->
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <!--------------------------------------->
+    <!--CSS files-->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/mens.css" />
+
+    <!-- Added jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="jumbotron text-center" style="background-color: #fae1dd">
+        <h1
+          style="
+            letter-spacing: 2rem;
+            font-size: 4rem;
+            font-weight: bold;
+            color: #424b54;
+          "
+        >
+        TIGHTY WIGHTY
+        </h1>
+        <br>
+        <div class="horizontalLanes">
+            <hr style="width:40%;text-align:center;border-bottom: 1px solid  #999999;">
+            <p style="font-size: 15px; letter-spacing:1rem; position: relative; top: 10px;"><a href="Babaali_finalproject.html">HOME</a>/WOMENS</p>
+            <hr style="width:40%;text-align:center;border-bottom: 1px solid  #999999;">
+        </div>
+        
+      </div>
+      <!-- Navigation Bar Start-->
+      <nav
+        class="navbar navbar-inverse"
+        class="navbar navbar-light"
+        style="background-color: #f8edeb; border: 0px;"
+      >
+        <div class="container">
+          <ul class="nav navbar-nav">
+            <!-- <li class="active"><a href="#">Home</a></li> -->
+            <li id="item1">
+              <a href="#">About Us</a>
+              <div id="subItem1">
+                <p>Our Story</p>
+                <p>Company</p>
+                <p>Our Stores</p>
+              </div>
+            </li>
+            <li id="item2">
+              <a href="#">Contact</a>
+              <div id="subItem2">
+                <p>Tell</p>
+                <p>Email</p>
+                <p>Fax</p>
+              </div>
+            </li>
+            <li id="item3">
+              <a href="#">Women's</a>
+              <div id="subItem3">
+                <p>Bottoms</p>
+                <p>Tops</p>
+              </div>
+            </li>
+            <li id="item4">
+              <a href="mens.html" target="_blank">Men's</a>
+              <div id="subItem4">
+                <p>Bottoms</p>
+                <p>Tops</p>
+              </div>
+            </li>
+            <li style="padding-top: 8px">
+              <form class="form-inline my-2 my-lg-0">
+                <input
+                  class="form-control mr-sm-2"
+                  type="search"
+                  placeholder="Search"
+                  id="mySearchInput"
+                />
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="mySearchButton"><a href="#" class="glyphicon glyphicon-search"></a></button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Navigation Bar End -->
+      <!------------------------------------------------------------->
+      <!-- Side Bar start-->
+      <div class="wrapper">
+        <nav id="sidebar">
+          <h4>&nbsp Shop All Womens</h4>
+
+          <ul class="list-unstyled components">
+            <li class="active">
+              <a
+                href="#homeSubmenu"
+                data-toggle="collapse"
+                aria-expanded="false"
+                class="dropdown-toggle"
+                ><strong>Tops</strong></a
+              >
+              <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li>
+                  <a href="#">Tees & Tanks</a>
+                </li>
+                <li>
+                  <a href="#">Long Sleeves</a>
+                </li>
+                <li>
+                  <a href="#">Short Sleeves</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="#pageSubmenu"
+                data-toggle="collapse"
+                aria-expanded="false"
+                class="dropdown-toggle"
+                id="bottoms"
+                ><strong>Bottoms</strong></a
+              >
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                  <a href="#">Denim</a>
+                </li>
+                <li>
+                  <a href="#">Shorts</a>
+                </li>
+                <li>
+                  <a href="#">Joggers</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="homePageLink">
+            <a href="Babaali_finalproject.html">Home Page</a>
+          </div>
+        </nav>
+      </div>
+      <!-- Side Bar done-->
+      <!------------------------------------------------------------->
+      <!-- Images Gallery -->
+      <div class="row">
+        <div class="col-md-2">
+          <div class="thumbnail">
+            <a href="images/img3.jpg">
+              <img src="images/img3.jpg" alt="T-shirt" style="width: 100%" />
+              <div class="caption">
+                <p>Lorem ipsum...</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="thumbnail">
+            <a href="images/img7.jpg">
+              <img src="images/img7.jpg" alt="T-shirt" style="width: 100%" />
+              <div class="caption">
+                <p>Lorem ipsum...</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="thumbnail">
+            <a href="images/img11.jpg">
+              <img src="images/img11.jpg" alt="T-shirt" style="width: 100%" />
+              <div class="caption">
+                <p>Lorem ipsum...</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-2">
+            <div class="thumbnail">
+              <a href="images/img12.jpg">
+                <img src="images/img12.jpg" alt="T-shirt" style="width: 100%" />
+                <div class="caption">
+                  <p>Lorem ipsum...</p>
+                </div>
+              </a>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!--container-fluid-->
+    <!-- footer -->
+    <div class="row">
+      <div class="textCenter col-md-12">
+        123 Main Street Westport, CT 06880<br />
+        Tel:(800) 555-1212<br />
+        Copyright © 2019 | Tighty Whities, LLC | All Rights Reserved
+      </div>
+    </div>
+    <!--row-->
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="JavaScript/main.js"></script>
+    <!-- <script src="JavaScript/mens.js"></script> -->
+  </body>
+</html>
