@@ -57,7 +57,7 @@ class App extends Component {
         {/* We used arrow function to pass parameter to our buttonHandler function */}
         <button style={this.styles} onClick={() => this.buttonHandler("Fojan")}> 
         {/* //or :onClick = {this.buttonHandler.bind(this, "Fojan")} */}
-          Swith Name
+          Switch Name
         </button>
         <h1>Hi, I am a react app</h1>
         <Person
