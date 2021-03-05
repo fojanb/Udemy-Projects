@@ -82,6 +82,7 @@ class App extends Component {
       /* Conditional rendering_If statement using Lists : Way #4 ===> Best practice!!!*/
     }
     if (this.state.showPersons) {
+      // We did loop over this.satet.persons actually:
       persons = (
         <div>
           {this.state.persons.map((person, index) => {
