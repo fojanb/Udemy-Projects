@@ -1,10 +1,7 @@
 import React from "react";
 // import "./Person.css";
 import styled from "styled-components";
-
-//Function Component: Arrow function
-const person = (props) => {
-  const StyledPerson = styled.div`
+const StyledPerson = styled.div`
      {
       //  Regular CSS here :
       font-family: monospace;
@@ -22,6 +19,9 @@ const person = (props) => {
       }
     }
   `;
+//Function Component: Arrow function
+const person = (props) => {
+  
   return (
     <StyledPerson>
       <h3 onClick={props.click}>
