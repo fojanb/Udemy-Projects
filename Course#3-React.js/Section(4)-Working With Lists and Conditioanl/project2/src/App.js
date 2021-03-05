@@ -45,7 +45,7 @@ class App extends Component {
         <div className="wrapper">
           {/* change words ='abc' to words=['a','b','c'] via split(''), then you can use map()*/}
           {/* Since map() only works for array not string */}
-          {/* Creating a list of Char component based on words ins state */}
+          {/* Creating a list of Char component based on words in state */}
           {this.state.words.split("").map((letter, index) => {
             //words turns to array here
             return (
