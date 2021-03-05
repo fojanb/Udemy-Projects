@@ -67,9 +67,9 @@ class App extends Component {
     // <------Internal CSS------>
 
     // Dynamic CSS - Classes - array of classes
-    let twoClasses = ["green", "bold"].join(" "); //Output wil be=>className='green bold' which is a list of classes in CSS
+    let twoClasses = ["green", "bold"].join(" "); //Output wil be=>className='green bold' which is a valid list of classes in CSS
     //Make sure to add one white space character between the qoute in join(' ').
-
+    // join(" ") has empty space
     // Dynamic CSS - Classes - array of classes
     const oneClass = []; //Emptty array
     if (this.state.persons.length <= 2) {
@@ -91,7 +91,8 @@ class App extends Component {
       margin: "0 auto",
       boxShadow: "5px 5px lightslategray",
       fontWeight: "bold",
-      ":hover": {  /*how to manage pseudo selectors with 'Radium'*/
+      ":hover": {
+        /*how to manage pseudo selectors with 'Radium'*/
         //pseudo css selector - Using 'Radium'
         backgroundColor: "lightGreen",
       },
@@ -103,7 +104,9 @@ class App extends Component {
     }
     if (this.state.showPersons) {
       persons = (
-        <div> {/* This 'div' is very important !!! always wrap your lists with a div*/}
+        <div>
+          {" "}
+          {/* This 'div' is very important !!! always wrap your lists with a div*/}
           {this.state.persons.map((person, index) => {
             return (
               <Person
@@ -162,7 +165,7 @@ class App extends Component {
         </button>
         <div className="smallScreen">
           <h1 className={twoClasses}>-- Hi, I am a react app --</h1>
-          <h2 className={oneClass.join(" ")}>-- Welcome here --</h2>
+          <p className={oneClass.join(" ")}>-- Welcome here --</p>
         </div>
         {persons}
         {/* Conditional rendering_Ternary Expression : Way #2 */}
