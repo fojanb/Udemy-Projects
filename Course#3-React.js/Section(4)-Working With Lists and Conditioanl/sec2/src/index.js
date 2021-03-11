@@ -4,7 +4,7 @@
 
 import React from "react";
 import ReactDOM from "react-dom"; //ReactDOM.render() method belongs to ReactDOM
-import App from "./App";
+import App from "./containers/App";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(<App/>,document.getElementById("root"));
