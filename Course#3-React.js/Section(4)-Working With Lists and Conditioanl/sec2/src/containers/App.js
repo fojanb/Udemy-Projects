@@ -2,8 +2,9 @@
 // import React, { Component } from "react"; //React.createElement() is from here.also setState()
 import "./App.css";
 import React, { Component } from "react"; //We need this line for building a 'class compnonet'
-import Person from "../components/Person/Person"; //App.js is Person.js's parent.
-import person from "../components/Person/Person";
+import Person from "../components/Persons/Persons"; //App.js is Person.js's parent.
+import Persons from "../components/Persons/Persons";
+
 //-------------------------Class Componenet------------------------------------
 class App extends Component {
   //Class Component
@@ -12,9 +13,9 @@ class App extends Component {
     persons: [
       //persons is array of objects (JSON format)
       //id must be UNIQUE
-      { id: '1' , name: "Mike", age: 20 },
-      { id: '2' , name: "Jenny", age: 32 },
-      { id: '3' , name: "Niel", age: 40 },
+      { id: "1", name: "Mike", age: 20 },
+      { id: "2", name: "Jenny", age: 32 },
+      { id: "3", name: "Niel", age: 40 },
     ],
     otherState: "Other type of state",
     showPersons: false,
@@ -28,9 +29,8 @@ class App extends Component {
     padding: "15px",
     cursor: "pointer",
     margin: "10px",
-    boxShadow:'5px 5px lightslategray',
-    fontWeight:'bold'
-    
+    boxShadow: "5px 5px lightslategray",
+    fontWeight: "bold",
   };
   //-----------------Event Handlers <start>---------------------
   buttonHandler = (newName) => {
@@ -39,26 +39,25 @@ class App extends Component {
     this.setState({
       //setState() is a method in 'Component' class and App inheret it.
       persons: [
-        {id:'1', name: newName, age: 20 }, //Instead of hard-coding I passed a parameter to buttonHandler()
-        { id:'2',name: "Jenny", age: 40 },
-        { id:'3',name: "Niel", age: 40 },
+        { id: "1", name: newName, age: 20 }, //Instead of hard-coding I passed a parameter to buttonHandler()
+        { id: "2", name: "Jenny", age: 40 },
+        { id: "3", name: "Niel", age: 40 },
       ],
     });
   };
 
-  changeNameHandler = (event,id) => {
-    const personIndex = this.state.persons.findIndex(p=>{
-      return p.id===id; //Index has been found so far
+  changeNameHandler = (event, id) => {
+    const personIndex = this.state.persons.findIndex((p) => {
+      return p.id === id; //Index has been found so far
     });
 
-    const person = {...this.state.persons[personIndex]}; //copy---Each person in persons is an object{}
-    person.name=event.target.value;
+    const person = { ...this.state.persons[personIndex] }; //copy---Each person in persons is an object{}
+    person.name = event.target.value;
 
-    const persons=[...this.state.persons]; //A copy of state.persons
-    persons[personIndex]=person;
-    this.setState({persons:persons});
-      //setState() is a method in 'Component' class and App inheret it.
-      
+    const persons = [...this.state.persons]; //A copy of state.persons
+    persons[personIndex] = person;
+    this.setState({ persons: persons });
+    //setState() is a method in 'Component' class and App inheret it.
   };
 
   togglePersonsHandler = () => {
@@ -69,11 +68,11 @@ class App extends Component {
   personDeleteHandler = (personIndex) => {
     //const persons = this.state.persons  //Fetch persons(Array of Objects) in state
     // const persons = this.state.persons.slice(); //Fetch a copy of persons(Array of Objects) in state
-    const persons = [...this.state.persons]  //Fetch a copy of persons(Array of Objects) in state
+    const persons = [...this.state.persons]; //Fetch a copy of persons(Array of Objects) in state
     persons.splice(personIndex, 1); //This line will remove item from arr
-    this.setState({ persons: persons });//Now update the state
+    this.setState({ persons: persons }); //Now update the state
   };
-  
+
   //-----------------Event Handlers <finish>---------------------
 
   render() {
@@ -85,17 +84,11 @@ class App extends Component {
       // We did loop over this.satet.persons actually:
       persons = (
         <div>
-          {this.state.persons.map((person, index) => {
-            return (
-              <Person
-                click={() => this.personDeleteHandler(index)} //A list
-                change={(event)=>this.changeNameHandler(event,person.id)}
-                name={person.name}
-                age={person.age}
-                key={person.id} //Key is UNIQUE since id is unique
-              ></Person>
-            );
-          })}
+          <Persons
+            persons={this.state.persons}
+            clicked={this.personDeleteHandler}
+            changed={this.changeNameHandler}
+          />
         </div>
       );
 
