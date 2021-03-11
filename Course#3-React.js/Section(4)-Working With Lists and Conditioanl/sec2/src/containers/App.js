@@ -2,8 +2,9 @@
 // import React, { Component } from "react"; //React.createElement() is from here.also setState()
 import "./App.css";
 import React, { Component } from "react"; //We need this line for building a 'class compnonet'
-import Person from "../components/Persons/Persons"; //App.js is Person.js's parent.
+// import Person from "../components/Persons/Persons"; //App.js is Person.js's parent.
 import Persons from "../components/Persons/Persons";
+import Cockpit from "../components/Cockpit/Cockpit"
 
 //-------------------------Class Componenet------------------------------------
 class App extends Component {
@@ -122,10 +123,7 @@ class App extends Component {
     //Method #1 :
     return (
       <div className="app">
-        <button style={this.styles} onClick={this.togglePersonsHandler}>
-          Toggle Persons
-        </button>
-        <h1>-- Hi, I am a react app --</h1>
+        <Cockpit styles={this.styles} toggled={this.togglePersonsHandler}/>
         {persons}
         {/* Conditional rendering_Ternary Expression : Way #2 */}
         {/* {this.state.showPersons ? (
