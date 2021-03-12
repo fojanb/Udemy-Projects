@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 const Cockpit = (props) => {
+  useEffect(() => {
+    console.log('[Cockpit.js] useEffect');
+    // HTTP request...
+  });
   return (
     <div>
       <button style={props.styles} onClick={props.toggled}>
