@@ -47,6 +47,8 @@ class App extends Component {
   // ---------update lifecycle(for state changes)-----------
   shouldComponentUpdate(nexrProps,nextState){
     console.log('[App.js] shouldComponentUpdate');
+    return true; //allows update
+    // return flase; Preventing the update
 
   }
   componentDidUpdate(){
