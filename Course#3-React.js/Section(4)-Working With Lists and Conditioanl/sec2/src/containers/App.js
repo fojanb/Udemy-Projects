@@ -4,23 +4,54 @@ import "./App.css";
 import React, { Component } from "react"; //We need this line for building a 'class compnonet'
 // import Person from "../components/Persons/Persons"; //App.js is Person.js's parent.
 import Persons from "../components/Persons/Persons";
-import Cockpit from "../components/Cockpit/Cockpit"
+import Cockpit from "../components/Cockpit/Cockpit";
 
 //-------------------------Class Componenet------------------------------------
+//Class Component
+
 class App extends Component {
-  //Class Component
-  state = {
-    //State is an JS object
-    persons: [
-      //persons is array of objects (JSON format)
-      //id must be UNIQUE
-      { id: "1", name: "Mike", age: 20 },
-      { id: "2", name: "Jenny", age: 32 },
-      { id: "3", name: "Niel", age: 40 },
-    ],
-    otherState: "Other type of state",
-    showPersons: false,
-  };
+  constructor(props) {
+    super(props);
+    console.log("[App.js] cunstructor");
+    this.state = {
+      persons: [
+        //persons is array of objects (JSON format)
+        //id must be UNIQUE
+        { id: "1", name: "Mike", age: 20 },
+        { id: "2", name: "Jenny", age: 32 },
+        { id: "3", name: "Niel", age: 40 },
+      ],
+      otherState: "Other type of state",
+      showPersons: false,
+    };
+  }
+  // state = {
+  //   //State is an JS object
+  //   persons: [
+  //     //persons is array of objects (JSON format)
+  //     //id must be UNIQUE
+  //     { id: "1", name: "Mike", age: 20 },
+  //     { id: "2", name: "Jenny", age: 32 },
+  //     { id: "3", name: "Niel", age: 40 },
+  //   ],
+  //   otherState: "Other type of state",
+  //   showPersons: false,
+  // };
+  static getDerivedStateFromProps(props, state) {
+    console.log("[App.js] getDerivedStateFromProps", props);
+    return state;
+  }
+  componentDidMount(){
+    console.log('[App.js] componentDidMount');
+  }
+  // ---------update lifecycle(for state changes)-----------
+  shouldComponentUpdate(nexrProps,nextState){
+    console.log('[App.js] shouldComponentUpdate');
+
+  }
+  componentDidUpdate(){
+    console.log('[App.js] componentDidUpdate');
+  }
   // ----------------------------------------------------------
   styles = {
     fontFamily: "monospace",
@@ -77,12 +108,12 @@ class App extends Component {
   //-----------------Event Handlers <finish>---------------------
 
   render() {
+    console.log("[App.js] render");
     let persons = null; //Default
     {
       /* Conditional rendering_If statement using Lists : Way #4 ===> Best practice!!!*/
     }
     if (this.state.showPersons) {
-      // We did loop over this.satet.persons actually:
       persons = (
         <div>
           <Persons
@@ -123,7 +154,7 @@ class App extends Component {
     //Method #1 :
     return (
       <div className="app">
-        <Cockpit styles={this.styles} toggled={this.togglePersonsHandler}/>
+        <Cockpit styles={this.styles} toggled={this.togglePersonsHandler} />
         {persons}
         {/* Conditional rendering_Ternary Expression : Way #2 */}
         {/* {this.state.showPersons ? (
