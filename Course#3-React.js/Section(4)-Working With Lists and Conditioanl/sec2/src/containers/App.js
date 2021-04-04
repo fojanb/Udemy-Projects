@@ -1,4 +1,4 @@
-//App.js is our react component (Function Component)
+//App.js is our react component (Class Component)
 // import React, { Component } from "react"; //React.createElement() is from here.also setState()
 import "./App.css";
 import React, { Component } from "react"; //We need this line for building a 'class compnonet'
@@ -41,18 +41,17 @@ class App extends Component {
     console.log("[App.js] getDerivedStateFromProps", props);
     return state;
   }
-  componentDidMount(){
-    console.log('[App.js] componentDidMount');
+  componentDidMount() {
+    console.log("[App.js] componentDidMount");
   }
   // ---------update lifecycle(for state changes)-----------
-  shouldComponentUpdate(nexrProps,nextState){
-    console.log('[App.js] shouldComponentUpdate');
+  shouldComponentUpdate(nexrProps, nextState) {
+    console.log("[App.js] shouldComponentUpdate");
     return true; //allows update
     // return flase; Preventing the update
-
   }
-  componentDidUpdate(){
-    console.log('[App.js] componentDidUpdate');
+  componentDidUpdate() {
+    console.log("[App.js] componentDidUpdate");
   }
   // ----------------------------------------------------------
   styles = {
@@ -156,7 +155,11 @@ class App extends Component {
     //Method #1 :
     return (
       <div className="app">
-        <Cockpit styles={this.styles} toggled={this.togglePersonsHandler} />
+        <Cockpit
+          title={this.props.appTitle}
+          styles={this.styles}
+          toggled={this.togglePersonsHandler}
+        />
         {persons}
         {/* Conditional rendering_Ternary Expression : Way #2 */}
         {/* {this.state.showPersons ? (
