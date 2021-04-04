@@ -7,7 +7,7 @@ const Cockpit = (props) => {
   return (
     <div>
       <button style={props.styles} onClick={props.toggled}>
-        Toggle Persons
+        {props.title}
       </button>
       <h1>-- Hi, I am a react app --</h1>
     </div>
