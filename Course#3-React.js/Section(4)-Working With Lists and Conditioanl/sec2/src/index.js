@@ -7,7 +7,7 @@ import ReactDOM from "react-dom"; //ReactDOM.render() method belongs to ReactDOM
 import App from "./containers/App";
 import reportWebVitals from "./reportWebVitals";
 
-ReactDOM.render(<App/>,document.getElementById("root"));
+ReactDOM.render(<App appTitle="Toggle Persons"/>,document.getElementById("root"));
 
 
 reportWebVitals();
