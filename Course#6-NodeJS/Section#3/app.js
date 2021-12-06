@@ -69,5 +69,5 @@ server.listen(3000);
 // Fully Functional Web Server------End
 // --------------------------------------------------------
 // Some notes :
-// When a user insert a URL (in the above example, localhost:3000) or clicking on a link , they are actually a GET request.See?super easy!
+// When a user insert a URL (in the above example, localhost:3000) or clicking on a link , they are actually a GET request.And this is actually means sending a message(request) to the server.See?super easy!
 // But when a user insert her infos into a form it is actually a POST request.
